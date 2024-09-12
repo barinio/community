@@ -1,11 +1,7 @@
-import { Fira_Code as FontMono, Inter as FontSans } from "next/font/google";
+import { Abhaya_Libre } from "next/font/google";
 
-export const fontSans = FontSans({
+export const fontAbhayaLibre = Abhaya_Libre({
   subsets: ["latin"],
-  variable: "--font-sans",
-});
-
-export const fontMono = FontMono({
-  subsets: ["latin"],
-  variable: "--font-mono",
+  weight: ["400", "700"],
+  variable: "--font-al",
 });
