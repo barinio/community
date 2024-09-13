@@ -12,6 +12,10 @@ module.exports = {
       fontFamily: {
         al: ["var(--font-al)"],
       },
+      colors: {
+        "norm-gray": "#0A090D",
+        "norm-white": "#FFFFFF"
+      },
     },
   },
   darkMode: "class",

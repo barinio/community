@@ -21,26 +21,26 @@ import {LocaleSwitcher} from "@/components/LocaleSwitcher";
 
 export const Navbar = () => {
   return (
-    <NextUINavbar maxWidth="xl" position="sticky">
+    <NextUINavbar maxWidth="xl"  className="mt-2" position="sticky">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
-          <NextLink className="flex justify-start items-center gap-1" href="/">
+          <NextLink className="flex justify-start items-center gap-3" href="/">
             <Logo />
-            <p className="font-bold text-inherit">CommUnité</p>
+            <p className="font-bold text-inherit text-2xl">CommUnité</p>
           </NextLink>
         </NavbarBrand>
 
 
         <NavbarContent
-            className="hidden sm:flex basis-1/5 sm:basis-full"
+            className="hidden sm:flex basis-1/5 sm:basis-full gap-20"
             justify="end"
         >
-            <ul className="hidden sm:flex gap-4 justify-start ml-2">
+            <ul className="hidden sm:flex gap-10 justify-start">
                 {siteConfig.navItems.map((item) => (
                     <NavbarItem key={item.href}>
                         <NextLink
                             className={clsx(
                                 linkStyles({color: "foreground"}),
-                                "data-[active=true]:text-primary data-[active=true]:font-medium"
+                                "data-[active=true]:text-primary data-[active=true]:font-medium font-bold text-sm px-[17px] py-2.5"
                             )}
                             color="foreground"
                             href={item.href}
@@ -51,9 +51,8 @@ export const Navbar = () => {
                 ))}
             </ul>
 
-            <NavbarItem className="hidden sm:flex gap-2">
+            <NavbarItem className="hidden sm:flex gap-6">
                 <LocaleSwitcher />
-
                 <ThemeSwitch/>
             </NavbarItem>
         </NavbarContent>
