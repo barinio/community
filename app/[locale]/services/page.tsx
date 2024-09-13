@@ -5,12 +5,13 @@ import Link from "next/link";
 import icon1 from "./icon-service1.svg";
 import icon2 from "./icon-service2.svg";
 import icon3 from "./icon-service3.svg";
+import serviceLogo from "../../../images/serviceImg.png";
 import { ArrowIcon } from "./icons";
 
 export default function Services() {
   return (
     <div>
-      <section className="mb-[178px]">
+      <section className="flex flex-row justify-between mb-[178px] mt-16 ">
         <div>
           <p className="max-w-[780px] text-[48px] text-[#171717] leading-[100%] font-bold tracking-[-1.4px] mb-[22px]">
             Chez CommUnité, nous proposons une gamme complète de services conçus
@@ -22,6 +23,40 @@ export default function Services() {
             leurs recevables, optimiser leur relation client et sécuriser leur
             trésorerie.
           </p>
+        </div>
+
+        <div className="relative pr-4">
+          <Image
+            src={serviceLogo}
+            width={238}
+            height={250}
+            alt="Icon"
+            className="inline-block mb-2"
+          />
+          <Card className="absolute top-[136px] left-[55px] h-20 z-10 rounded px-6 py-[20px] bg-[#fff] ">
+            <p className="w-[410px] text-2xl font-light text-[#1b1b1b]">
+              Your credit scoring
+              <span className="text-4xl text-[#01C087] ml-8 mr-10">792</span>
+              <span className="text-2xl font-bold text-[#1b1b1b]">Good</span>
+            </p>
+          </Card>
+          <Card className="relative w-[485px] rounded-[33px] px-5 pt-[30px] pb-[44px]  bg-[#171717] ">
+            <p className="text-xs font-normal text-[#9E9E9E] mb-9 flex items-center before:content-[''] before:block before:h-[1px] before:w-[30px] before:bg-[#9E9E9E] before:mr-2">
+              Optimisation de la gestion des débiteurs
+            </p>
+            <p className="w-[230px] text-[20px] leading-[90%] tracking-[-1.4px] font-bold text-[#f9f5f5]">
+              Améliorez vos performances et atteignez de nouveaux sommets
+            </p>
+            <div className="absolute bottom-[0px] right-[30px] flex flex-row items-end gap-4">
+              {[80, 96, 112].map((height, index) => (
+                <span
+                  key={index}
+                  className="w-[47px] rounded-[2px] bg-[#ffdd33]"
+                  style={{ height: `${height}px` }}
+                />
+              ))}
+            </div>
+          </Card>
         </div>
       </section>
       <h2 className="text-center text-[45px] leading-[38px] tracking-tight font-bold uppercase mb-[86px]">
@@ -36,7 +71,7 @@ export default function Services() {
                 src={icon1}
                 width={47}
                 height={51}
-                alt="Picture of the author"
+                alt="Icon"
                 className="inline-block "
               />
             </div>
@@ -52,7 +87,7 @@ export default function Services() {
               préservant des relations harmonieuses avec vos clients.
             </p>
 
-            <div className="flex justify-center">
+            <div className="flex justify-center mt-auto">
               <Button
                 // href="/services"
                 // as={Link}
@@ -94,7 +129,7 @@ export default function Services() {
               débiteurs.
             </p>
 
-            <div className="flex justify-center">
+            <div className="flex justify-center mt-auto">
               <Button
                 // href="/services"
                 // as={Link}
@@ -147,9 +182,9 @@ export default function Services() {
       </h2>
 
       <div className="flex flex-row gap-[70px] mb-[104px]">
-        <Card className="rounded-[32px] bg-[#171717] dark:bg-[#171717]">
+        <Card className="flex-1 rounded-[32px] bg-[#171717] dark:bg-[#171717]">
           <CardBody className="px-[78px] pt-[78px] pb-[44px]">
-            <p className="text-[45px] leading-[58px] tracking-tight text-[#fff] mb-[120px]">
+            <p className="w-[300px] h-[170px] text-[45px] leading-[58px] tracking-tight text-[#fff] mb-[120px]">
               L'élaboration d'une politique de recouvrement
             </p>
 
@@ -170,9 +205,9 @@ export default function Services() {
           </CardBody>
         </Card>
 
-        <Card className="rounded-[32px] bg-[#ffdd33] dark:bg-[#171717] text-[#000000]">
+        <Card className="flex-1 rounded-[32px] bg-[#ffdd33] dark:bg-[#171717] text-[#000000]">
           <CardBody className="px-[78px] pt-[78px] pb-[44px]">
-            <p className=" text-[45px] leading-[58px] tracking-tight mb-[120px]">
+            <p className="w-[300px] h-[170px] text-[45px] leading-[58px] tracking-tight mb-[120px]">
               La révision et la rédaction des contrats
             </p>
 
@@ -199,9 +234,9 @@ export default function Services() {
       </h2>
 
       <div className="flex flex-row gap-[70px] mb-6">
-        <Card className="rounded-[32px] bg-[#ffdd33] dark:bg-[#171717] text-[#000000]">
+        <Card className="flex-1 rounded-[32px] bg-[#ffdd33] dark:bg-[#171717] text-[#000000]">
           <CardBody className="px-[78px] pt-[78px] pb-[44px]">
-            <p className=" text-[45px] leading-[58px] tracking-tight mb-[120px]">
+            <p className="w-[300px] h-[170px] text-[45px] leading-[58px] tracking-tight mb-[120px]">
               Rédaction de scripts de contact et d’appels
             </p>
 
@@ -222,9 +257,9 @@ export default function Services() {
           </CardBody>
         </Card>
 
-        <Card className="rounded-[32px] bg-[#171717] dark:bg-[#171717]">
+        <Card className="flex-1 rounded-[32px] bg-[#171717] dark:bg-[#171717]">
           <CardBody className="px-[78px] pt-[78px] pb-[44px]">
-            <p className="text-[45px] leading-[58px] tracking-tight text-[#fff] mb-[120px]">
+            <p className="w-[300px] h-[170px] text-[45px] leading-[58px] tracking-tight text-[#fff] mb-auto">
               Conseils et accompagnement juridiques
             </p>
 
