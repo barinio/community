@@ -10,11 +10,22 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-sans)"],
-        mono: ["var(--font-mono)"],
+        al: ["var(--font-al)"],
+      },
+      colors: {
+        "norm-gray": "#0A090D",
+        "norm-white": "#FFFFFF"
       },
     },
   },
   darkMode: "class",
-  plugins: [nextui()],
+  plugins: [nextui({
+    themes: {
+      dark: {
+        colors: {
+          background: "#09090B"
+        }
+      }
+    }
+  })]
 }
