@@ -14,7 +14,8 @@ module.exports = {
       },
       colors: {
         "norm-gray": "#0A090D",
-        "norm-white": "#FFFFFF"
+        "norm-white": "#FFFFFF",
+        "main-yellow": "#FFDD33"
       },
     },
   },
