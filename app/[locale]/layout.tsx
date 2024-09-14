@@ -54,7 +54,7 @@ export default async function RootLayout({ children, params: { locale } }: {
             <main className="container mx-auto max-w-7xl px-6 flex-grow">
               {children}
             </main>
-            <footer className="w-full flex items-center justify-center py-3">
+            <footer className="w-full flex flex-col items-center justify-center pb-9 gap-9">
               <Footer />
             </footer>
           </div>

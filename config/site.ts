@@ -1,5 +1,10 @@
 export type SiteConfig = typeof siteConfig;
 
+import instagram from "@/images/instagram.svg"
+import facebook from "@/images/facebook.svg"
+import twitter from "@/images/twitter.svg"
+import linkedin from "@/images/linkedin.svg"
+
 export const siteConfig = {
   name: "CommUnity",
   description:
@@ -32,11 +37,21 @@ export const siteConfig = {
   //     href: "/our-commitment",
   //   },
   // ],
-  // links: {
-  //   github: "https://github.com/nextui-org/nextui",
-  //   twitter: "https://twitter.com/getnextui",
-  //   docs: "https://nextui.org",
-  //   discord: "https://discord.gg/9b6yyZKmH4",
-  //   sponsor: "https://patreon.com/jrgarciadev",
-  // },
+  links: [
+    {
+      icon: instagram,
+      link: "https://nextui.org"
+    },
+    {
+      icon:facebook,
+      link: "https://discord.gg/9b6yyZKmH4"
+    },
+    {
+      icon:twitter,
+      link: "https://twitter.com/getnextui"
+    },
+    {
+      icon:linkedin,
+      link: "https://patreon.com/jrgarciadev",
+    }]
 };
