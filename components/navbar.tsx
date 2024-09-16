@@ -1,13 +1,13 @@
-"use client"
+"use client";
 
 import {
   Navbar as NextUINavbar,
-  NavbarContent,
-  NavbarMenu,
-  NavbarMenuToggle,
   NavbarBrand,
+  NavbarContent,
   NavbarItem,
+  NavbarMenu,
   NavbarMenuItem,
+  NavbarMenuToggle,
 } from "@nextui-org/navbar";
 import { Link } from "@nextui-org/link";
 import { link as linkStyles } from "@nextui-org/theme";
@@ -17,72 +17,61 @@ import clsx from "clsx";
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
 import { Logo } from "@/components/icons";
-import {LocaleSwitcher} from "@/components/LocaleSwitcher";
+import { LocaleSwitcher } from "@/components/LocaleSwitcher";
 
 export const Navbar = () => {
   return (
-    <NextUINavbar maxWidth="xl"  className="mt-2" position="sticky">
-        <NavbarBrand as="li" className="gap-3 max-w-fit">
-          <NextLink className="flex justify-start items-center gap-3" href="/">
-            <Logo />
-            <p className="font-bold text-inherit text-2xl">CommUnité</p>
-          </NextLink>
-        </NavbarBrand>
+    <NextUINavbar maxWidth="xl" className="mt-2" position="sticky">
+      <NavbarBrand as="li" className="gap-3 max-w-fit">
+        <NextLink className="flex justify-start items-center gap-3" href="/">
+          <Logo />
+          <p className="font-bold text-inherit text-2xl">CommUnité</p>
+        </NextLink>
+      </NavbarBrand>
 
-
-        <NavbarContent
-            className="hidden sm:flex basis-1/5 sm:basis-full gap-20"
-            justify="end"
-        >
-            <ul className="hidden sm:flex gap-10 justify-start">
-                {siteConfig.navItems.map((item) => (
-                    <NavbarItem key={item.href}>
-                        <NextLink
-                            className={clsx(
-                                linkStyles({color: "foreground"}),
-                                "data-[active=true]:text-primary data-[active=true]:font-medium font-bold text-sm px-[17px] py-2.5"
-                            )}
-                            color="foreground"
-                            href={item.href}
-                        >
-                            {item.label}
-                        </NextLink>
-                    </NavbarItem>
-                ))}
-            </ul>
-
-            <NavbarItem className="hidden sm:flex gap-6">
-                <LocaleSwitcher />
-                <ThemeSwitch/>
+      <NavbarContent
+        className="hidden sm:flex basis-1/5 sm:basis-full gap-20"
+        justify="end"
+      >
+        <ul className="hidden md:flex gap-10 justify-start">
+          {siteConfig.navItems.map((item) => (
+            <NavbarItem key={item.href}>
+              <NextLink
+                className={clsx(
+                  linkStyles({ color: "foreground" }),
+                  "data-[active=true]:text-primary data-[active=true]:font-medium font-bold text-sm px-[17px] py-2.5",
+                )}
+                color="foreground"
+                href={item.href}
+              >
+                {item.label}
+              </NextLink>
             </NavbarItem>
-        </NavbarContent>
+          ))}
+        </ul>
 
-        <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
-            <ThemeSwitch/>
-            <NavbarMenuToggle/>
-        </NavbarContent>
+        <NavbarItem className="hidden md:flex gap-6">
+          <LocaleSwitcher />
+          <ThemeSwitch />
+        </NavbarItem>
+      </NavbarContent>
 
-        <NavbarMenu>
-            <div className="mx-4 mt-2 flex flex-col gap-2">
-                {siteConfig.navItems.map((item, index) => (
-                    <NavbarMenuItem key={`${item}-${index}`}>
-                        <Link
-                            color={
-                                index === 2
-                                    ? "primary"
-                                    : index === siteConfig.navItems.length - 1
-                                        ? "danger"
-                                        : "foreground"
-                            }
-                            href="#"
-                            size="lg"
-                        >
-                            {item.label}
-                        </Link>
-                    </NavbarMenuItem>
-                ))}
-            </div>
-        </NavbarMenu>
+      <NavbarContent className="md:hidden basis-1 pl-4" justify="end">
+        <ThemeSwitch />
+        <NavbarMenuToggle />
+      </NavbarContent>
+
+      <NavbarMenu>
+        <div className="mx-4 mt-2 flex flex-col gap-2">
+          {siteConfig.navItems.map((item, index) => (
+            <NavbarMenuItem key={`${item}-${index}`}>
+              <Link color="foreground" href="#" size="lg">
+                {item.label}
+              </Link>
+            </NavbarMenuItem>
+          ))}
+        </div>
+      </NavbarMenu>
     </NextUINavbar>
   );
 };
