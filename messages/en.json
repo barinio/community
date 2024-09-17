@@ -1,5 +1,56 @@
 {
-  "HomePage": {
-    "title": "Hello world!"
+  "NavItems": {
+    "home": "Home",
+    "services": "Services",
+    "ourCommitment": "Our Commitment"
+  },
+  "HomePageMain": {
+    "titleAchieveMore": "Achieve more with CommUnité"
+  },
+  "HomePageHero": {
+    "heroTitle": "CommUnité",
+    "heroSubtitle": "Your expert partner in innovative accounts receivable management",
+    "heroBtnLinkWrite": "Write to us",
+    "heroBtnLinkCallUs": "Call us"
+  },
+  "FutureSolutionsSection": {
+    "title": "CommUnité – Future Solutions",
+
+    "title1": "CommUnité offers a complete and adaptive solution for managing accounts receivable under 90 days and amicable and legal recovery of overdue debts.",
+    "description1": "Our close collaboration with our joint venture, the law firm Maîtres du Recouvrement, allows us to offer an unmatched integrated solution.",
+
+    "title2": "At CommUnité, we know that behind every debt are different realities",
+    "description2_1": "Those of debtor-clients whose communication must be maintained or restored, those of agreements to be structured and relationships to be preserved. By recognizing the importance of each situation and the legal framework governing the creditor-debtor relationship - and vice versa - we deploy tailored strategies that preserve and enhance the relationship with your clients, while ensuring optimal recovery.",
+    "description2_2": "CommUnité is the strategic ally of optimal, economical, and secure financial management, supported by top-tier legal expertise.",
+
+    "title3": "Our mission",
+    "description3": "To optimize the management of client accounts by combining legal supervision, receivables management, bad debt recovery, and accounting solutions, all enhanced by cutting-edge tools.",
+
+    "title4": "Get more work done with fewer employees",
+
+    "title5": "Integrated solutions for simplified receivables management",
+
+    "title6": "Contact us for more information",
+    "btnMore": "Find out more"
+  },
+
+  "Footer": {
+    "home": "Home",
+    "services": "Services",
+    "ourCommitment": "Our Commitment",
+
+    "title": "Stay up to date with the latest news",
+    "description": "Join our newsletter to stay informed about features and releases.",
+
+    "inputTitle": "Stay updated",
+    "inputPlaceholder": "Enter your email",
+    "button": "Subscribe",
+
+    "subTitle": "CommUnité – Future Solutions",
+    "titleCompany": "Company",
+    "titleSupport": "Support",
+
+    "privacyPolicy": "Privacy Policy",
+    "contact": "Contact"
   }
 }

@@ -13,6 +13,7 @@ import { Link } from "@nextui-org/link";
 import { link as linkStyles } from "@nextui-org/theme";
 import NextLink from "next/link";
 import clsx from "clsx";
+import { useTranslations } from "next-intl";
 
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
@@ -20,6 +21,8 @@ import { Logo } from "@/components/icons";
 import { LocaleSwitcher } from "@/components/LocaleSwitcher";
 
 export const Navbar = () => {
+  const t = useTranslations("NavItems");
+
   return (
     <NextUINavbar maxWidth="xl" className="mt-2" position="sticky">
       <NavbarBrand as="li" className="gap-3 max-w-fit">
@@ -39,12 +42,12 @@ export const Navbar = () => {
               <NextLink
                 className={clsx(
                   linkStyles({ color: "foreground" }),
-                  "data-[active=true]:text-primary data-[active=true]:font-medium font-bold text-sm px-[17px] py-2.5",
+                  "data-[active=true]:text-primary data-[active=true]:font-medium font-bold text-sm px-[17px] py-2.5 uppercase",
                 )}
                 color="foreground"
                 href={item.href}
               >
-                {item.label}
+                {t(item.label)}
               </NextLink>
             </NavbarItem>
           ))}
@@ -65,8 +68,8 @@ export const Navbar = () => {
         <div className="mx-4 mt-2 flex flex-col gap-2">
           {siteConfig.navItems.map((item, index) => (
             <NavbarMenuItem key={`${item}-${index}`}>
-              <Link color="foreground" href="#" size="lg">
-                {item.label}
+              <Link color="foreground" className="uppercase" href="#" size="lg">
+                {t(item.label)}
               </Link>
             </NavbarMenuItem>
           ))}
