@@ -1,9 +1,11 @@
 export type SiteConfig = typeof siteConfig;
 
-import instagram from "@/images/instagram.svg"
-import facebook from "@/images/facebook.svg"
-import twitter from "@/images/twitter.svg"
-import linkedin from "@/images/linkedin.svg"
+import {
+  FacebookIcon,
+  InstagramIcon,
+  LinkedinIcon,
+  TwitterIcon,
+} from "@/components/icons";
 
 export const siteConfig = {
   name: "CommUnity",
@@ -11,16 +13,26 @@ export const siteConfig = {
     "Votre partenaire expert en gestion innovante de comptes recevables",
   navItems: [
     {
-      label: "Welcome",
+      label: "home",
       href: "/",
     },
     {
-      label: "Services",
+      label: "services",
       href: "/services",
     },
     {
-      label: "Our commitment",
+      label: "ourCommitment",
       href: "/our-commitment",
+    },
+  ],
+  footerOtherLinks: [
+    {
+      label: "privacyPolicy",
+      href: "/privacy-policy",
+    },
+    {
+      label: "contact",
+      href: "/contact",
     },
   ],
   // navMenuItems: [
@@ -39,19 +51,20 @@ export const siteConfig = {
   // ],
   links: [
     {
-      icon: instagram,
-      link: "https://nextui.org"
+      Icon: InstagramIcon,
+      link: "https://nextui.org",
     },
     {
-      icon:facebook,
-      link: "https://discord.gg/9b6yyZKmH4"
+      Icon: FacebookIcon,
+      link: "https://discord.gg/9b6yyZKmH4",
     },
     {
-      icon:twitter,
-      link: "https://twitter.com/getnextui"
+      Icon: TwitterIcon,
+      link: "https://twitter.com/getnextui",
     },
     {
-      icon:linkedin,
+      Icon: LinkedinIcon,
       link: "https://patreon.com/jrgarciadev",
-    }]
+    },
+  ],
 };
