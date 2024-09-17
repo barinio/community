@@ -1,5 +1,55 @@
 {
-  "HomePage": {
-    "title": "Bonjour le monde!"
+  "NavItems": {
+    "home": "Accueil",
+    "services": "Services",
+    "ourCommitment": "Notre engagement"
+  },
+  "HomePageMain": {
+    "titleAchieveMore": "Réalisez davantage avec CommUnité"
+  },
+  "HomePageHero": {
+    "heroTitle": "CommUnité",
+    "heroSubtitle": "Votre partenaire expert en gestion innovante de comptes recevables",
+    "heroBtnLinkWrite": "Écrivez-nous",
+    "heroBtnLinkCallUs": "Appelez-nous"
+  },
+  "FutureSolutionsSection": {
+    "title": "CommUnité – Solutions d’avenir",
+
+    "title1": "CommUnité offre une solution complète et adaptative pour la gestion des comptes recevables de moins de 90 jours et le recouvrement amiable et judiciaire des créances passées ce délai.",
+    "description1": "Notre collaboration étroite avec notre co-entreprise, le Cabinet d'avocats Maîtres du Recouvrement, nous permet d'offrir une solution intégrée inégalée.",
+
+    "title2": "Chez CommUnité, nous savons que derrière toute créance se cachent différentes réalités",
+    "description2_1": "Celles de clients-débiteurs dont la communication doit être maintenue ou rétablie, celles d’entente à encadrer et de relations à préserver. En reconnaissant l'importance de chaque situation et du cadre légal encadrant les rapports du créancier et du débiteur - et vice-versa - nous déployons des stratégies sur mesure qui préservent et améliorent la relation avec vos clients, tout en garantissant un recouvrement optimal.",
+    "description2_2": "CommUnite est l’allié stratégique d’une gestion financière optimale, économique et sécurisée, soutenue par une expertise juridique de premier plan.",
+
+    "title3": "Notre mission",
+    "description3": "Optimiser la gestion des comptes-clients en combinant encadrement juridique, gestion des recevables, recouvrement des mauvaises créances et solutions comptable, le tout optimisé par des outils de pointe.",
+
+    "title4": "Faites plus de travail avec moins d’employés",
+
+    "title5": "Solutions intégrées pour une gestion simplifiée de vos recevables",
+
+    "title6": "Contactez-nous pour plus d’informations",
+    "btnMore": "Renseignez-vous"
+  },
+  "Footer": {
+    "home": "Accueil",
+    "services": "Services",
+    "ourCommitment": "Notre engagement",
+
+    "title": "Restez au courant des dernières nouveautés",
+    "description": "Rejoignez notre newsletter pour rester informé des fonctionnalités et des versions.",
+
+    "inputTitle": "Restez à jour",
+    "inputPlaceholder": "Entrez votre courriel",
+    "button": "S'abonner",
+
+    "subTitle": "CommUnité – Solutions d’avenir",
+    "titleCompany": "Company",
+    "titleSupport": "Support",
+
+    "privacyPolicy": "Politique de confidentialite",
+    "contact": "Contact"
   }
 }
