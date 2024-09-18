@@ -2,18 +2,59 @@ import { Button } from "@nextui-org/button";
 import { Card, CardBody } from "@nextui-org/card";
 import Image from "next/image";
 import Link from "next/link";
-import icon1 from "./icon-service1.svg";
-import icon2 from "./icon-service2.svg";
-import icon3 from "./icon-service3.svg";
-import serviceLogo from "../../../images/serviceImg.png";
-import { ArrowIcon } from "./icons";
+import { useTranslations } from "next-intl";
+
+import {
+  ArrowIcon,
+  IconService1,
+  IconService2,
+  IconService3,
+} from "@/components/icons";
+import serviceLogo from "@/images/serviceImg.png";
+
+const cardsData = [
+  {
+    title: "L'élaboration d'une politique de recouvrement",
+    description: "Description de la première carte",
+    bgColor: "#171717",
+    textColor: "#fff",
+    buttonBg: "#ffdd33",
+    buttonTextColor: "black",
+  },
+  {
+    title: "La révision et la rédaction des contrats",
+    description: "Description de la deuxième carte",
+    bgColor: "#ffdd33",
+    textColor: "#000",
+    buttonBg: "#000",
+    buttonTextColor: "#fff",
+  },
+  {
+    title: "Rédaction de scripts de contact et d’appels",
+    description: "Description de la troisième carte",
+    bgColor: "#ffdd33",
+    textColor: "#000",
+    buttonBg: "#000",
+    buttonTextColor: "#fff",
+  },
+  {
+    title: "Conseils et accompagnement juridiques",
+    description: "Description de la quatrième carte",
+    bgColor: "#171717",
+    textColor: "#fff",
+    buttonBg: "#ffdd33",
+    buttonTextColor: "black",
+  },
+];
 
 export default function Services() {
+  const t = useTranslations("HomePageMain");
+
   return (
-    <div>
-      <section className="flex flex-row justify-between mb-[178px] mt-16 ">
+    <div className="">
+      <section className="flex flex-col lg:flex-row justify-between mb-[178px] mt-16 ">
         <div>
-          <p className="max-w-[780px] text-[48px] text-[#171717] leading-[100%] font-bold tracking-[-1.4px] mb-[22px]">
+          <p className="max-w-[780px] text-[48px] text-[#171717] dark:text-[#fff] leading-[100%] font-bold tracking-[-1.4px] mb-[22px]">
             Chez CommUnité, nous proposons une gamme complète de services conçus
             pour s’adapter aux besoins spécifiques de chaque entreprise.
           </p>
@@ -25,7 +66,7 @@ export default function Services() {
           </p>
         </div>
 
-        <div className="relative pr-4">
+        <div className="relative hidden md:block">
           <Image
             src={serviceLogo}
             width={238}
@@ -59,21 +100,16 @@ export default function Services() {
           </Card>
         </div>
       </section>
+
       <h2 className="text-center text-[45px] leading-[38px] tracking-tight font-bold uppercase mb-[86px]">
         Nos services
       </h2>
 
-      <div className="flex flex-row gap-6 mb-6">
+      <div className="flex flex-col md:flex-row gap-6 mb-6">
         <Card className="rounded-[32px] bg-[#F9FAFB] dark:bg-[#171717]">
           <CardBody className="p-[45px]">
             <div className="flex items-center justify-center w-[72px] h-[72px] rounded-full bg-[#FFDD33] mb-[50px]">
-              <Image
-                src={icon1}
-                width={47}
-                height={51}
-                alt="Icon"
-                className="inline-block "
-              />
+              <IconService1 />
             </div>
 
             <p className="text-3xl mb-5">
@@ -89,8 +125,8 @@ export default function Services() {
 
             <div className="flex justify-center mt-auto">
               <Button
-                // href="/services"
-                // as={Link}
+                href="/services"
+                as={Link}
                 radius="full"
                 color="warning"
                 endContent={<ArrowIcon />}
@@ -107,13 +143,7 @@ export default function Services() {
         <Card className="rounded-[32px] bg-[#F9FAFB] dark:bg-[#171717]">
           <CardBody className="p-[45px]">
             <div className="flex items-center justify-center w-[72px] h-[72px] rounded-full bg-[#FFDD33] mb-[50px]">
-              <Image
-                src={icon2}
-                width={47}
-                height={51}
-                alt="Picture of the author"
-                className="inline-block "
-              />
+              <IconService2 />
             </div>
 
             <p className="text-3xl mb-5">
@@ -131,8 +161,8 @@ export default function Services() {
 
             <div className="flex justify-center mt-auto">
               <Button
-                // href="/services"
-                // as={Link}
+                href="/services"
+                as={Link}
                 radius="full"
                 color="warning"
                 endContent={<ArrowIcon />}
@@ -150,13 +180,7 @@ export default function Services() {
       <Card className="rounded-[32px] bg-[#F9FAFB] dark:bg-[#171717] mb-14">
         <CardBody className="p-[45px]">
           <div className="flex items-center justify-center w-[72px] h-[72px] rounded-full bg-[#FFDD33] mb-[50px]">
-            <Image
-              src={icon3}
-              width={40}
-              height={35}
-              alt="Picture of the author"
-              className="inline-block "
-            />
+            <IconService3 />
           </div>
 
           <h3 className="text-4xl mb-12">
@@ -181,105 +205,141 @@ export default function Services() {
         Nos services comprennent
       </h2>
 
-      <div className="flex flex-row gap-[70px] mb-[104px]">
-        <Card className="flex-1 rounded-[32px] bg-[#171717] dark:bg-[#171717]">
-          <CardBody className="px-[78px] pt-[78px] pb-[44px]">
-            <p className="w-[300px] h-[170px] text-[45px] leading-[58px] tracking-tight text-[#fff] mb-[120px]">
-              L'élaboration d'une politique de recouvrement
-            </p>
-
-            <div className="flex justify-center">
-              <Button
-                // href="/services"
-                // as={Link}
-                radius="full"
-                color="warning"
-                endContent={<ArrowIcon />}
-                // variant="solid"
-                className="font-bold text-xl w-[220px] py-8 px-6 bg-[#ffdd33] text-black "
-              >
-                En savoir plus
-                {/* {t("servicesBtn")} */}
-              </Button>
-            </div>
-          </CardBody>
-        </Card>
-
-        <Card className="flex-1 rounded-[32px] bg-[#ffdd33] dark:bg-[#171717] text-[#000000]">
-          <CardBody className="px-[78px] pt-[78px] pb-[44px]">
-            <p className="w-[300px] h-[170px] text-[45px] leading-[58px] tracking-tight mb-[120px]">
-              La révision et la rédaction des contrats
-            </p>
-
-            <div className="flex justify-center">
-              <Button
-                // href="/services"
-                // as={Link}
-                radius="full"
-                color="warning"
-                endContent={<ArrowIcon />}
-                // variant="solid"
-                className="font-bold text-xl w-[220px] text-[#fff] py-8 px-6 bg-[#000] "
-              >
-                En savoir plus
-                {/* {t("servicesBtn")} */}
-              </Button>
-            </div>
-          </CardBody>
-        </Card>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-[70px] mb-[104px]">
+        {cardsData.map((card, index) => (
+          <Card
+            key={index}
+            className="rounded-[32px]"
+            style={{ backgroundColor: card.bgColor, color: card.textColor }}
+          >
+            <CardBody className="px-[78px] pt-[78px] pb-[44px]">
+              <p className="w-[300px] h-[170px] text-[45px] leading-[58px] tracking-tight mb-[120px]">
+                {card.title}
+              </p>
+              <div className="flex justify-center">
+                <Button
+                  href="/services"
+                  as={Link}
+                  radius="full"
+                  color="warning"
+                  endContent={<ArrowIcon />}
+                  className="font-bold text-xl w-[220px] py-8 px-6"
+                  style={{
+                    backgroundColor: card.buttonBg,
+                    color: card.buttonTextColor,
+                  }}
+                >
+                  En savoir plus
+                </Button>
+              </div>
+            </CardBody>
+          </Card>
+        ))}
       </div>
 
-      <h2 className="text-center text-[45px] leading-[38px] tracking-tight font-bold  mb-[102px]">
+      <h2 className="text-center text-[45px] leading-[38px] tracking-tight font-bold  mb-[160px]">
         CommUnité – Solutions d’avenir
       </h2>
 
-      <div className="flex flex-row gap-[70px] mb-6">
-        <Card className="flex-1 rounded-[32px] bg-[#ffdd33] dark:bg-[#171717] text-[#000000]">
-          <CardBody className="px-[78px] pt-[78px] pb-[44px]">
-            <p className="w-[300px] h-[170px] text-[45px] leading-[58px] tracking-tight mb-[120px]">
-              Rédaction de scripts de contact et d’appels
-            </p>
-
-            <div className="flex justify-center">
-              <Button
-                // href="/services"
-                // as={Link}
-                radius="full"
-                color="warning"
-                endContent={<ArrowIcon />}
-                // variant="solid"
-                className="font-bold text-xl w-[220px] text-[#fff] py-8 px-6 bg-[#000] "
-              >
-                En savoir plus
-                {/* {t("servicesBtn")} */}
-              </Button>
-            </div>
-          </CardBody>
-        </Card>
-
-        <Card className="flex-1 rounded-[32px] bg-[#171717] dark:bg-[#171717]">
-          <CardBody className="px-[78px] pt-[78px] pb-[44px]">
-            <p className="w-[300px] h-[170px] text-[45px] leading-[58px] tracking-tight text-[#fff] mb-auto">
-              Conseils et accompagnement juridiques
-            </p>
-
-            <div className="flex justify-center">
-              <Button
-                // href="/services"
-                // as={Link}
-                radius="full"
-                color="warning"
-                endContent={<ArrowIcon />}
-                // variant="solid"
-                className="font-bold text-xl w-[220px] py-8 px-6 bg-[#ffdd33] text-black "
-              >
-                En savoir plus
-                {/* {t("servicesBtn")} */}
-              </Button>
-            </div>
-          </CardBody>
-        </Card>
-      </div>
+      <h2 className="font-bold text-[58px] md:text-[110px] text-center leading-[0.82] tracking-[-.03em]  mb-[90px]">
+        {t("titleAchieveMore")}
+      </h2>
     </div>
   );
 }
+
+{
+  /* <div className="flex flex-row gap-[70px] mb-[104px]">
+  <Card className="flex-1 rounded-[32px] bg-[#171717] dark:bg-[#171717]">
+    <CardBody className="px-[78px] pt-[78px] pb-[44px]">
+      <p className="w-[300px] h-[170px] text-[45px] leading-[58px] tracking-tight text-[#fff] mb-[120px]">
+        L'élaboration d'une politique de recouvrement
+      </p>
+
+      <div className="flex justify-center">
+        <Button
+          href="/services"
+          as={Link}
+          radius="full"
+          color="warning"
+          endContent={<ArrowIcon />}
+          // variant="solid"
+          className="font-bold text-xl w-[220px] py-8 px-6 bg-[#ffdd33] text-black "
+        >
+          En savoir plus
+          {/* {t("servicesBtn")} */
+}
+// </Button>
+// </div>
+// </CardBody>
+// </Card>
+
+// <Card className="flex-1 rounded-[32px] bg-[#ffdd33] dark:bg-[#ffdd33] text-[#000000]">
+//   <CardBody className="px-[78px] pt-[78px] pb-[44px]">
+//     <p className="w-[300px] h-[170px] text-[45px] leading-[58px] tracking-tight mb-[120px]">
+//       La révision et la rédaction des contrats
+//     </p>
+
+//     <div className="flex justify-center">
+//       <Button
+//         href="/services"
+//         as={Link}
+//         radius="full"
+//         color="warning"
+//         endContent={<ArrowIcon />}
+//         // variant="solid"
+//         className="font-bold text-xl w-[220px] text-[#fff] py-8 px-6 bg-[#000] "
+//       >
+//         En savoir plus
+//         {/* {t("servicesBtn")} */}
+//       </Button>
+//     </div>
+//   </CardBody>
+// </Card>
+
+// <Card className="flex-1 rounded-[32px] bg-[#ffdd33] dark:bg-[#ffdd33] text-[#000000]">
+//   <CardBody className="px-[78px] pt-[78px] pb-[44px]">
+//     <p className="w-[300px] h-[170px] text-[45px] leading-[58px] tracking-tight mb-[120px]">
+//       Rédaction de scripts de contact et d’appels
+//     </p>
+
+//     <div className="flex justify-center">
+//       <Button
+//         href="/services"
+//         as={Link}
+//         radius="full"
+//         color="warning"
+//         endContent={<ArrowIcon />}
+//         // variant="solid"
+//         className="font-bold text-xl w-[220px] text-[#fff] py-8 px-6 bg-[#000] "
+//       >
+//         En savoir plus
+//         {/* {t("servicesBtn")} */}
+//       </Button>
+//     </div>
+//   </CardBody>
+// </Card>
+
+// <Card className="flex-1 rounded-[32px] bg-[#171717] dark:bg-[#171717]">
+//   <CardBody className="px-[78px] pt-[78px] pb-[44px]">
+//     <p className="w-[300px] h-[170px] text-[45px] leading-[58px] tracking-tight text-[#fff] mb-auto">
+//       Conseils et accompagnement juridiques
+//     </p>
+
+//     <div className="flex justify-center">
+//       <Button
+//         href="/services"
+//         as={Link}
+//         radius="full"
+//         color="warning"
+//         endContent={<ArrowIcon />}
+//         // variant="solid"
+//         className="font-bold text-xl w-[220px] py-8 px-6 bg-[#ffdd33] text-black "
+//       >
+//         En savoir plus
+//         {/* {t("servicesBtn")} */}
+//       </Button>
+//     </div>
+//   </CardBody>
+// </Card>
+// </div>; */}

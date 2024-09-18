@@ -1,29 +1,79 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { ScrollShadow } from "@nextui-org/scroll-shadow";
 import { Tab, Tabs } from "@nextui-org/tabs";
-import { usePathname, useRouter } from "next/navigation";
-import { dataCommitment } from "./data";
 import Image from "next/image";
+import { Button } from "@nextui-org/button";
+
+import { dataCommitment } from "@/data/dataCommitment";
+
+const renderWithBold = (text: string) => {
+  const parts = text.split(/(\*.*?\*)/);
+
+  return parts.map((part, index) => {
+    if (part.startsWith("*") && part.endsWith("*")) {
+      return (
+        <strong key={index} className="font-bold">
+          {part.slice(1, -1)}
+        </strong>
+      );
+    }
+
+    return part;
+  });
+};
+
+const renderDescription = (description: any[]) => {
+  return description.map((item, index) => {
+    if (typeof item === "string") {
+      return (
+        <p key={index} className="text-2xl mb-8 last:pt-6 text-justify">
+          {renderWithBold(item)}
+        </p>
+      );
+    } else if (Array.isArray(item)) {
+      return (
+        <ul key={index} className="list-disc list-inside  mb-10">
+          {item.map((subItem, subIndex) => (
+            <li key={subIndex} className="text-2xl text-justify pl-[20px]">
+              {renderWithBold(subItem)}
+            </li>
+          ))}
+        </ul>
+      );
+    }
+
+    return null;
+  });
+};
+
+type ScrollShadowVisibility =
+  | "auto"
+  | "top"
+  | "bottom"
+  | "left"
+  | "right"
+  | "both"
+  | "none";
 
 export default function OurCommitment() {
-  const [selectedTab, setSelectedTab] = useState(dataCommitment[0].id);
-  const pathname = usePathname();
-  const router = useRouter();
+  const [selectedTab, setSelectedTab] = useState<string>(dataCommitment[0].id);
 
-  // useEffect(() => {
-  //   const id = pathname.split("/").pop();
+  const currentTab = dataCommitment.find((tab) => tab.id === selectedTab);
 
-  //   if (dataCommitment.some((item) => item.id === id)) {
-  //     setSelectedTab(id);
-  //   }
-  // }, [pathname]);
-
-  const handleTabChange = (key) => {
+  const handleTabChange = (key: any) => {
     setSelectedTab(key);
-    // router.push(`/our-commitment/${key}`, undefined, { shallow: true });
   };
+
+  // const [shadowVisibility, setShadowVisibility] =
+  //   useState<ScrollShadowVisibility>("auto");
+
+  // const handleVisibilityChange = (visibility: ScrollShadowVisibility) => {
+  //   setShadowVisibility(visibility);
+  //   console.log("Shadow visibility changed:", visibility);
+  //   // Здесь вы можете добавить дополнительную логику, основанную на изменении видимости
+  // };
 
   return (
     <>
@@ -31,6 +81,7 @@ export default function OurCommitment() {
         hideScrollBar
         className=" w-full max-w-[1280px] overflow-x-auto"
         orientation="horizontal"
+        // onVisibilityChange={handleVisibilityChange}
       >
         <Tabs
           // selectedKey={pathname}
@@ -51,30 +102,41 @@ export default function OurCommitment() {
               // href={`/our-commitment/${tab.id}`}
               key={tab.id}
               title={tab.title}
-            >
-              <section key={tab.id}>
-                <div className="clearfix">
-                  <div className="w-[520px] float-right mt-2 ml-10 mb-5">
-                    <Image
-                      alt={tab.title}
-                      className="w-full h-full object-contain transition-transform duration-300"
-                      width={520}
-                      height={420}
-                      src={tab.img}
-                    />
-                  </div>
-                  {tab.description.map((item, index) => (
-                    <p key={index} className="text-xl mb-3 last:mb-14">
-                      {item}
-                    </p>
-                  ))}
-                </div>
-                <p className="text-xl text-[#D1A75B] mb-3">{"-"}</p>
-              </section>
-            </Tab>
+            />
           ))}
         </Tabs>
       </ScrollShadow>
+
+      {currentTab && (
+        <section key={currentTab.id}>
+          <div className="clearfix mb-[85px]">
+            <div className="w-[320px] md:w-[420px] lg:w-[520px] sm:float-right mt-2 ml-16 mb-20">
+              <Image
+                alt={currentTab.title}
+                className="w-full h-full object-contain transition-transform duration-300"
+                width={520}
+                height={420}
+                src={currentTab.img}
+              />
+            </div>
+            {renderDescription(currentTab.description)}
+          </div>
+
+          <div className="flex justify-center mt-auto">
+            <Button
+              // href="/services"
+              // as={Link}
+              radius="full"
+              color="warning"
+              // variant="solid"
+              className="font-bold text-xl w-[220px] py-8 px-6 bg-[#ffdd33] text-black mb-[90px]"
+            >
+              Contactez-nous
+              {/* {t("servicesBtn")} */}
+            </Button>
+          </div>
+        </section>
+      )}
     </>
   );
 }
