@@ -3,18 +3,10 @@ import { useTranslations } from "next-intl";
 
 import heroImg from "@/images/hero-img.png";
 import TitleAchieveMore from "@/components/TitleAchieveMore";
+import { OurCommitmentList } from "@/data/OurCommitmentList";
 
 export default function OurCommitment() {
   const t = useTranslations("OurCommitment");
-
-  const OurCommitmentList = [
-    { number: 1, title: t("title1"), description: t("description1") },
-    { number: 2, title: t("title2"), description: t("description2") },
-    { number: 3, title: t("title3"), description: t("description3") },
-    { number: 4, title: t("title4"), description: t("description4") },
-    { number: 5, title: t("title5"), description: t("description5") },
-    { number: 6, title: t("title6"), description: t("description6") },
-  ];
 
   return (
     <>
@@ -33,7 +25,7 @@ export default function OurCommitment() {
         </div>
       </div>
 
-      <ul className="flex justify-center flex-wrap gap-x-6 gap-y-11 mb-5 [&>*:nth-child(-n+2)]:bg-main-yellow [&>*:nth-child(n+3):nth-child(-n+4)]:bg-black [&>*:nth-child(n+5)]:bg-[#F9FAFB]">
+      <ul className="flex justify-center flex-wrap gap-x-6 gap-y-11 mb-5 [&>*:nth-child(-n+2)]:bg-main-yellow [&>*:nth-child(n+3):nth-child(-n+4)]:bg-black [&>*:nth-child(n+3):nth-child(-n+4)]:dark:bg-[#171717] [&>*:nth-child(n+5)]:bg-[#F9FAFB]">
         {OurCommitmentList.map(({ number, title, description }) => (
           <li key={number} className="rounded-[32px] w-[628px]">
             <section className="w-full max-w-[975px] lg:max-w-[628px] p-[45px]">
@@ -45,12 +37,12 @@ export default function OurCommitment() {
               <h3
                 className={`font-bold text-[38px] leading-[0.98] text-justify ${number >= 3 && number <= 4 ? "text-white" : "dark:text-[#1A1D1F]"}`}
               >
-                {title}
+                {t(title)}
               </h3>
               <p
                 className={`text-[38px] leading-[0.98] text-justify ${number >= 3 && number <= 4 ? "text-white" : "dark:text-[#1A1D1F]"}`}
               >
-                {description}
+                {t(description)}
               </p>
             </section>
           </li>
