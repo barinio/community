@@ -52,5 +52,94 @@
 
     "privacyPolicy": "Privacy Policy",
     "contact": "Contact"
+  },
+
+  "ServicePage": {
+    "title": "At CommUnité, we offer a full range of services designed to meet the specific needs of each business.",
+    "textTitle": "Thanks to our diverse expertise, innovative approach, and guaranteed legal support, we help our clients improve their receivables, optimize their customer relationships, and secure their cash flow.",
+
+    "reviewsTitle": "Your credit scoring",
+    "reviewsText": "Good",
+    "reviewsText2": "Optimization of receivables management",
+    "reviewsText3": "Improve your performance and reach new heights",
+
+    "subTitle1": "Our services",
+    "cardText1": "Maximize the management of your receivables at minimal cost with our fully or partially automated services. Taking into account the quality of available information and payment deadlines for receivables, we offer customized solutions tailored to your needs. Maintain healthy cash flow with our proactive management of accounts under 90 days. We ensure that your invoices are paid on time while maintaining harmonious relationships with your clients.",
+    "cardButton": "Learn more",
+    "cardText2": "Secure the recovery of your receivables by quickly identifying those at the highest risk of delay and intervening appropriately at the right time. Clients who subscribe to our receivables management services benefit from a preferential rate for recovery, provided by our joint venture, the law firm Maîtres du Recouvrement. Our balanced approach combines efficiency, effectiveness, and respectability, allowing you to recover your receivables while maintaining positive professional relationships with your debtors.",
+    "cardTitle3": "'Lex dura, sed lex' – The law is harsh, but it is the law. To ensure that the claims assigned by our clients are flawless from a legal standpoint, we ensure their perfect legal compliance.",
+    "cardText3": "Moreover, we provide advice on debt recovery practices from a legal framework perspective. We guide you on what to say, when to say it, and how to say it, while scrupulously respecting legal obligations and applicable regulations, so that recovery operations are flawless.",
+
+    "subTitle2": "Our services include",
+    "cardIncludeTitle1": "The development of a recovery policy",
+    "cardIncludeTitle2": "The review and drafting of contracts",
+    "cardIncludeTitle3": "Drafting contact and call scripts",
+    "cardIncludeTitle4": "Legal advice and support",
+
+    "subTitle3": "CommUnity – Future Solutions",
+    "titleAchieveMore": "Achieve more with CommUnité"
+  },
+
+  "OurCommitmentPage": {
+    "tabTitle1": "Management of accounts receivable",
+    "tabTitle2": "Masters of Recovery",
+    "tabTitle3": "Development of a recovery policy",
+    "tabTitle4": "The review and drafting of contracts",
+    "tabTitle5": "The establishment of scripts",
+    "tabTitle6": "Legal advice and support",
+
+    "tab1Descr1": "Diligent follow-up is the primary lever for debt recovery. *Our automated solutions allow you to rigorously track all outstanding obligations by sending systematic reminders and ensuring constant communication with your debtors.* With these tools, you can maximize your chances of recovery while reducing the time spent on manual accounts receivable management.",
+    "tab1Descr2": "*We offer our clients complete flexibility in managing their receivables.* You can entrust us with full management, freeing up your time and relieving you of administrative worries. Alternatively, you can choose our online, custom software, designed to perfectly fit your specific needs and optimize your internal management into a simple and intuitive process.",
+    "tab1Descr3": "*This service provides access to a Client Portal that offers detailed reports and real-time tracking of cases, as well as interventions made with your debtor clients.* Additionally, our software is highly secure and certified SOC 2 Type 2, the benchmark for data security and privacy.",
+
+    "tab2Descr1": "*Masters of Recovery* is a law firm specialized in amicable and judicial debt recovery. Our team of professionals is led by lawyers and recovery experts.",
+    "tab2Descr2": "*When a receivable entrusted to CommUnite reaches a predefined delay threshold (generally 90 days), the case is immediately transferred to our joint venture, the law firm Masters of Recovery, which takes charge of the case and deploys more legally binding recovery measures.* The case is then evaluated according to assessment metrics that assign it a Recovery Probability Index (RPI). This proven and intuitive formula combines various data points that inform about the borrower's capacity and solvency, enabling tailored and contextual management of receivables while ensuring unmatched results.",
+    "tab2Descr3": "At Masters of Recovery, we prioritize communication focused on collaboration and constructive problem-solving. *Our exchanges aim to encourage dialogue and value the participants, with the goal of finding mutually beneficial solutions.* Concerned about the interests of our creditor clients, we promote mediation with the debtor party but do not hesitate to resort to coercive judicial measures when dialogue proves unsuccessful or impossible. Creditors can assign their unpaid debts directly to the law firm Masters of Recovery. However, those who assign them first to CommUnite benefit from a discount.",
+    "tab2Descr4": "By choosing CommUnite, you benefit from comprehensive, personalized, and secure debt management, supported by innovative technologies and specialized legal expertise, ensuring optimal results, complete transparency, and support for sustainable growth.",
+
+    "tab3Descr1": "The development of a well-defined recovery policy is essential not only for maintaining good financial health within a company but also for coordinating the various resources assigned to this task. This service includes one or all of the following:",
+    "tab3SubDescr1": "*Recovery Policy:* Drafting or revising the existing policy and practices. Identifying gaps and proposing improvements.",
+    "tab3SubDescr2": "*Analyze the current situation:* Analyze the company's current debt recovery practices, identify weaknesses, and opportunities for improvement.",
+    "tab3SubDescr3": "*Define payment deadlines:* Set clear and realistic deadlines for invoice payment.",
+    "tab3SubDescr4": "*Establish procedures:* Implement standardized processes for managing receivables, including follow-up steps and actions to take in case of non-payment.",
+    "tab3SubDescr5": "*Staff training:* Training internal teams on the new recovery procedures to ensure effective implementation. Coordination with external providers, if applicable.",
+    "tab3SubDescr6": "*Implementation of tracking tools:* Development or integration of receivables management software for real-time tracking of payments and follow-ups, along with regular monitoring for adjustments based on results achieved.",
+    "tab3Descr2": "By choosing CommUnite, you benefit from comprehensive, personalized, and secure debt management, supported by innovative technologies and specialized legal expertise, ensuring optimal results, complete transparency, and support for sustainable growth.",
+
+    "tab4Descr1": "*Contracts are the fundamental cornerstone of business relationships, establishing a clear and secure framework for commitments between business partners.* They define not only the rights and obligations of each party but also ensure the protection of the company's interests in case of disputes or payment defaults. Rigorous contract management helps prevent risks and secure transactions, while strengthening trust and transparency in your collaborations.",
+    "tab4SubDescr1": "This service includes:",
+    "tab4SubDescr2": "*Review of existing contracts:* Examine current contracts to ensure they adequately protect the company's interests and comply with applicable laws.",
+    "tab4SubDescr3": "*Drafting new contracts:* Create tailored contracts that cover all essential aspects, including the obligations of the parties, payment terms, penalties, interest, guarantees, and required mentions for reporting a debt to credit bureaus, etc.",
+    "tab4SubDescr4": "*Negotiation of terms:* Assist in negotiating contractual terms with clients or partners to ensure that agreements are favorable and fair.",
+    "tab4SubDescr5": "*Clarity and transparency:* Ensure that the terms are written clearly to avoid any ambiguity that could lead to future conflicts.",
+    "tab4Descr2": "By choosing CommUnite, you benefit from comprehensive, personalized, and secure debt management, supported by innovative technologies and specialized legal expertise, ensuring optimal results, complete transparency, and support for sustainable growth.",
+
+    "tab5Descr1": "The establishment of recovery scripts is an essential element of a well-defined recovery policy. Our scripts are designed to guide clients towards settling their debts while maintaining a positive relationship with your company, thus ensuring the preservation of long-term business relationships. They provide clear and consistent guidelines for every interaction with your clients, ensuring that communications remain professional, uniform, and effective.",
+    "tab5Descr2": "Drafting contact and call scripts:",
+    "tab5SubDescr1": "*Creation of standardized scripts*",
+    "tab5SubDescr2": "*For phone calls:* Develop detailed scripts for payment reminders. Our scripts include polite greetings, clear explanations, reasons for the call, open-ended questions to understand the client's situation, and proposed payment solutions.",
+    "tab5SubDescr3": "*For texts, emails, and reminder letters:* Similar to call scripts, written scripts support and complement your communications at each stage of recovery. They are customizable while including key elements such as the amount due, the due date, and payment options, ensuring clear and consistent communication.",
+    "tab5SubDescr4": "*Adapted to situations and days overdue:*",
+    "tab5SubDescr5": "*First reminders:* Friendly and informative scripts for initial communications, reminding the client of the payment deadline and providing information on payment methods.",
+    "tab5SubDescr6": "*Intermediate reminders:* Firmer scripts, emphasizing the importance of maintaining the business relationship by inviting clients to contact you in case of financial difficulty.",
+    "tab5SubDescr7": "*Final reminders:* Clear and determined scripts for last contact attempts, informing the client of imminent subsequent actions and penalties related to the delay.",
+    "tab5SubDescr8": "*Training and role-playing:*",
+    "tab5SubDescr9": "*Staff training:* Organize training sessions where staff can practice using the scripts through role-playing. This allows employees to become familiar with the scripts and learn how to respond to various client reactions.",
+    "tab5SubDescr10": "*Adaptability:* Teach employees how to adapt the scripts based on the client's reaction while remaining within the established guidelines. This flexibility allows for effective management of varied and complex situations.",
+    "tab5SubDescr11": "*Objection management:* Integrate pre-established responses to common client objections, helping agents remain professional and advance the conversation.",
+    "tab5SubDescr12": "*Escalation steps:* Guidelines on situations where it is necessary to escalate a case, for example, to a supervisor, legal department, or management, based on the client's reaction or the amount overdue.",
+    "tab5SubDescr13": "*Regular updates of scripts:*",
+    "tab5SubDescr14": "*Periodic reviews:* Establish a process for regular script review to ensure they remain relevant and effective. Feedback from recovery teams can be used to adjust and improve the scripts.",
+    "tab5SubDescr15": "*Legal compliance:* Ensure that the scripts comply with applicable laws and regulations, respecting client rights while protecting the company's interests.",
+    "tab5Descr3": "By choosing CommUnite, you benefit from comprehensive, personalized, and secure debt management, supported by innovative technologies and specialized legal expertise, ensuring optimal results, complete transparency, and support for sustainable growth.",
+
+    "tab6Descr1": "At CommUnite, a law firm specialized in innovative receivables management, we understand the importance of protecting your business legally. In this regard, we can provide a comprehensive legal support service designed to ensure the security and compliance of your activities. This service aims to offer complete legal assistance to protect your business in the following areas:",
+    "tab6SubDescr1": "*Personalized advice:* We provide legal recommendations tailored to the specific needs of your business, whether for debt management, contract drafting, or regulatory compliance.",
+    "tab6SubDescr2": "*Support in case of disputes:* We assist you in managing conflicts with your clients or partners, including legal representation if necessary, to defend your interests professionally.",
+    "tab6SubDescr3": "*Continuous updates:* We keep you informed of legislative developments that may affect your activities, and we adjust your practices accordingly to minimize legal risks.",
+    "tab6SubDescr4": "*Risk prevention:* We help you identify and mitigate potential legal risks by implementing strategies to avoid conflicts and disputes.",
+    "tab6Descr2": "By choosing CommUnite, you benefit from comprehensive, personalized, and secure debt management, supported by innovative technologies and specialized legal expertise, ensuring optimal results, complete transparency, and support for sustainable growth.",
+
+    "btnCommitment": "Contact us"
   }
 }
