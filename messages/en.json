@@ -3,7 +3,7 @@
     "home": "Home",
     "services": "Services",
     "ourCommitment": "Our Commitment",
-    "benefits": "Benefits"
+    "advantages": "Advantages"
   },
   "AchieveMore": {
     "title": "Achieve more with CommUnité"
@@ -166,5 +166,34 @@
     "tab6Descr2": "By choosing CommUnite, you benefit from comprehensive, personalized, and secure debt management, supported by innovative technologies and specialized legal expertise, ensuring optimal results, complete transparency, and support for sustainable growth.",
 
     "btnCommitment": "Contact us"
+  },
+
+  "AdvantagesPage": {
+    "heroTitle": "By choosing CommUnite, you benefit from a comprehensive range of advantages that go beyond simple receivables management.",
+
+    "advantagesTitle": "CommUnité Advantages",
+
+    "advantagesItemTitle1": "Specialized Expertise",
+    "advantagesItemContent1": "As a law firm specializing in receivables management, we combine legal expertise and collection skills to offer you complete solutions tailored to your needs.",
+    "advantagesItemTitle2": "Personalized Solutions",
+    "advantagesItemContent2": "Every business is unique, which is why our services are fully customizable based on your operations, industry, and the specific challenges you face.",
+    "advantagesItemTitle3": "Enhanced Security",
+    "advantagesItemContent3": "Our solutions are ISO 27001 and SOC 2 Type II certified, ensuring maximum protection of your sensitive data and compliance with information security standards.",
+    "advantagesItemTitle4": "Cutting-Edge Technological Tools",
+    "advantagesItemContent4": "We use the latest technologies to ensure efficient and secure receivables management, keeping you at the forefront of innovation in receivables management.",
+    "advantagesItemTitle5": "Integration of AI and Automation",
+    "advantagesItemContent5": "We integrate artificial intelligence and automation for optimized follow-ups, drastically reducing the need for personnel assigned to the task, which lowers costs while increasing efficiency.",
+    "advantagesItemTitle6": "Performance-Based Pricing",
+    "advantagesItemContent6": "Our pricing is performance-based, meaning you only pay for the results achieved, ensuring optimal return on investment.",
+    "advantagesItemTitle7": "Transfer to Collection",
+    "advantagesItemContent7": "In case of delinquent receivables, we ensure a swift handover of files to our joint venture, the law firm Maîtres du Recouvrement, for a fast and effective legal approach.",
+    "advantagesItemTitle8": "Seamless Integration",
+    "advantagesItemContent8": "We assist you in integrating our solutions with your existing systems, ensuring a smooth transition without interrupting your daily operations.",
+    "advantagesItemTitle9": "Transparency and Communication",
+    "advantagesItemContent9": "We believe in a trust-based relationship with our clients, built on transparency and open communication. You benefit from regular, detailed reports and close collaboration with our managers.",
+    "advantagesItemTitle10": "Sustainable Growth",
+    "advantagesItemContent10": "By transforming your receivables management into a strategic process, we help you establish a solid foundation that promotes not only sustainable growth but also the strengthening of your client relationships.",
+
+    "lastAdvantagesItem": "By choosing CommUnite, you benefit from comprehensive, personalized, and secure receivables management, supported by innovative technologies and specialized legal expertise, ensuring optimal results, total transparency, and guidance toward sustainable growth."
   }
 }

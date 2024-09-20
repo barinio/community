@@ -36,7 +36,7 @@ export const Navbar = () => {
         className="hidden sm:flex basis-1/5 sm:basis-full gap-20"
         justify="end"
       >
-        <ul className="hidden md:flex gap-10 justify-start">
+        <ul className="hidden md:flex gap-x-10 justify-end flex-wrap gap-y-0 max-[965px]:pt-3">
           {siteConfig.navItems.map((item) => (
             <NavbarItem key={item.href}>
               <NextLink
@@ -51,12 +51,11 @@ export const Navbar = () => {
               </NextLink>
             </NavbarItem>
           ))}
+          <li className="hidden md:flex gap-6 px-[17px]">
+            <LocaleSwitcher />
+            <ThemeSwitch />
+          </li>
         </ul>
-
-        <NavbarItem className="hidden md:flex gap-6">
-          <LocaleSwitcher />
-          <ThemeSwitch />
-        </NavbarItem>
       </NavbarContent>
 
       <NavbarContent className="md:hidden basis-1 pl-4" justify="end">
