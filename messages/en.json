@@ -2,10 +2,11 @@
   "NavItems": {
     "home": "Home",
     "services": "Services",
-    "ourCommitment": "Our Commitment"
+    "ourCommitment": "Our Commitment",
+    "benefits": "Benefits"
   },
-  "HomePageMain": {
-    "titleAchieveMore": "Achieve more with CommUnité"
+  "AchieveMore": {
+    "title": "Achieve more with CommUnité"
   },
   "HomePageHero": {
     "heroTitle": "CommUnité",
@@ -32,6 +33,30 @@
 
     "title6": "Contact us for more information",
     "btnMore": "Find out more"
+  },
+
+  "OurCommitment": {
+    "heroTitle": "At CommUnite, we are committed to providing you with accounts receivable management solutions based on six essential pillars:",
+
+    "title1": "Certified Security",
+    "description1": "The protection of your data is our top priority. Our solutions are ISO 27001 and SOC 2 Type II certified, ensuring the highest standards of information security and data control. You can trust our ability to handle your sensitive information with the utmost care.",
+
+    "title2": "Maximum Efficiency",
+    "description2": "Our automated systems are designed to optimize the management of your receivables, facilitating communication with your clients and simplifying the payment process. This automation ensures unmatched accuracy and optimal results, allowing you to recover your receivables quickly and without hassle.",
+
+    "title3": "Transparency and Communication",
+    "description3": "We believe in open and clear communication with our clients. Our managers are always available to collaborate with your teams, ensuring smooth and effective cooperation. We provide detailed reports and regular updates, guaranteeing total transparency and flawless accounting accuracy, so you always have a clear view of your receivables’ status.",
+
+    "title4": "Integration and Support",
+    "description4": "We understand that every business has unique needs. That’s why we offer personalized integration services, tailored to your company's operations and IT systems. Our teams support you every step of the way, from implementation to optimization, so that our solutions seamlessly integrate with your existing processes without disrupting your activities.",
+
+    "title5": "Absolute Reliability",
+    "description5": "Backed by specialized lawyers, our management solutions are rigorously tested to ensure absolute reliability and impeccable legal compliance. You can rely on us to manage your receivables with exemplary professionalism.",
+
+    "title6": "Legal Expertise",
+    "description6": "Our solutions benefit from the continuous expertise of our lawyers and receivables management specialists. Every action taken is optimized, legally sound, and ethically impeccable. We provide full legal support to secure your financial operations and protect your interests at every step.",
+
+    "lastBoxText": "With CommUnité, you benefit from receivables management solutions that not only protect your financial interests but also transform your accounts receivable management into a major asset. We help you create an environment where proactive management of your receivables becomes a driver of sustainable growth and strengthened business relationships."
   },
 
   "Footer": {

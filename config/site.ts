@@ -24,6 +24,10 @@ export const siteConfig = {
       label: "ourCommitment",
       href: "/our-commitment",
     },
+    {
+      label: "benefits",
+      href: "/benefits",
+    },
   ],
   footerOtherLinks: [
     {

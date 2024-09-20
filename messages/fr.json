@@ -2,10 +2,11 @@
   "NavItems": {
     "home": "Accueil",
     "services": "Services",
-    "ourCommitment": "Notre engagement"
+    "ourCommitment": "Notre engagement",
+    "benefits": "Avantages"
   },
-  "HomePageMain": {
-    "titleAchieveMore": "Réalisez davantage avec CommUnité"
+  "AchieveMore": {
+    "title": "Réalisez davantage avec CommUnité"
   },
   "HomePageHero": {
     "heroTitle": "CommUnité",
@@ -33,6 +34,31 @@
     "title6": "Contactez-nous pour plus d’informations",
     "btnMore": "Renseignez-vous"
   },
+
+  "OurCommitment": {
+    "heroTitle": "Chez CommUnite, nous nous engageons à vous offrir des solutions de gestion des comptes recevables qui reposent sur six piliers essentiels :",
+
+    "title1": "Sécurité Certifiée",
+    "description1": "La protection de vos données est notre priorité absolue. Nos solutions sont certifiées ISO 27001 et SOC 2 Type II, garantissant les plus hauts standards de sécurité de l'information et de contrôle des données. Vous pouvez avoir confiance en notre capacité à gérer vos informations sensibles avec le plus grand soin.",
+
+    "title2": "Efficacité Maximale ",
+    "description2": "Nos systèmes automatisés sont conçus pour optimiser la gestion de vos créances, en facilitant la communication avec vos clients et en simplifiant le processus de paiement. Cette automatisation garantit une précision inégalée et des résultats optimaux, vous permettant de récupérer vos créances rapidement et sans tracas.",
+
+    "title3": "Transparence et Communication",
+    "description3": "Nous croyons en une communication ouverte et claire avec nos clients. Nos gestionnaires sont toujours disponibles pour échanger avec vos responsables, assurant une collaboration fluide et efficace. Nous fournissons des rapports détaillés et des mises à jour régulières, garantissant une transparence totale et une précision comptable irréprochable, afin que vous ayez toujours une vision claire de l’état de vos créances.",
+
+    "title4": "Intégration et Accompagnement",
+    "description4": "Nous comprenons que chaque entreprise a des besoins uniques. C'est pourquoi nous offrons un service d'intégration personnalisé, qui s'adapte aux opérations et aux systèmes informatiques de votre entreprise. Nos équipes vous accompagnent à chaque étape, de la mise en place à l'optimisation, pour que nos solutions s'intègrent parfaitement à vos processus existants, sans interruption de vos activités.",
+
+    "title5": "Fiabilité Absolue",
+    "description5": "Encadrées par des avocats spécialisés, nos solutions de gestion sont rigoureusement testées pour assurer une fiabilité absolue et une conformité légale irréprochable. Vous pouvez compter sur nous pour gérer vos créances avec un professionnalisme exemplaire.",
+
+    "title6": "Expertise Juridique ",
+    "description6": "Nos solutions bénéficient de l’expertise continue de nos avocats et experts en gestion de créances. Chaque action entreprise est optimisée, légalement fondée et éthiquement irréprochable. Nous vous offrons un soutien juridique complet pour sécuriser vos opérations financières et protéger vos intérêts à chaque étape.",
+
+    "lastBoxText": "Avec CommUnite, vous bénéficiez de solutions de gestion des créances qui non seulement protègent vos intérêts financiers, mais qui transforment la gestion de vos comptes recevables en un atout majeur. Nous vous aidons à créer un environnement où la gestion proactive de vos créances devient un moteur de croissance durable et de relations commerciales renforcées."
+  },
+
   "Footer": {
     "home": "Accueil",
     "services": "Services",
