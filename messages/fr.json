@@ -3,7 +3,7 @@
     "home": "Accueil",
     "services": "Services",
     "ourCommitment": "Notre engagement",
-    "benefits": "Avantages"
+    "advantages": "Avantages"
   },
   "AchieveMore": {
     "title": "Réalisez davantage avec CommUnité"
@@ -166,5 +166,34 @@
     "tab6Descr2": "En choisissant CommUnite, vous bénéficiez d'une gestion de créances complète, personnalisée et sécurisée, soutenue par des technologies innovantes et une expertise juridique spécialisée, garantissant des résultats optimaux, une transparence totale et un accompagnement vers une croissance durable.",
 
     "btnCommitment": "Contactez-nous"
+  },
+
+  "AdvantagesPage": {
+    "heroTitle": "En choisissant CommUnite, vous bénéficiez d'une gamme complète d'avantages qui vont au-delà de la simple gestion de vos créances.",
+
+    "advantagesTitle": "Avantages CommUnité",
+
+    "advantagesItemTitle1": "Expertise Spécialisée",
+    "advantagesItemContent1": "En tant que cabinet d'avocats spécialisé dans la gestion des créances, nous combinons expertise juridique et compétences en recouvrement pour vous offrir des solutions complètes et adaptées à vos besoins.",
+    "advantagesItemTitle2": "Solutions Personnalisées",
+    "advantagesItemContent2": "Chaque entreprise est unique, c'est pourquoi nos services sont entièrement personnalisables en fonction de vos opérations, de votre secteur d'activité, et des défis spécifiques auxquels vous êtes confronté.",
+    "advantagesItemTitle3": "Sécurité Renforcée",
+    "advantagesItemContent3": "Nos solutions sont certifiées ISO 27001 et SOC 2 Type II, assurant une protection maximale de vos données sensibles et une conformité aux normes de sécurité de l'information.",
+    "advantagesItemTitle4": "Outils Technologiques de Pointe",
+    "advantagesItemContent4": "Nous utilisons les dernières technologies pour garantir une gestion efficace et sécurisée de vos recevables, vous permettant de rester à la pointe de l'innovation dans la gestion des créances.",
+    "advantagesItemTitle5": "Intégration de l'IA et de l'Automatisation",
+    "advantagesItemContent5": "Nous intégrons l'intelligence artificielle et l'automatisation pour des relances optimisées, réduisant drastiquement votre besoin en personnel assigné à la tâche, ce qui permet de réduire les coûts tout en d'augmenter l'efficacité.",
+    "advantagesItemTitle6": "Tarification à la Performance",
+    "advantagesItemContent6": "Nos tarifs sont basés sur la performance, ce qui signifie que vous ne payez que pour les résultats obtenus, garantissant ainsi un retour sur investissement optimal.",
+    "advantagesItemTitle7": "Transfert au Recouvrement",
+    "advantagesItemContent7": "En cas de créances délinquantes, nous assurons une prise en charge rapide des dossiers par notre co-entreprise, le Cabinet d'avocats Maîtres du Recouvrement, pour une approche légale rapide et efficace.",
+    "advantagesItemTitle8": "Intégration Fluide",
+    "advantagesItemContent8": "Nous vous accompagnons dans l'intégration de nos solutions avec vos systèmes existants, garantissant une transition en douceur sans interruption de vos opérations quotidiennes.",
+    "advantagesItemTitle9": "Transparence et Communication",
+    "advantagesItemContent9": "Nous croyons en une relation de confiance avec nos clients, fondée sur la transparence et une communication ouverte. Vous bénéficiez de rapports réguliers et détaillés, ainsi que d'une collaboration étroite avec nos gestionnaires.",
+    "advantagesItemTitle10": "Croissance Durable",
+    "advantagesItemContent10": "En transformant la gestion de vos créances en un processus stratégique, nous vous aidons à établir des bases solides qui favorisent non seulement une croissance durable, mais aussi le renforcement de vos relations avec vos clients.",
+
+    "lastAdvantagesItem": "En choisissant CommUnite, vous bénéficiez d'une gestion de créances complète, personnalisée et sécurisée, soutenue par des technologies innovantes et une expertise juridique spécialisée, garantissant des résultats optimaux, une transparence totale et un accompagnement vers une croissance durable."
   }
 }
