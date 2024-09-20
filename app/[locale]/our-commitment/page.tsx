@@ -1,124 +1,60 @@
-"use client";
-
-import React, { useState } from "react";
-import { ScrollShadow } from "@nextui-org/scroll-shadow";
-import { Tab, Tabs } from "@nextui-org/tabs";
 import Image from "next/image";
-import { Button } from "@nextui-org/button";
 import { useTranslations } from "next-intl";
 
-import { dataCommitment } from "@/data/dataCommitment";
+import heroImg from "@/images/hero-img.png";
+import TitleAchieveMore from "@/components/TitleAchieveMore";
+import { OurCommitmentList } from "@/data/OurCommitmentList";
 
 export default function OurCommitment() {
-  const [selectedTab, setSelectedTab] = useState<string>(dataCommitment[0].id);
-
-  const t = useTranslations("OurCommitmentPage");
-
-  const renderWithBold = (text: string) => {
-    const parts = text.split(/(\*.*?\*)/);
-
-    return parts.map((part, index) => {
-      if (part.startsWith("*") && part.endsWith("*")) {
-        return (
-          <strong key={index} className="font-bold">
-            {part.slice(1, -1)}
-          </strong>
-        );
-      }
-
-      return part;
-    });
-  };
-
-  const renderDescription = (description: any[]) => {
-    return description.map((item, index) => {
-      if (typeof item === "string") {
-        return (
-          <p key={index} className="text-2xl mb-8 last:pt-6 text-justify">
-            {renderWithBold(t(item))}
-          </p>
-        );
-      } else if (Array.isArray(item)) {
-        return (
-          <ul key={index} className="list-disc list-inside  mb-10">
-            {item.map((subItem, subIndex) => (
-              <li key={subIndex} className="text-2xl text-justify pl-[20px]">
-                {renderWithBold(t(subItem))}
-              </li>
-            ))}
-          </ul>
-        );
-      }
-
-      return null;
-    });
-  };
-
-  const currentTab = dataCommitment.find((tab) => tab.id === selectedTab);
-
-  const handleTabChange = (key: any) => {
-    setSelectedTab(key);
-  };
+  const t = useTranslations("OurCommitment");
 
   return (
     <>
-      <ScrollShadow
-        hideScrollBar
-        className=" w-full max-w-[1280px] overflow-x-auto"
-        orientation="horizontal"
-      >
-        <Tabs
-          variant="underlined"
-          aria-label="Navigation Tabs"
-          selectedKey={selectedTab}
-          onSelectionChange={handleTabChange}
-          classNames={{
-            tabList:
-              "gap-6 w-max relative rounded-none p-0 border-b border-divider whitespace-nowrap mb-9",
-            cursor: "w-full",
-            tab: "max-w-fit px-0 h-12",
-            tabContent: "text-default-400",
-          }}
-        >
-          {dataCommitment.map((tab) => (
-            <Tab
-              // href={`/our-commitment/${tab.id}`}
-              key={tab.id}
-              title={t(tab.title)}
-            />
-          ))}
-        </Tabs>
-      </ScrollShadow>
+      <div className="items-center justify-end flex max-w-7xl gap-6 mb-24">
+        <h1 className="max-w-[611px] text-justify w-full font-bold text-6xl dark:text-norm-white text-[#171717] tracking-[-.04em]">
+          {t("heroTitle")}
+        </h1>
+        <div className="w-full">
+          <Image
+            src={heroImg}
+            width={594}
+            height={548}
+            alt="Picture of the author"
+            className="object-fill m-auto"
+          />
+        </div>
+      </div>
 
-      {currentTab && (
-        <section key={currentTab.id}>
-          <div className="clearfix mb-[85px]">
-            <div className="w-[320px] md:w-[420px] lg:w-[520px] sm:float-right mt-2 ml-16 mb-20">
-              <Image
-                alt={currentTab.title}
-                className="w-full h-full object-contain transition-transform duration-300"
-                width={520}
-                height={420}
-                src={currentTab.img}
-              />
-            </div>
-            {renderDescription(currentTab.description)}
-          </div>
+      <ul className="flex justify-center flex-wrap gap-x-6 gap-y-11 mb-5 [&>*:nth-child(-n+2)]:bg-main-yellow [&>*:nth-child(n+3):nth-child(-n+4)]:bg-black [&>*:nth-child(n+3):nth-child(-n+4)]:dark:bg-[#171717] [&>*:nth-child(n+5)]:bg-[#F9FAFB]">
+        {OurCommitmentList.map(({ number, title, description }) => (
+          <li key={number} className="rounded-[32px] w-[628px]">
+            <section className="w-full max-w-[975px] lg:max-w-[628px] p-[45px]">
+              <div
+                className={`mb-[50px] w-[72px] h-[72px] font-bold text-[35px] flex items-center justify-center rounded-full ${number <= 2 ? "bg-black text-white" : "bg-main-yellow text-black"}`}
+              >
+                {number}
+              </div>
+              <h3
+                className={`font-bold text-[38px] leading-[0.98] text-justify ${number >= 3 && number <= 4 ? "text-white" : "dark:text-[#1A1D1F]"}`}
+              >
+                {t(title)}
+              </h3>
+              <p
+                className={`text-[38px] leading-[0.98] text-justify ${number >= 3 && number <= 4 ? "text-white" : "dark:text-[#1A1D1F]"}`}
+              >
+                {t(description)}
+              </p>
+            </section>
+          </li>
+        ))}
+        <li className="rounded-[32px] w-full py-14 px-[70px]">
+          <p className="text-[35px] leading-[0.98] text-justify dark:text-[#1A1D1F]">
+            {t("lastBoxText")}
+          </p>
+        </li>
+      </ul>
 
-          <div className="flex justify-center mt-auto">
-            <Button
-              // href="/services"
-              // as={Link}
-              radius="full"
-              color="warning"
-              // variant="solid"
-              className="font-bold text-xl w-[220px] py-8 px-6 bg-[#ffdd33] text-black mb-[90px]"
-            >
-              {t("btnCommitment")}
-            </Button>
-          </div>
-        </section>
-      )}
+      <TitleAchieveMore />
     </>
   );
 }

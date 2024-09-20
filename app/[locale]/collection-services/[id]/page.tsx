@@ -1,7 +1,7 @@
 // import { Image } from "@nextui-org/image";
 // // import { useTranslations } from "next-intl";
 
-// import { dataCommitment, CommitmentItem } from "../data";
+// import { dataCollectionServices, CommitmentItem } from "../data";
 
 // export interface PageProps {
 //   params: { id: string };
@@ -11,7 +11,7 @@
 //   const id = params.id;
 //   // const t = useTranslations("BlogPage");
 
-//   const blogItem: CommitmentItem | undefined = dataCommitment.find(
+//   const blogItem: CommitmentItem | undefined = dataCollectionServices.find(
 //     (item) => item.id === id
 //   );
 

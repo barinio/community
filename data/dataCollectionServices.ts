@@ -1,13 +1,13 @@
-import img1 from "@/images/ourCommitment.svg";
+import img1 from "@/images/collectionServices.svg";
 
-export interface CommitmentItem {
+export interface CollectionServicesItem {
   id: string;
   title: string;
   img: string;
   description: string[];
 }
 
-export const dataCommitment = [
+export const dataCollectionServices = [
   {
     id: "1-gestion-des-comptes-recevables",
     title: "tabTitle1",
