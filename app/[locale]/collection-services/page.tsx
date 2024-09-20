@@ -5,62 +5,56 @@ import { ScrollShadow } from "@nextui-org/scroll-shadow";
 import { Tab, Tabs } from "@nextui-org/tabs";
 import Image from "next/image";
 import { Button } from "@nextui-org/button";
+import { useTranslations } from "next-intl";
 
 import { dataCollectionServices } from "@/data/dataCollectionServices";
-
-const renderWithBold = (text: string) => {
-  const parts = text.split(/(\*.*?\*)/);
-
-  return parts.map((part, index) => {
-    if (part.startsWith("*") && part.endsWith("*")) {
-      return (
-        <strong key={index} className="font-bold">
-          {part.slice(1, -1)}
-        </strong>
-      );
-    }
-
-    return part;
-  });
-};
-
-const renderDescription = (description: any[]) => {
-  return description.map((item, index) => {
-    if (typeof item === "string") {
-      return (
-        <p key={index} className="text-2xl mb-8 last:pt-6 text-justify">
-          {renderWithBold(item)}
-        </p>
-      );
-    } else if (Array.isArray(item)) {
-      return (
-        <ul key={index} className="list-disc list-inside  mb-10">
-          {item.map((subItem, subIndex) => (
-            <li key={subIndex} className="text-2xl text-justify pl-[20px]">
-              {renderWithBold(subItem)}
-            </li>
-          ))}
-        </ul>
-      );
-    }
-
-    return null;
-  });
-};
-
-type ScrollShadowVisibility =
-  | "auto"
-  | "top"
-  | "bottom"
-  | "left"
-  | "right"
-  | "both"
-  | "none";
 
 export default function CollectionServices() {
   const [selectedTab, setSelectedTab] = useState<string>(
     dataCollectionServices[0].id,
   );
+
+  const t = useTranslations("OurCommitmentPage");
+
+  const renderWithBold = (text: string) => {
+    const parts = text.split(/(\*.*?\*)/);
+
+    return parts.map((part, index) => {
+      if (part.startsWith("*") && part.endsWith("*")) {
+        return (
+          <strong key={index} className="font-bold">
+            {part.slice(1, -1)}
+          </strong>
+        );
+      }
+
+      return part;
+    });
+  };
+
+  const renderDescription = (description: any[]) => {
+    return description.map((item, index) => {
+      if (typeof item === "string") {
+        return (
+          <p key={index} className="text-2xl mb-8 last:pt-6 text-justify">
+            {renderWithBold(t(item))}
+          </p>
+        );
+      } else if (Array.isArray(item)) {
+        return (
+          <ul key={index} className="list-disc list-inside  mb-10">
+            {item.map((subItem, subIndex) => (
+              <li key={subIndex} className="text-2xl text-justify pl-[20px]">
+                {renderWithBold(t(subItem))}
+              </li>
+            ))}
+          </ul>
+        );
+      }
+
+      return null;
+    });
+  };
 
   const currentTab = dataCollectionServices.find(
     (tab) => tab.id === selectedTab,
@@ -70,25 +64,14 @@ export default function CollectionServices() {
     setSelectedTab(key);
   };
 
-  // const [shadowVisibility, setShadowVisibility] =
-  //   useState<ScrollShadowVisibility>("auto");
-
-  // const handleVisibilityChange = (visibility: ScrollShadowVisibility) => {
-  //   setShadowVisibility(visibility);
-  //   console.log("Shadow visibility changed:", visibility);
-  //   // Здесь вы можете добавить дополнительную логику, основанную на изменении видимости
-  // };
-
   return (
     <>
       <ScrollShadow
         hideScrollBar
         className=" w-full max-w-[1280px] overflow-x-auto"
         orientation="horizontal"
-        // onVisibilityChange={handleVisibilityChange}
       >
         <Tabs
-          // selectedKey={pathname}
           variant="underlined"
           aria-label="Navigation Tabs"
           selectedKey={selectedTab}
@@ -105,7 +88,7 @@ export default function CollectionServices() {
             <Tab
               // href={`/our-commitment/${tab.id}`}
               key={tab.id}
-              title={tab.title}
+              title={t(tab.title)}
             />
           ))}
         </Tabs>
@@ -135,8 +118,7 @@ export default function CollectionServices() {
               // variant="solid"
               className="font-bold text-xl w-[220px] py-8 px-6 bg-[#ffdd33] text-black mb-[90px]"
             >
-              Contactez-nous
-              {/* {t("servicesBtn")} */}
+              {t("btnCommitment")}
             </Button>
           </div>
         </section>
