@@ -14,6 +14,7 @@ import serviceLogo from "@/images/serviceImg.png";
 
 const cardsData = [
   {
+    id: "lelaboration-dune-politique-de-recouvrement",
     title: "cardIncludeTitle1",
     description: "Description de la première carte",
     bgColor: "#171717",
@@ -22,6 +23,7 @@ const cardsData = [
     buttonTextColor: "black",
   },
   {
+    id: "la-revision-et-la-redaction-des-contrats",
     title: "cardIncludeTitle2",
     description: "Description de la deuxième carte",
     bgColor: "#ffdd33",
@@ -30,6 +32,7 @@ const cardsData = [
     buttonTextColor: "#fff",
   },
   {
+    id: "letablissement-de-scripts",
     title: "cardIncludeTitle3",
     description: "Description de la troisième carte",
     bgColor: "#ffdd33",
@@ -38,6 +41,7 @@ const cardsData = [
     buttonTextColor: "#fff",
   },
   {
+    id: "conseils-et-accompagnement-juridiques",
     title: "cardIncludeTitle4",
     description: "Description de la quatrième carte",
     bgColor: "#171717",
@@ -115,7 +119,7 @@ export default function Services() {
 
             <div className="flex justify-center mt-auto">
               <Button
-                href="/services"
+                href="/services/gestion-des-comptes-recevables"
                 as={Link}
                 radius="full"
                 color="warning"
@@ -140,7 +144,7 @@ export default function Services() {
 
             <div className="flex justify-center mt-auto">
               <Button
-                href="/services"
+                href="/services/recouvrement-des-creances"
                 as={Link}
                 radius="full"
                 color="warning"
@@ -185,7 +189,7 @@ export default function Services() {
             </p>
             <div className="flex justify-center">
               <Button
-                href="/services"
+                href={`/services/${card.id}`}
                 as={Link}
                 radius="full"
                 color="warning"

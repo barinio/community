@@ -7,12 +7,20 @@ import Image from "next/image";
 import { Button } from "@nextui-org/button";
 import { useTranslations } from "next-intl";
 
-import { dataCollectionServices } from "@/data/dataCollectionServices";
+import {
+  dataCollectionServices,
+  CollectionServicesItem,
+} from "@/data/dataCollectionServices";
 
-export default function CollectionServices() {
-  const [selectedTab, setSelectedTab] = useState<string>(
-    dataCollectionServices[0].id,
-  );
+export interface PageProps {
+  params: { id: string };
+}
+
+export default function CollectionServices({ params }: PageProps) {
+  const [selectedTab, setSelectedTab] = useState<string>(params.id);
+
+  console.log("params.id :>> ", params.id);
+  // const id = params.id;
 
   const t = useTranslations("CollectionServicesPage");
 
@@ -57,7 +65,7 @@ export default function CollectionServices() {
   };
 
   const currentTab = dataCollectionServices.find(
-    (tab) => tab.id === selectedTab,
+    (tab) => tab.id === selectedTab
   );
 
   const handleTabChange = (key: any) => {

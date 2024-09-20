@@ -3,7 +3,8 @@
     "home": "Accueil",
     "services": "Services",
     "ourCommitment": "Notre engagement",
-    "advantages": "Avantages"
+    "advantages": "Avantages",
+    "contact": "Nous joindre"
   },
   "AchieveMore": {
     "title": "Réalisez davantage avec CommUnité"
@@ -63,6 +64,7 @@
     "home": "Accueil",
     "services": "Services",
     "ourCommitment": "Notre engagement",
+    "advantages": "Avantages",
 
     "title": "Restez au courant des dernières nouveautés",
     "description": "Rejoignez notre newsletter pour rester informé des fonctionnalités et des versions.",
@@ -195,5 +197,14 @@
     "advantagesItemContent10": "En transformant la gestion de vos créances en un processus stratégique, nous vous aidons à établir des bases solides qui favorisent non seulement une croissance durable, mais aussi le renforcement de vos relations avec vos clients.",
 
     "lastAdvantagesItem": "En choisissant CommUnite, vous bénéficiez d'une gestion de créances complète, personnalisée et sécurisée, soutenue par des technologies innovantes et une expertise juridique spécialisée, garantissant des résultats optimaux, une transparence totale et un accompagnement vers une croissance durable."
+  },
+
+  "ContactUsPage": {
+    "contactTitle": "Contactez-nous pour une coopération",
+    "inputName": "Votre nom",
+    "inputMail": "Courriel",
+    "inputTel": "Téléphone",
+    "inputCom": "Votre message",
+    "contactBtn1": "Envoyer"
   }
 }
