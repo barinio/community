@@ -14,7 +14,7 @@ export default function CollectionServices() {
     dataCollectionServices[0].id,
   );
 
-  const t = useTranslations("OurCommitmentPage");
+  const t = useTranslations("CollectionServicesPage");
 
   const renderWithBold = (text: string) => {
     const parts = text.split(/(\*.*?\*)/);
