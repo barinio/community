@@ -28,6 +28,10 @@ export const siteConfig = {
       label: "advantages",
       href: "/advantages",
     },
+    {
+      label: "contact",
+      href: "/contact",
+    },
   ],
   footerOtherLinks: [
     {

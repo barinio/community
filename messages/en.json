@@ -3,7 +3,8 @@
     "home": "Home",
     "services": "Services",
     "ourCommitment": "Our Commitment",
-    "advantages": "Advantages"
+    "advantages": "Advantages",
+    "contact": "Contact Us"
   },
   "AchieveMore": {
     "title": "Achieve more with CommUnité"
@@ -63,6 +64,7 @@
     "home": "Home",
     "services": "Services",
     "ourCommitment": "Our Commitment",
+    "advantages": "Advantages",
 
     "title": "Stay up to date with the latest news",
     "description": "Join our newsletter to stay informed about features and releases.",
@@ -195,5 +197,14 @@
     "advantagesItemContent10": "By transforming your receivables management into a strategic process, we help you establish a solid foundation that promotes not only sustainable growth but also the strengthening of your client relationships.",
 
     "lastAdvantagesItem": "By choosing CommUnite, you benefit from comprehensive, personalized, and secure receivables management, supported by innovative technologies and specialized legal expertise, ensuring optimal results, total transparency, and guidance toward sustainable growth."
+  },
+
+  "ContactUsPage": {
+    "contactTitle": "Contact us for cooperation",
+    "inputName": "Your name",
+    "inputMail": "E-mail",
+    "inputTel": "Telephone",
+    "inputCom": "Your message",
+    "contactBtn1": "Send"
   }
 }

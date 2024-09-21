@@ -9,19 +9,19 @@ export interface CollectionServicesItem {
 
 export const dataCollectionServices = [
   {
-    id: "1-gestion-des-comptes-recevables",
+    id: "gestion-des-comptes-recevables",
     title: "tabTitle1",
     img: img1,
     description: ["tab1Descr1", "tab1Descr2", "tab1Descr3"],
   },
   {
-    id: "2-recouvrement-des-creances",
+    id: "recouvrement-des-creances",
     title: "tabTitle2",
     img: img1,
     description: ["tab2Descr1", "tab2Descr2", "tab2Descr3", "tab2Descr4"],
   },
   {
-    id: "3-elaboration-dune-politique-de-recouvrement",
+    id: "lelaboration-dune-politique-de-recouvrement",
     title: "tabTitle3",
     img: img1,
     description: [
@@ -38,7 +38,7 @@ export const dataCollectionServices = [
     ],
   },
   {
-    id: "4-la-revision-et-la-redaction-des-contrats",
+    id: "la-revision-et-la-redaction-des-contrats",
     title: "tabTitle4",
     img: img1,
     description: [
@@ -54,7 +54,7 @@ export const dataCollectionServices = [
     ],
   },
   {
-    id: "5-letablissement-de-scripts",
+    id: "letablissement-de-scripts",
     title: "tabTitle5",
     img: img1,
     description: [
@@ -81,7 +81,7 @@ export const dataCollectionServices = [
     ],
   },
   {
-    id: "6-conseils-et-accompagnement-juridiques",
+    id: "conseils-et-accompagnement-juridiques",
     title: "tabTitle6",
     img: img1,
     description: [
