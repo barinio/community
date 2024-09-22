@@ -7,10 +7,7 @@ import Image from "next/image";
 import { Button } from "@nextui-org/button";
 import { useTranslations } from "next-intl";
 
-import {
-  dataCollectionServices,
-  CollectionServicesItem,
-} from "@/data/dataCollectionServices";
+import { dataCollectionServices } from "@/data/dataCollectionServices";
 
 export interface PageProps {
   params: { id: string };
@@ -18,9 +15,6 @@ export interface PageProps {
 
 export default function CollectionServices({ params }: PageProps) {
   const [selectedTab, setSelectedTab] = useState<string>(params.id);
-
-  console.log("params.id :>> ", params.id);
-  // const id = params.id;
 
   const t = useTranslations("CollectionServicesPage");
 
@@ -105,7 +99,7 @@ export default function CollectionServices({ params }: PageProps) {
       {currentTab && (
         <section key={currentTab.id}>
           <div className="clearfix mb-[85px]">
-            <div className="w-[320px] md:w-[420px] lg:w-[520px] sm:float-right mt-2 ml-16 mb-20">
+            <div className="hidden sm:block w-[320px] md:w-[420px] lg:w-[520px] sm:float-right ml-16 mb-20">
               <Image
                 alt={currentTab.title}
                 className="w-full h-full object-contain transition-transform duration-300"
