@@ -89,11 +89,12 @@ const FutureSolutionsSection = () => {
             {t("title4")}
           </h3>
         </SectionContentWrapper>
+        
         <SectionContentWrapper classStyles="lg:max-w-[405px] p-[30px] min-h-[414px]">
           <div className="bg-main-yellow flex justify-center items-center rounded-full w-[72px] h-[72px] mb-[50px]">
             <MobileIcon />
           </div>
-          <h3 className="font-bold text-[42px] leading-[0.9] text-justify">
+          <h3 className="font-bold text-[42px] leading-[0.9]">
             {t("title5")}
           </h3>
         </SectionContentWrapper>
