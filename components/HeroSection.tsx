@@ -10,7 +10,7 @@ const HeroSection = () => {
 
   return (
     <div className="items-center flex mb-[65px]">
-      <div className="w-full mr-[90px]">
+      <div className="max-lg:hidden w-full mr-[90px]">
         <Image
           src={heroImg}
           width={554}
@@ -20,11 +20,11 @@ const HeroSection = () => {
         />
       </div>
 
-      <div className="max-w-[519px] w-full">
+      <div className="max-lg:flex flex-col items-center max-w-[519px] w-full">
         <h1 className="font-bold text-8xl dark:text-norm-white text-[#171717] mb-[18px]">
           {t("heroTitle")}
         </h1>
-        <p className="text-4xl dark:text-[#D6DCE5] text-norm-gray mb-[52px]">
+        <p className="max-lg:text-center text-4xl dark:text-[#D6DCE5] text-norm-gray mb-[52px]">
           {t("heroSubtitle")}
         </p>
 
