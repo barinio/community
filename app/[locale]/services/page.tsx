@@ -143,11 +143,9 @@ export default function Services() {
                 radius="full"
                 color="warning"
                 endContent={<ArrowIcon />}
-                // variant="solid"
                 className="font-bold text-xl w-[220px] py-8 px-6 bg-[#ffdd33] text-black w-btn"
               >
                 {t("cardButton")}
-                {/* {t("servicesBtn")} */}
               </Button>
             </div>
           </CardBody>
@@ -168,11 +166,9 @@ export default function Services() {
                 radius="full"
                 color="warning"
                 endContent={<ArrowIcon />}
-                // variant="solid"
                 className="font-bold text-xl w-[220px] py-8 px-6 bg-[#ffdd33] text-black w-btn"
               >
                 {t("cardButton")}
-                {/* {t("servicesBtn")} */}
               </Button>
             </div>
           </CardBody>
@@ -207,8 +203,7 @@ export default function Services() {
             `}
             style={{ backgroundColor: card.bgColor, color: card.textColor }}
           >
-            {/* <CardBody> */}
-            <p className="w-[300px] h-[170px] text-[45px] leading-[58px] tracking-tight mb-[120px]">
+            <p className="w-[230px] sm:w-[300px] h-[170px] text-[36px] leading-[48px] tracking-tight sm:text-[45px] sm:leading-[58px] sm:tracking-tight mb-[120px]">
               {t(card.title)}
             </p>
             <div className="flex justify-center">
@@ -227,7 +222,6 @@ export default function Services() {
                 {t("cardButton")}
               </Button>
             </div>
-            {/* </CardBody> */}
           </Card>
         ))}
       </div>
@@ -242,99 +236,3 @@ export default function Services() {
     </div>
   );
 }
-
-{
-  /* <div className="flex flex-row gap-[70px] mb-[104px]">
-  <Card className="flex-1 rounded-[32px] bg-[#171717] dark:bg-[#171717]">
-    <CardBody className="px-[78px] pt-[78px] pb-[44px]">
-      <p className="w-[300px] h-[170px] text-[45px] leading-[58px] tracking-tight text-[#fff] mb-[120px]">
-        L'élaboration d'une politique de recouvrement
-      </p>
-
-      <div className="flex justify-center">
-        <Button
-          href="/services"
-          as={Link}
-          radius="full"
-          color="warning"
-          endContent={<ArrowIcon />}
-          // variant="solid"
-          className="font-bold text-xl w-[220px] py-8 px-6 bg-[#ffdd33] text-black "
-        >
-          En savoir plus
-          {/* {t("servicesBtn")} */
-}
-// </Button>
-// </div>
-// </CardBody>
-// </Card>
-
-// <Card className="flex-1 rounded-[32px] bg-[#ffdd33] dark:bg-[#ffdd33] text-[#000000]">
-//   <CardBody className="px-[78px] pt-[78px] pb-[44px]">
-//     <p className="w-[300px] h-[170px] text-[45px] leading-[58px] tracking-tight mb-[120px]">
-//       La révision et la rédaction des contrats
-//     </p>
-
-//     <div className="flex justify-center">
-//       <Button
-//         href="/services"
-//         as={Link}
-//         radius="full"
-//         color="warning"
-//         endContent={<ArrowIcon />}
-//         // variant="solid"
-//         className="font-bold text-xl w-[220px] text-[#fff] py-8 px-6 bg-[#000] "
-//       >
-//         En savoir plus
-//         {/* {t("servicesBtn")} */}
-//       </Button>
-//     </div>
-//   </CardBody>
-// </Card>
-
-// <Card className="flex-1 rounded-[32px] bg-[#ffdd33] dark:bg-[#ffdd33] text-[#000000]">
-//   <CardBody className="px-[78px] pt-[78px] pb-[44px]">
-//     <p className="w-[300px] h-[170px] text-[45px] leading-[58px] tracking-tight mb-[120px]">
-//       Rédaction de scripts de contact et d’appels
-//     </p>
-
-//     <div className="flex justify-center">
-//       <Button
-//         href="/services"
-//         as={Link}
-//         radius="full"
-//         color="warning"
-//         endContent={<ArrowIcon />}
-//         // variant="solid"
-//         className="font-bold text-xl w-[220px] text-[#fff] py-8 px-6 bg-[#000] "
-//       >
-//         En savoir plus
-//         {/* {t("servicesBtn")} */}
-//       </Button>
-//     </div>
-//   </CardBody>
-// </Card>
-
-// <Card className="flex-1 rounded-[32px] bg-[#171717] dark:bg-[#171717]">
-//   <CardBody className="px-[78px] pt-[78px] pb-[44px]">
-//     <p className="w-[300px] h-[170px] text-[45px] leading-[58px] tracking-tight text-[#fff] mb-auto">
-//       Conseils et accompagnement juridiques
-//     </p>
-
-//     <div className="flex justify-center">
-//       <Button
-//         href="/services"
-//         as={Link}
-//         radius="full"
-//         color="warning"
-//         endContent={<ArrowIcon />}
-//         // variant="solid"
-//         className="font-bold text-xl w-[220px] py-8 px-6 bg-[#ffdd33] text-black "
-//       >
-//         En savoir plus
-//         {/* {t("servicesBtn")} */}
-//       </Button>
-//     </div>
-//   </CardBody>
-// </Card>
-// </div>; */}
