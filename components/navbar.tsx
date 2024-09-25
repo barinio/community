@@ -10,7 +10,6 @@ import {
   NavbarMenuToggle,
 } from "@nextui-org/navbar";
 import { Link } from "@nextui-org/link";
-import { link as linkStyles } from "@nextui-org/theme";
 import NextLink from "next/link";
 import clsx from "clsx";
 import { useTranslations } from "next-intl";
@@ -19,6 +18,7 @@ import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
 import { Logo } from "@/components/icons";
 import { LocaleSwitcher } from "@/components/LocaleSwitcher";
+import { Button } from "@nextui-org/button";
 
 export const Navbar = () => {
   const t = useTranslations("NavItems");
@@ -39,16 +39,18 @@ export const Navbar = () => {
         <ul className="hidden md:flex gap-x-10 justify-end flex-wrap gap-y-0 max-[965px]:pt-3">
           {siteConfig.navItems.map((item) => (
             <NavbarItem key={item.href}>
-              <NextLink
+              <Button
+                as={Link}
                 className={clsx(
-                  linkStyles({ color: "foreground" }),
-                  "data-[active=true]:text-primary data-[active=true]:font-medium font-bold text-sm px-[17px] py-2.5 uppercase",
+                  "bg-transparent data-[active=true]:text-primary data-[active=true]:font-medium font-bold text-sm px-[17px] py-2.5 uppercase",
+                  "hover:bg-[#FFDD33] hover:text-black focus:bg-[#FFDD33] focus:text-black transition-colors duration-300",
                 )}
-                color="foreground"
+                variant="solid"
+                radius="full"
                 href={item.href}
               >
                 {t(item.label)}
-              </NextLink>
+              </Button>
             </NavbarItem>
           ))}
           <li className="hidden md:flex gap-6 px-[17px]">

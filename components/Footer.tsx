@@ -1,12 +1,11 @@
 import React from "react";
 import NextLink from "next/link";
-import { Button } from "@nextui-org/button";
-import { Input } from "@nextui-org/input";
 import { Link } from "@nextui-org/link";
 import { useTranslations } from "next-intl";
 
 import { InboxIcon, Logo } from "@/components/icons";
 import { siteConfig } from "@/config/site";
+import FooterInputEmail from "@/components/FooterInputEmail";
 
 const Footer = () => {
   const t = useTranslations("Footer");
@@ -29,41 +28,7 @@ const Footer = () => {
             <section className="max-w-[535px]">
               <h4 className="text-norm-white mb-6">{t("inputTitle")}</h4>
 
-              <div className="flex">
-                <Input
-                  radius="full"
-                  type="email"
-                  placeholder={t("inputPlaceholder")}
-                  className="w-[300px] mr-[18px]"
-                  isClearable
-                  classNames={{
-                    input: [
-                      "bg-transparent",
-                      "text-white dark:text-white/90",
-                      "placeholder:text-white/60",
-                      "group-data-[has-value=true]:text-white",
-                    ],
-                    innerWrapper: "bg-transparent",
-                    inputWrapper: [
-                      "shadow-xl",
-                      "bg-default/10",
-                      "dark:bg-default/50",
-                      "h-[53px]",
-                      "data-[hover=true]:bg-default/30",
-                      "dark:hover:bg-default/70",
-                      "group-data-[focus=true]:bg-default/10",
-                      "!cursor-text",
-                    ],
-                  }}
-                />
-
-                <Button
-                  radius="full"
-                  className="bg-main-yellow text-norm-gray w-[104px] h-[53px]"
-                >
-                  {t("button")}
-                </Button>
-              </div>
+              <FooterInputEmail />
             </section>
           </div>
         </div>
