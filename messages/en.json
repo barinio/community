@@ -78,7 +78,9 @@
     "titleSupport": "Support",
 
     "privacyPolicy": "Privacy Policy",
-    "contact": "Contact"
+    "contact": "Contact",
+
+    "sentSuccessfully": "Sent successfully"
   },
 
   "ServicePage": {
@@ -206,5 +208,38 @@
     "inputTel": "Telephone",
     "inputCom": "Your message",
     "contactBtn1": "Send"
+  },
+
+  "PrivacyPolicy": {
+    "mainTitle": "Privacy Policy",
+    "mainDescription": "What is personal information? “Personal information is that which relates to a natural person and allows them to be identified. They are confidential. With certain exceptions, they cannot be communicated without the consent of the person concerned.”",
+
+    "title1": "Introduction",
+    "description1": "The protection of personal information is essential for CommUnity. We are committed to protecting the privacy and security of the personal information we collect, whether it concerns our customers or our staff. This information is managed with discretion, rigor, and in accordance with legal, regulatory, and contractual requirements.",
+
+    "title2": "Duty of caution and discretion",
+    "description2": "CommUnity pays particular attention to safeguarding the personal data it holds. Each lawyer and staff member is required to respect not only the fundamental principles of protection of personal information but also the ethical standards specific to the legal profession. Aware of the importance of professional secrecy, our firm reinforces this obligation by signing confidentiality commitments and through training.",
+
+    "title3": "Duty of protection",
+    "description3": "CommUnity fully assumes its responsibility for safeguarding the personal data in its possession. Each member of our team is committed to adhering to the standards established for the preservation of this information. In addition to adhering to the provisions of the Civil Code of Quebec concerning loyalty and confidentiality, we place emphasis on the continuing training of our staff. This results in the signing of a confidentiality agreement and regular training sessions on the subject.",
+
+    "title4": "Management of customer and employee data",
+    "description4": "CommUnity collects personal information as part of its legal activities, whether for the provision of legal services, communication with clients, financial analysis, or recruitment and team management procedures. Our priority is to only collect the data strictly necessary to carry out our mandates. All information, regardless of its format or method of storage, benefits from rigorous protection to guarantee its confidentiality and protection.",
+
+    "title5": "Retention and communication of personal information",
+    "description5": "CommUnity implements rigorous security protocols to guarantee the confidentiality of personal information. Access to this data is strictly reserved for duly authorized members of the firm. This information is processed exclusively within the framework of the mandates for which it was provided. The firm undertakes to never share this data with external entities without the explicit consent of the client, unless a legal obligation compels us to do so.",
+
+    "title6": "Consultation and modification",
+    "description6": "Everyone has the right to consult the personal data that CommUnity keeps about them. In addition, they have the right to request an update or correction of this information. To do this, any request must be addressed to the Privacy Protection Officer within the firm. This request may be accompanied by a processing fee.",
+
+    "title7": "Complaints",
+    "description7": "Anyone with concerns about the protection of their personal information can contact the Privacy Officer.",
+
+    "title8": "Policy",
+    "description8": "CommUnity reserves the right to modify this policy at any time. Note that the latest version of our policy is displayed on this page.",
+
+    "privacyOfficer": "Privacy Officer",
+    "privacyOfficerName": "Patrick René, Directeur des Opérations",
+    "addressText": "4350 Beaubien Est, Montréal (Québec) H1T 1S9"
   }
 }
