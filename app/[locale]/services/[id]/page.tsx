@@ -8,6 +8,7 @@ import { Button } from "@nextui-org/button";
 import { useTranslations } from "next-intl";
 
 import { dataCollectionServices } from "@/data/dataCollectionServices";
+import Link from "next/link";
 
 export interface PageProps {
   params: { id: string };
@@ -153,11 +154,10 @@ export default function CollectionServices({ params }: PageProps) {
 
           <div className="flex justify-center mt-auto">
             <Button
-              // href="/services"
-              // as={Link}
+              href={`/contact`}
+              as={Link}
               radius="full"
               color="warning"
-              // variant="solid"
               className="font-bold text-xl w-[220px] py-8 px-6 bg-[#ffdd33] text-black mb-[90px]"
             >
               {t("btnCommitment")}
