@@ -1,4 +1,9 @@
-import img1 from "@/images/collectionServices.svg";
+import img1 from "@/images/gestion-des-comptes.svg";
+import img2 from "@/images/recouvrement-des-creances.svg";
+import img3 from "@/images/lelaboration-dune-politique.svg";
+import img4 from "@/images/la-revision-et-la-redaction.svg";
+import img5 from "@/images/letablissement-de-scripts.svg";
+import img6 from "@/images/conseils-et-accompagnement.svg";
 
 export interface CollectionServicesItem {
   id: string;
@@ -17,13 +22,13 @@ export const dataCollectionServices = [
   {
     id: "recouvrement-des-creances",
     title: "tabTitle2",
-    img: img1,
+    img: img2,
     description: ["tab2Descr1", "tab2Descr2", "tab2Descr3", "tab2Descr4"],
   },
   {
     id: "lelaboration-dune-politique-de-recouvrement",
     title: "tabTitle3",
-    img: img1,
+    img: img3,
     description: [
       "tab3Descr1",
       [
@@ -40,7 +45,7 @@ export const dataCollectionServices = [
   {
     id: "la-revision-et-la-redaction-des-contrats",
     title: "tabTitle4",
-    img: img1,
+    img: img4,
     description: [
       "tab4Descr1",
       [
@@ -56,7 +61,7 @@ export const dataCollectionServices = [
   {
     id: "letablissement-de-scripts",
     title: "tabTitle5",
-    img: img1,
+    img: img5,
     description: [
       "tab5Descr1",
       "tab5Descr2",
@@ -83,7 +88,7 @@ export const dataCollectionServices = [
   {
     id: "conseils-et-accompagnement-juridiques",
     title: "tabTitle6",
-    img: img1,
+    img: img6,
     description: [
       "tab6Descr1",
       ["tab6SubDescr1", "tab6SubDescr2", "tab6SubDescr3", "tab6SubDescr4"],

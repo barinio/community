@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { ScrollShadow } from "@nextui-org/scroll-shadow";
 import { Tab, Tabs } from "@nextui-org/tabs";
 import Image from "next/image";
@@ -17,6 +17,42 @@ export default function CollectionServices({ params }: PageProps) {
   const [selectedTab, setSelectedTab] = useState<string>(params.id);
 
   const t = useTranslations("CollectionServicesPage");
+  const tabsContainerRef = useRef<HTMLDivElement>(null);
+
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+
+  const handleMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!tabsContainerRef.current || e.button !== 0) return;
+    setIsDragging(true);
+    setStartX(e.pageX - tabsContainerRef.current.offsetLeft);
+    setScrollLeft(tabsContainerRef.current.scrollLeft);
+  };
+
+  const handleMouseLeave = () => {
+    setIsDragging(false);
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+  };
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!isDragging || !tabsContainerRef.current) return;
+    e.preventDefault();
+    const x = e.pageX - tabsContainerRef.current.offsetLeft;
+    const walk = (x - startX) * 2;
+
+    tabsContainerRef.current.scrollLeft = scrollLeft - walk;
+  };
+
+  // const handleWheelScroll = (e: React.WheelEvent<HTMLDivElement>) => {
+  //   if (tabsContainerRef.current) {
+  //     e.preventDefault();
+  //     tabsContainerRef.current.scrollLeft += e.deltaY;
+  //   }
+  // };
 
   const renderWithBold = (text: string) => {
     const parts = text.split(/(\*.*?\*)/);
@@ -70,8 +106,16 @@ export default function CollectionServices({ params }: PageProps) {
     <>
       <ScrollShadow
         hideScrollBar
-        className=" w-full max-w-[1280px] overflow-x-auto"
+        className={`w-full max-w-[1280px] overflow-x-auto ${
+          isDragging ? "cursor-grabbing" : "cursor-grab"
+        }`}
         orientation="horizontal"
+        ref={tabsContainerRef}
+        // onWheel={handleWheelScroll}
+        onMouseDown={handleMouseDown}
+        onMouseUp={handleMouseUp}
+        onMouseLeave={handleMouseLeave}
+        onMouseMove={handleMouseMove}
       >
         <Tabs
           variant="underlined"
@@ -80,10 +124,10 @@ export default function CollectionServices({ params }: PageProps) {
           onSelectionChange={handleTabChange}
           classNames={{
             tabList:
-              "gap-6 w-max relative rounded-none p-0 border-b border-divider whitespace-nowrap mb-9",
+              "gap-6 w-max relative rounded-none p-0 border-b border-divider  mb-9",
             cursor: "w-full",
             tab: "max-w-fit px-0 h-12",
-            tabContent: "text-default-400",
+            tabContent: "text-default-400 whitespace-nowrap",
           }}
         >
           {dataCollectionServices.map((tab) => (
@@ -95,7 +139,7 @@ export default function CollectionServices({ params }: PageProps) {
       {currentTab && (
         <section key={currentTab.id}>
           <div className="clearfix mb-[85px]">
-            <div className="hidden sm:block w-[320px] md:w-[420px] lg:w-[520px] sm:float-right ml-16 mb-20">
+            <div className="hidden sm:block w-[320px] md:w-[420px] lg:w-[520px] sm:float-right ml-16 pt-[10px] mb-14">
               <Image
                 alt={currentTab.title}
                 className="w-full h-full object-contain transition-transform duration-300"
