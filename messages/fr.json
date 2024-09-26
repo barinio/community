@@ -240,5 +240,19 @@
     "privacyOfficer": "Responsable de la confidentialité",
     "privacyOfficerName": "Patrick René, Directeur des Opérations",
     "addressText": "4350 Beaubien Est, Montréal (Québec) H1T 1S9"
+  },
+
+  "ChatBot": {
+    "chatOpenBtn": "Écrivez-nous",
+    "chatTitle": "Contactez-nous",
+    "chatText": "Veuillez noter que les réponses fournies ne constituent pas des avis juridiques. Nous recommandons de consulter un avocat.",
+    "chatBtn": "",
+    "chatBtnSubmit": "Envoyer",
+    "inputMessageChat": "",
+    "inputEmailChat": "Courriel",
+    "inputNameChat": "Nom",
+    "inputTelChat": "Téléphone",
+    "messageSuccess": "Vous avez envoyé le courrier avec succès.",
+    "messageError": "Une erreur s'est produite lors de l'envoi des données. Veuillez réessayer."
   }
 }
