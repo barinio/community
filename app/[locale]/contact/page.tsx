@@ -40,11 +40,8 @@ export default function ContactUsPage() {
     comments: "",
   };
 
-  const handleSubmit = async (
-    values: FormValues,
-    { setSubmitting, resetForm }: any
-  ) => {
-    console.log("Form submitted:", values);
+  const handleSubmit = async (values: FormValues, { resetForm }: any) => {
+    // console.log("Form submitted:", values);
     resetForm();
   };
 

@@ -13,18 +13,26 @@ import { Link } from "@nextui-org/link";
 import NextLink from "next/link";
 import clsx from "clsx";
 import { useTranslations } from "next-intl";
+import { useReducer } from "react";
+import { Button } from "@nextui-org/button";
 
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
 import { Logo } from "@/components/icons";
 import { LocaleSwitcher } from "@/components/LocaleSwitcher";
-import { Button } from "@nextui-org/button";
 
 export const Navbar = () => {
   const t = useTranslations("NavItems");
+  const [isMenuOpen, setIsMenuOpen] = useReducer((current) => !current, false);
 
   return (
-    <NextUINavbar maxWidth="xl" className="mt-2" position="sticky">
+    <NextUINavbar
+      maxWidth="xl"
+      className="mt-2"
+      position="sticky"
+      isMenuOpen={isMenuOpen}
+      onMenuOpenChange={setIsMenuOpen}
+    >
       <NavbarBrand as="li" className="gap-3 max-w-fit">
         <NextLink className="flex justify-start items-center gap-3" href="/">
           <Logo />
@@ -61,15 +69,22 @@ export const Navbar = () => {
       </NavbarContent>
 
       <NavbarContent className="md:hidden basis-1 pl-4" justify="end">
+        <LocaleSwitcher />
         <ThemeSwitch />
         <NavbarMenuToggle />
       </NavbarContent>
 
       <NavbarMenu>
-        <div className="mx-4 mt-2 flex flex-col gap-2">
+        <div className="mx-4 mt-2 flex flex-col gap-5">
           {siteConfig.navItems.map((item, index) => (
             <NavbarMenuItem key={`${item}-${index}`}>
-              <Link color="foreground" className="uppercase" href="#" size="lg">
+              <Link
+                color="foreground"
+                className="uppercase"
+                href={item.href}
+                size="lg"
+                onPress={() => setIsMenuOpen()}
+              >
                 {t(item.label)}
               </Link>
             </NavbarMenuItem>

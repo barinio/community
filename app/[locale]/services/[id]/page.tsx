@@ -87,11 +87,7 @@ export default function CollectionServices({ params }: PageProps) {
           }}
         >
           {dataCollectionServices.map((tab) => (
-            <Tab
-              // href={`/our-commitment/${tab.id}`}
-              key={tab.id}
-              title={t(tab.title)}
-            />
+            <Tab key={tab.id} title={t(tab.title)} />
           ))}
         </Tabs>
       </ScrollShadow>

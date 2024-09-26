@@ -43,20 +43,6 @@ export const siteConfig = {
       href: "/contact",
     },
   ],
-  // navMenuItems: [
-  //   {
-  //     label: "Welcome",
-  //     href: "/",
-  //   },
-  //   {
-  //     label: "Services",
-  //     href: "/services",
-  //   },
-  //   {
-  //     label: "Our commitment",
-  //     href: "/our-commitment",
-  //   },
-  // ],
   links: [
     {
       Icon: InstagramIcon,

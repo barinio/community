@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "@nextui-org/button";
 import { useTranslations } from "next-intl";
 import * as Yup from "yup";
@@ -22,7 +22,7 @@ interface FormInputValue {
 
 const FooterInputEmail = () => {
   const t = useTranslations("Footer");
-
+  const [isSuccessSubmitted, setIsSuccessSubmitted] = useState(false);
   const initialValues: FormInputValue = {
     email: "",
   };
@@ -32,7 +32,12 @@ const FooterInputEmail = () => {
     { setSubmitting, resetForm }: any,
   ) => {
     console.log("Form submitted:", value);
+    setIsSuccessSubmitted(true);
     resetForm();
+
+    setTimeout(() => {
+      setIsSuccessSubmitted(false);
+    }, 3000);
   };
 
   return (
@@ -50,7 +55,7 @@ const FooterInputEmail = () => {
                 radius="full"
                 type="email"
                 placeholder={t("inputPlaceholder")}
-                className={`w-[300px] mr-[18px] ${errors.email && touched.email ? "border-red-500" : ""}`}
+                className={`max-sm:max-w-[193px] w-[300px] mr-[18px] ${errors.email && touched.email ? "border-red-500" : ""}`}
                 name="email"
                 classNames={{
                   input: [
@@ -77,6 +82,9 @@ const FooterInputEmail = () => {
                 component="div"
                 name="email"
               />
+              {isSuccessSubmitted && (
+                <p className="pl-5 text-[#20FF81]">{t("sentSuccessfully")}</p>
+              )}
             </div>
             <Button
               radius="full"
