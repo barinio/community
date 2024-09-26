@@ -13,7 +13,7 @@ export default function Advantages() {
       <TemplateHeroSection title={t("heroTitle")} />
 
       <section>
-        <h2 className="font-bold text-[55px] dark:text-norm-white text-[#171717] mb-[90px] text-center">
+        <h2 className="font-bold text-[35px] sm:text-[55px] dark:text-norm-white text-[#171717] mb-[90px] text-center">
           {t("advantagesTitle")}
         </h2>
 
@@ -32,8 +32,8 @@ export default function Advantages() {
             );
           })}
 
-          <li className="rounded-[32px] w-full py-14 px-[70px] bg-[#F9FAFB]">
-            <p className="text-[35px] leading-[0.98] text-justify dark:text-[#1A1D1F]">
+          <li className="rounded-[32px] w-full py-14 px-[30px] sm:px-[70px] bg-[#F9FAFB]">
+            <p className="text-[20px] sm:text-[35px] leading-[0.98] text-justify dark:text-[#1A1D1F]">
               {t("lastAdvantagesItem")}
             </p>
           </li>

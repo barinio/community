@@ -78,7 +78,8 @@
     "titleSupport": "Support",
 
     "privacyPolicy": "Politique de confidentialite",
-    "contact": "Contact"
+    "contact": "Contact",
+    "sentSuccessfully": "Envoyé avec succès"
   },
 
   "ServicePage": {
@@ -206,5 +207,38 @@
     "inputTel": "Téléphone",
     "inputCom": "Votre message",
     "contactBtn1": "Envoyer"
+  },
+
+  "PrivacyPolicy": {
+    "mainTitle": "Politique de confidentialité",
+    "mainDescription": "Qu'est-ce qu'une information personnelle ? « L'information personnelle est celle qui concerne une personne physique et permet de l'identifier. Elle est confidentielle. À quelques exceptions près, elle ne peut pas être communiquée sans le consentement de la personne concernée. »",
+
+    "title1": "Introduction",
+    "description1": "La protection des informations personnelles est essentielle pour CommUnity. Nous nous engageons à protéger la vie privée et la sécurité des informations personnelles que nous collectons, qu'elles concernent nos clients ou notre personnel. Ces informations sont gérées avec discrétion, rigueur et conformément aux exigences légales, réglementaires et contractuelles.",
+
+    "title2": "Devoir de prudence et de discrétion",
+    "description2": "CommUnity accorde une attention particulière à la protection des données personnelles qu'elle détient. Chaque avocat et membre du personnel est tenu de respecter non seulement les principes fondamentaux de la protection des informations personnelles, mais aussi les normes éthiques propres à la profession juridique. Conscients de l'importance du secret professionnel, notre cabinet renforce cette obligation par la signature d'engagements de confidentialité et par des formations.",
+
+    "title3": "Devoir de protection",
+    "description3": "CommUnity assume pleinement sa responsabilité de protéger les données personnelles en sa possession. Chaque membre de notre équipe s'engage à respecter les normes établies pour la préservation de ces informations. En plus de respecter les dispositions du Code civil du Québec concernant la loyauté et la confidentialité, nous insistons sur la formation continue de notre personnel. Cela se traduit par la signature d'un accord de confidentialité et des sessions de formation régulières sur le sujet.",
+
+    "title4": "Gestion des données des clients et des employés",
+    "description4": "CommUnity collecte des informations personnelles dans le cadre de ses activités juridiques, que ce soit pour la fourniture de services juridiques, la communication avec les clients, l'analyse financière ou les procédures de recrutement et de gestion de l'équipe. Notre priorité est de ne collecter que les données strictement nécessaires à l'accomplissement de nos mandats. Toutes les informations, quel que soit leur format ou leur mode de stockage, bénéficient d'une protection rigoureuse pour garantir leur confidentialité et leur sécurité.",
+
+    "title5": "Conservation et communication des informations personnelles",
+    "description5": "CommUnity met en place des protocoles de sécurité rigoureux pour garantir la confidentialité des informations personnelles. L'accès à ces données est strictement réservé aux membres dûment autorisés du cabinet. Ces informations sont traitées exclusivement dans le cadre des mandats pour lesquels elles ont été fournies. Le cabinet s'engage à ne jamais partager ces données avec des entités extérieures sans le consentement explicite du client, sauf si une obligation légale nous y contraint.",
+
+    "title6": "Consultation et modification",
+    "description6": "Toute personne a le droit de consulter les données personnelles que CommUnity conserve à son sujet. De plus, elle a le droit de demander une mise à jour ou une correction de ces informations. Pour ce faire, toute demande doit être adressée au Responsable de la protection des renseignements personnels au sein du cabinet. Cette demande peut être accompagnée de frais de traitement.",
+
+    "title7": "Plaintes",
+    "description7": "Toute personne ayant des préoccupations concernant la protection de ses informations personnelles peut contacter le Responsable de la confidentialité.",
+
+    "title8": "Politique",
+    "description8": "CommUnity se réserve le droit de modifier cette politique à tout moment. Veuillez noter que la dernière version de notre politique est affichée sur cette page.",
+
+    "privacyOfficer": "Responsable de la confidentialité",
+    "privacyOfficerName": "Patrick René, Directeur des Opérations",
+    "addressText": "4350 Beaubien Est, Montréal (Québec) H1T 1S9"
   }
 }

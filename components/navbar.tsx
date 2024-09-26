@@ -10,10 +10,11 @@ import {
   NavbarMenuToggle,
 } from "@nextui-org/navbar";
 import { Link } from "@nextui-org/link";
-import { link as linkStyles } from "@nextui-org/theme";
 import NextLink from "next/link";
 import clsx from "clsx";
 import { useTranslations } from "next-intl";
+import { useReducer } from "react";
+import { Button } from "@nextui-org/button";
 
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
@@ -22,9 +23,16 @@ import { LocaleSwitcher } from "@/components/LocaleSwitcher";
 
 export const Navbar = () => {
   const t = useTranslations("NavItems");
+  const [isMenuOpen, setIsMenuOpen] = useReducer((current) => !current, false);
 
   return (
-    <NextUINavbar maxWidth="xl" className="mt-2" position="sticky">
+    <NextUINavbar
+      maxWidth="xl"
+      className="mt-2"
+      position="sticky"
+      isMenuOpen={isMenuOpen}
+      onMenuOpenChange={setIsMenuOpen}
+    >
       <NavbarBrand as="li" className="gap-3 max-w-fit">
         <NextLink className="flex justify-start items-center gap-3" href="/">
           <Logo />
@@ -39,16 +47,18 @@ export const Navbar = () => {
         <ul className="hidden md:flex gap-x-10 justify-end flex-wrap gap-y-0 max-[965px]:pt-3">
           {siteConfig.navItems.map((item) => (
             <NavbarItem key={item.href}>
-              <NextLink
+              <Button
+                as={Link}
                 className={clsx(
-                  linkStyles({ color: "foreground" }),
-                  "data-[active=true]:text-primary data-[active=true]:font-medium font-bold text-sm px-[17px] py-2.5 uppercase",
+                  "bg-transparent data-[active=true]:text-primary data-[active=true]:font-medium font-bold text-sm px-[17px] py-2.5 uppercase",
+                  "hover:bg-[#FFDD33] hover:text-black focus:bg-[#FFDD33] focus:text-black transition-colors duration-300",
                 )}
-                color="foreground"
+                variant="solid"
+                radius="full"
                 href={item.href}
               >
                 {t(item.label)}
-              </NextLink>
+              </Button>
             </NavbarItem>
           ))}
           <li className="hidden md:flex gap-6 px-[17px]">
@@ -59,15 +69,22 @@ export const Navbar = () => {
       </NavbarContent>
 
       <NavbarContent className="md:hidden basis-1 pl-4" justify="end">
+        <LocaleSwitcher />
         <ThemeSwitch />
         <NavbarMenuToggle />
       </NavbarContent>
 
       <NavbarMenu>
-        <div className="mx-4 mt-2 flex flex-col gap-2">
+        <div className="mx-4 mt-2 flex flex-col gap-5">
           {siteConfig.navItems.map((item, index) => (
             <NavbarMenuItem key={`${item}-${index}`}>
-              <Link color="foreground" className="uppercase" href="#" size="lg">
+              <Link
+                color="foreground"
+                className="uppercase"
+                href={item.href}
+                size="lg"
+                onPress={() => setIsMenuOpen()}
+              >
                 {t(item.label)}
               </Link>
             </NavbarMenuItem>

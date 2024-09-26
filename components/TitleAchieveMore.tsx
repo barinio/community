@@ -4,7 +4,7 @@ const TitleAchieveMore = () => {
   const t = useTranslations("AchieveMore");
 
   return (
-    <h2 className="font-bold max-w-7xl text-[110px] text-center leading-[0.82] tracking-[-.03em] mt-[85px]">
+    <h2 className="max-sm:hidden font-bold max-w-7xl text-[110px] text-center leading-[0.82] tracking-[-.03em] mt-[85px]">
       {t("title")}
     </h2>
   );
