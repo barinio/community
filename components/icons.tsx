@@ -65,8 +65,9 @@ export const InboxIcon = ({}: IconSvgProps) => (
 
 export const DiagramaIcon = ({}: IconSvgProps) => (
   <svg
-    width="38"
-    height="38"
+    className="w-5 sm:w-[38px] h-5 sm:h-[38px]"
+    // width="38"
+    // height="38"
     viewBox="0 0 38 38"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -88,10 +89,11 @@ export const DiagramaIcon = ({}: IconSvgProps) => (
 
 export const OperatorIcon = ({}: IconSvgProps) => (
   <svg
+    className="w-5 sm:w-[38px] h-5 sm:h-[38px]"
+    // width="38"
+    // height="38"
     version="1.0"
     xmlns="http://www.w3.org/2000/svg"
-    width="38"
-    height="38"
     viewBox="0 0 80.000000 84.000000"
     preserveAspectRatio="xMidYMid meet"
   >
@@ -129,10 +131,11 @@ m365 29 c32 -24 85 -112 85 -141 0 -10 -31 -13 -135 -13 l-135 0 0 55 c0 30 3
 
 export const AimIcon = ({}: IconSvgProps) => (
   <svg
+    className="w-5 sm:w-[38px] h-5 sm:h-[38px]"
+    // width="38"
+    // height="38"
     version="1.0"
     xmlns="http://www.w3.org/2000/svg"
-    width="38"
-    height="38"
     viewBox="0 0 100.000000 100.000000"
     preserveAspectRatio="xMidYMid meet"
   >

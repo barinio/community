@@ -45,14 +45,14 @@ export default async function RootLayout({
       <body
         className={clsx(
           `min-h-screen bg-background antialiased font-al`,
-          fontAbhayaLibre.variable
+          fontAbhayaLibre.variable,
         )}
       >
         <NextIntlClientProvider messages={messages}>
           <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
             <div className="relative flex flex-col h-screen">
               <Navbar />
-              <main className="container mx-auto max-w-[1440px] px-6 flex-grow">
+              <main className="sm:container mx-auto max-w-[390px] sm:max-w-[1440px] px-5 sm:px-6 flex-grow">
                 {children}
               </main>
               <footer className="w-full max-w-[1328px] m-auto flex flex-col items-center justify-center px-6 pb-9 gap-9">

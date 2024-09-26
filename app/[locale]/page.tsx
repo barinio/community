@@ -1,5 +1,5 @@
 import HeroSection from "@/components/HeroSection";
-import FutureSolutionsSection from "@/components/FutureSolutionsSection";
+import FutureSolutionsSection from "@/components/FutureSolutionsSection/FutureSolutionsSection";
 import TitleAchieveMore from "@/components/TitleAchieveMore";
 
 export default function Home() {
