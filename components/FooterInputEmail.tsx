@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 import * as Yup from "yup";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import { Input } from "@nextui-org/input";
+import axios from "axios";
 
 const emailRegExp =
   /^(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])$/;
@@ -16,9 +17,19 @@ const validationSchema = Yup.object().shape({
     .matches(emailRegExp, "Invalid email address"),
 });
 
+const instance = axios.create({
+  baseURL: "http://localhost:3003",
+});
+
 interface FormInputValue {
   email: string;
 }
+
+const postUserEmail = async (data: FormInputValue) => {
+  const res = await instance.post("/subscription", data);
+
+  return res;
+};
 
 const FooterInputEmail = () => {
   const t = useTranslations("Footer");
@@ -32,12 +43,21 @@ const FooterInputEmail = () => {
     { setSubmitting, resetForm }: any,
   ) => {
     console.log("Form submitted:", value);
-    setIsSuccessSubmitted(true);
-    resetForm();
 
-    setTimeout(() => {
+    try {
+      await postUserEmail(value);
+      setIsSuccessSubmitted(true);
+    } catch (error) {
+      console.log("error:", error);
+    } finally {
+      setSubmitting(false);
       setIsSuccessSubmitted(false);
-    }, 3000);
+      resetForm();
+    }
+
+    // setTimeout(() => {
+    //   setIsSuccessSubmitted(false);
+    // }, 3000);
   };
 
   return (
