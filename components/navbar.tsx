@@ -36,7 +36,9 @@ export const Navbar = () => {
       <NavbarBrand as="li" className="gap-3 max-w-fit">
         <NextLink className="flex justify-start items-center gap-3" href="/">
           <Logo />
-          <p className="font-bold text-inherit text-2xl">CommUnité</p>
+          <p className="font-bold text-inherit md:max-lg:text-lg text-2xl">
+            CommUnité
+          </p>
         </NextLink>
       </NavbarBrand>
 
@@ -44,13 +46,13 @@ export const Navbar = () => {
         className="hidden sm:flex basis-1/5 sm:basis-full gap-20"
         justify="end"
       >
-        <ul className="hidden md:flex gap-x-10 justify-end flex-wrap gap-y-0 max-[965px]:pt-3">
+        <ul className="hidden md:flex lg:gap-5 justify-end ">
           {siteConfig.navItems.map((item) => (
             <NavbarItem key={item.href}>
               <Button
                 as={Link}
                 className={clsx(
-                  "bg-transparent data-[active=true]:text-primary data-[active=true]:font-medium font-bold text-sm px-[17px] py-2.5 uppercase",
+                  "bg-transparent data-[active=true]:text-primary data-[active=true]:font-medium font-bold text-sm px-2 lg:px-[17px] py-2.5 uppercase",
                   "hover:bg-[#FFDD33] hover:text-black focus:bg-[#FFDD33] focus:text-black transition-colors duration-300",
                 )}
                 variant="solid"
@@ -61,7 +63,7 @@ export const Navbar = () => {
               </Button>
             </NavbarItem>
           ))}
-          <li className="hidden md:flex gap-6 px-[17px]">
+          <li className="hidden md:flex gap-2 lg:gap-6 px-1 lg:px-[17px]">
             <LocaleSwitcher />
             <ThemeSwitch />
           </li>
