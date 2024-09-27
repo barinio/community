@@ -84,7 +84,7 @@ function KeywordForm() {
             />
           </div>
           <button
-            className="flex justify-center items-center text-white bg-gray-900 w-full p-3 font-inherit gap-2 mt-4 rounded-md shadow-md hover:bg-gray-700 active:scale-95 transition"
+            className="flex justify-center items-center text-base text-[#171717] bg-[#FFDD33] w-full p-3 font-inherit gap-2 mt-4 rounded-md shadow-md hover:bg-[#ccbf06] active:scale-95 transition-all duration-300 ease-in-out"
             type="submit"
           >
             {t("chatBtnSubmit")}

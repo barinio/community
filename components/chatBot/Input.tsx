@@ -46,7 +46,7 @@ function Input({ sendMessage }: InputProps) {
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            fill="gray"
+            fill="#FFDD33"
             viewBox="0 0 664 663"
             width="24"
             height="24"
