@@ -19,7 +19,7 @@ function Assistant() {
       {!isChatOpen && (
         <button
           onClick={toggleChat}
-          className="w-36 h-14 rounded-full bg-gradient-to-r from-[#e32769] to-[#c20e4d] shadow-lg shadow-[rgba(210,18,47,0.5)] text-white text-lg font-dosis transition-all duration-300 ease-in-out hover:translate-y-[3px] hover:shadow-none active:opacity-50"
+          className="w-36 h-14 rounded-full bg-gradient-to-r from-[#FFDD33] to-[#FFDD33]  text-[#171717] text-lg shadow-[0px_4px_4px_0px_#00000024] font-dosis transition-all duration-300 ease-in-out hover:translate-y-[3px] hover:shadow-none active:opacity-50"
         >
           {t("chatOpenBtn")}
         </button>
