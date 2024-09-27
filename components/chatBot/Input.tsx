@@ -26,13 +26,13 @@ function Input({ sendMessage }: InputProps) {
   };
 
   return (
-    <div className="w-full h-10 flex items-center justify-center bg-gray-800 px-4 rounded-lg border border-gray-700 mb-6 absolute bottom-14 left-1/2 transform -translate-x-1/2 focus-within:border-gray-500">
+    <div className="w-[95%] h-10 flex items-center justify-center bg-gray-800 px-4 rounded-lg border border-gray-700 mb-6 absolute bottom-14 left-1/2 transform -translate-x-1/2 focus-within:border-gray-500">
       <form className="flex w-full" onSubmit={handleSendMessage}>
         <input
           required
           placeholder="Message..."
           type="text"
-          className="bg-gray-800 text-white w-full px-2 focus:outline-none focus:border-gray-600 focus:ring-1 focus:ring-gray-600"
+          className="bg-gray-800 text-white w-full px-2 focus:outline-none focus:border-gray-600 focus:ring-1 focus:ring-gray-800"
           id="messageInput"
           value={message}
           onChange={handleChange}
@@ -46,7 +46,7 @@ function Input({ sendMessage }: InputProps) {
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            fill="none"
+            fill="gray"
             viewBox="0 0 664 663"
             width="24"
             height="24"
