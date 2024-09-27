@@ -11,6 +11,7 @@ import { siteConfig } from "@/config/site";
 import { fontAbhayaLibre } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
 import Footer from "@/components/Footer";
+import Assistant from "@/components/chatBot/Assistant";
 
 export const metadata: Metadata = {
   title: {
@@ -45,7 +46,7 @@ export default async function RootLayout({
       <body
         className={clsx(
           `min-h-screen bg-background antialiased font-al`,
-          fontAbhayaLibre.variable,
+          fontAbhayaLibre.variable
         )}
       >
         <NextIntlClientProvider messages={messages}>
@@ -54,6 +55,7 @@ export default async function RootLayout({
               <Navbar />
               <main className="sm:container mx-auto max-w-[390px] sm:max-w-[1440px] px-5 sm:px-6 flex-grow">
                 {children}
+                <Assistant />
               </main>
               <footer className="max-sm:max-w-[350px] w-full max-w-[1328px] m-auto flex flex-col items-center justify-center sm:px-6 pb-9 gap-9">
                 <Footer />

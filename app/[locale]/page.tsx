@@ -1,7 +1,6 @@
 import HeroSection from "@/components/HeroSection";
 import FutureSolutionsSection from "@/components/FutureSolutionsSection/FutureSolutionsSection";
 import TitleAchieveMore from "@/components/TitleAchieveMore";
-import Assistant from "@/components/chatBot/Assistant";
 
 export default function Home() {
   return (
@@ -10,7 +9,6 @@ export default function Home() {
         <HeroSection />
         <FutureSolutionsSection />
         <TitleAchieveMore />
-        <Assistant />
       </section>
     </>
   );

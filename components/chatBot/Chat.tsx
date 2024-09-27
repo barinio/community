@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 
 import Input from "@/components/chatBot/Input";
 import KeywordForm from "@/components/chatBot/KeywordForm";
+import { IconClose } from "../icons";
 
 interface Message {
   content: string;
@@ -25,7 +26,7 @@ function Chat({ closeChat }: ChatProps) {
   const t = useTranslations("ChatBot");
 
   const setupWebSocket = () => {
-    ws.current = new WebSocket("wss://localhost:3003");
+    ws.current = new WebSocket("ws://localhost:3000");
 
     // ws.current = new WebSocket("wss://one855-product-code.onrender.com");
     ws.current.onmessage = (event) => {
@@ -91,18 +92,18 @@ function Chat({ closeChat }: ChatProps) {
   };
 
   return (
-    <div className="w-80 h-[620px] rounded-[44px] bg-gray-800 p-4 flex flex-col justify-between">
+    <div className="w-80 h-[620px] rounded-[44px] bg-gray-700 p-4 flex flex-col justify-between">
       <div>
         <div className="flex justify-end mb-4">
           <button
             onClick={closeChat}
-            className="w-10 h-10 bg-[rgba(180,83,107,0.11)] rounded-full transition-colors duration-500 hover:bg-red-600 active:bg-red-800"
+            className="w-8 h-8 flex justify-center items-center bg-[rgba(63,49,53,0.11)] rounded-full transition-colors duration-500 hover:bg-gray-600 active:bg-gray-800 text-[22px]"
           >
-            x
+            <IconClose />
           </button>
         </div>
         <div
-          className="w-full h-full rounded-lg max-h-[420px] overflow-y-auto overflow-x-hidden flex flex-col items-center"
+          className="w-full h-full  rounded-lg max-h-[420px] overflow-y-auto overflow-x-hidden flex flex-col items-start custom-scrollbar"
           ref={chatRef}
         >
           <KeywordForm />
@@ -110,16 +111,16 @@ function Chat({ closeChat }: ChatProps) {
             <div className="flex items-center my-2" key={index}>
               {msg.type === "incoming" && (
                 <img
-                  className="w-8 h-8 mr-2"
+                  className="w-6 h-6 mr-2 "
                   src="https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/64/external-balance-scale-advertising-kiranshastry-lineal-kiranshastry.png"
                   alt="Balance Scale"
                 />
               )}
               <div
-                className={`p-2.5 rounded-lg text-gray-800 break-words ${
+                className={`p-2 rounded-lg text-gray-800 break-words ${
                   msg.type === "outgoing"
-                    ? "bg-green-300 self-end mr-[-50px] w-[220px]"
-                    : "bg-blue-200 w-[70%] self-start"
+                    ? "bg-green-300  ml-[110px] w-[160px]"
+                    : "bg-blue-200 w-[70%] mr-auto"
                 }`}
               >
                 {msg.content}
@@ -131,7 +132,7 @@ function Chat({ closeChat }: ChatProps) {
         </div>
       </div>
       <div>
-        <p className="text-gray-500 text-xs w-[80%] mx-auto">{t("chatText")}</p>
+        <p className="text-gray-400 text-xs w-[80%] mx-auto">{t("chatText")}</p>
       </div>
     </div>
   );

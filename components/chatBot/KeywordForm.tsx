@@ -30,7 +30,7 @@ function KeywordForm() {
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     axios
-      .post("http://localhost:3003/add", formData)
+      .post("http://localhost:3000/add", formData)
       // .post("https://one855-product-code.onrender.com/add", formData)
       .then((response) => {
         console.log(response.data);
@@ -44,7 +44,7 @@ function KeywordForm() {
   };
 
   return (
-    <div className="w-72 bg-gray-800 p-6 text-sm font-inherit text-gray-900 flex flex-col gap-2 box-border rounded-lg shadow-md">
+    <div className="w-72 bg-gray-600 p-6 text-sm font-inherit text-gray-900 flex flex-col gap-2 box-border rounded-lg shadow-md">
       <div className="text-center font-semibold text-lg text-white">
         {t("chatTitle")}
       </div>
@@ -91,12 +91,14 @@ function KeywordForm() {
           </button>
         </form>
       ) : (
-        <p className="bg-gray-700 text-white p-3 rounded-md">
+        <p className="bg-gray-500 text-white p-3 rounded-md">
           {t("messageSuccess")}
         </p>
       )}
 
-      {submittingError && <div className="text-red-500">{submittingError}</div>}
+      {submittingError && (
+        <div className="text-red-400 text-base">{submittingError}</div>
+      )}
     </div>
   );
 }
