@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import React, { useRef, useState } from "react";
 import { ScrollShadow } from "@nextui-org/scroll-shadow";
 import { Tab, Tabs } from "@nextui-org/tabs";
@@ -8,7 +9,6 @@ import { Button } from "@nextui-org/button";
 import { useTranslations } from "next-intl";
 
 import { dataCollectionServices } from "@/data/dataCollectionServices";
-import Link from "next/link";
 
 export interface PageProps {
   params: { id: string };
