@@ -40,7 +40,7 @@ const FooterInputEmail = () => {
 
   const handleSubmit = async (
     value: FormInputValue,
-    { setSubmitting, resetForm }: any,
+    { setSubmitting, resetForm }: any
   ) => {
     console.log("Form submitted:", value);
 
@@ -75,25 +75,26 @@ const FooterInputEmail = () => {
                 radius="full"
                 type="email"
                 placeholder={t("inputPlaceholder")}
-                className={`max-sm:max-w-[193px] w-[300px] mr-[18px] ${errors.email && touched.email ? "border-red-500" : ""}`}
+                className={`text-white max-sm:max-w-[193px] w-[300px] mr-[18px]  ${errors.email && touched.email ? "border-red-500" : ""}`}
                 name="email"
                 classNames={{
                   input: [
                     "bg-transparent",
-                    "text-white dark:text-white/90",
+                    "text-white/60 dark:text-white/90",
                     "placeholder:text-white/60",
                     "group-data-[has-value=true]:text-white",
                   ],
                   innerWrapper: "bg-transparent",
                   inputWrapper: [
                     "shadow-xl",
-                    "bg-default/10",
+                    // "bg-default/10",
                     "dark:bg-default/50",
                     "h-[53px]",
                     "data-[hover=true]:bg-default/30",
                     "dark:hover:bg-default/70",
                     "group-data-[focus=true]:bg-default/10",
                     "!cursor-text",
+                    "text-white/60 dark:text-white/90",
                   ],
                 }}
               />

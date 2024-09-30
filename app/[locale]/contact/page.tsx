@@ -2,11 +2,33 @@
 
 import { Button } from "@nextui-org/button";
 import { Card } from "@nextui-org/card";
+import axios from "axios";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import { useTranslations } from "next-intl";
 import * as Yup from "yup";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { useTheme } from "next-themes";
 
-const phoneRegExp = /^[+]{0,1}380([0-9]{9})$/;
+const instance = axios.create({
+  baseURL: "http://localhost:3000",
+});
+
+interface UserLetter {
+  username: string;
+  email: string;
+  telephone: string;
+  comments?: string;
+}
+
+const postUserLetter = async (data: UserLetter) => {
+  const res = await instance.post("/letter", data);
+
+  return res;
+};
+
+const phoneRegExp =
+  /^\+?1?[-.\s]?(\(?[0-9][0-9]{2}\)?)?[-.\s]?[2-9][0-9]{2}[-.\s]?[0-9]{4}$/;
 const emailRegExp =
   /^(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])$/;
 
@@ -20,7 +42,7 @@ const validationSchema = Yup.object().shape({
     .matches(emailRegExp, "Invalid email address"),
   telephone: Yup.string()
     .required("Phone number is required")
-    .matches(phoneRegExp, "+XX (XXX) XXX - XX - XX"),
+    .matches(phoneRegExp, "+X (XXX) XXX-XXXX"),
 });
 
 interface FormValues {
@@ -32,6 +54,7 @@ interface FormValues {
 
 export default function ContactUsPage() {
   const t = useTranslations("ContactUsPage");
+  const { theme } = useTheme();
 
   const initialValues: FormValues = {
     username: "",
@@ -40,9 +63,37 @@ export default function ContactUsPage() {
     comments: "",
   };
 
-  const handleSubmit = async (values: FormValues, { resetForm }: any) => {
-    // console.log("Form submitted:", values);
-    resetForm();
+  const handleSubmit = async (
+    values: FormValues,
+    { setSubmitting, resetForm }: any
+  ) => {
+    console.log("Form submitted:", values);
+
+    try {
+      await postUserLetter(values);
+
+      toast.success(t("successMessage"), {
+        position: "top-right",
+        autoClose: 6000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
+    } catch (error) {
+      console.log("error:", error);
+      toast.error(t("errorMessage"), {
+        position: "top-right",
+        autoClose: 6000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
+    } finally {
+      setSubmitting(false);
+      resetForm();
+    }
   };
 
   return (
@@ -133,6 +184,7 @@ export default function ContactUsPage() {
           )}
         </Formik>
       </section>
+      <ToastContainer theme={theme === "dark" ? "dark" : "light"} />
     </>
   );
 }

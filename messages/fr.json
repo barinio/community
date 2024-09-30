@@ -206,7 +206,9 @@
     "inputMail": "Courriel",
     "inputTel": "Téléphone",
     "inputCom": "Votre message",
-    "contactBtn1": "Envoyer"
+    "contactBtn1": "Envoyer",
+    "successMessage": "Votre message a été envoyé avec succès!",
+    "errorMessage": "Une erreur s'est produite pendant l'envoi du message. Veuillez réessayer."
   },
 
   "PrivacyPolicy": {
