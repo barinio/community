@@ -75,12 +75,12 @@ const FooterInputEmail = () => {
                 radius="full"
                 type="email"
                 placeholder={t("inputPlaceholder")}
-                className={`max-sm:max-w-[193px] w-[300px] mr-[18px]  ${errors.email && touched.email ? "border-red-500" : ""}`}
+                className={`max-sm:max-w-[193px] w-[300px] mr-[18px] ${errors.email && touched.email ? "border-red-500" : ""}`}
                 name="email"
                 classNames={{
                   input: [
                     "bg-transparent",
-                    "text-white/60 dark:text-white/90",
+                    "text-white dark:text-white/90",
                     "placeholder:text-white/60",
                     "group-data-[has-value=true]:text-white",
                   ],
