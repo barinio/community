@@ -26,7 +26,7 @@ function Input({ sendMessage }: InputProps) {
   };
 
   return (
-    <div className="w-[95%] h-10 flex items-center justify-center bg-gray-800 px-4 rounded-lg border border-gray-700 mb-6 absolute bottom-14 left-1/2 transform -translate-x-1/2 focus-within:border-gray-500">
+    <div className="w-[85%] h-10 flex items-center justify-center bg-gray-800 px-4 rounded-lg border border-gray-700 mb-6 absolute bottom-14 left-1/2 transform -translate-x-1/2 focus-within:border-gray-500">
       <form className="flex w-full" onSubmit={handleSendMessage}>
         <input
           required

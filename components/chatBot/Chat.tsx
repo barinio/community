@@ -4,9 +4,10 @@ import { useState, useEffect, useRef } from "react";
 import PulseLoader from "react-spinners/PulseLoader";
 import { useTranslations } from "next-intl";
 
+import { IconClose } from "../icons";
+
 import Input from "@/components/chatBot/Input";
 import KeywordForm from "@/components/chatBot/KeywordForm";
-import { IconClose } from "../icons";
 
 interface Message {
   content: string;
@@ -26,7 +27,7 @@ function Chat({ closeChat }: ChatProps) {
   const t = useTranslations("ChatBot");
 
   const setupWebSocket = () => {
-    ws.current = new WebSocket("ws://localhost:3000");
+    ws.current = new WebSocket("ws://localhost:3002");
 
     // ws.current = new WebSocket("wss://one855-product-code.onrender.com");
     ws.current.onmessage = (event) => {
