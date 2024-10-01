@@ -79,7 +79,9 @@
 
     "privacyPolicy": "Politique de confidentialite",
     "contact": "Contact",
-    "sentSuccessfully": "Envoyé avec succès"
+
+    "sentSuccessfully": "Envoyé avec succès",
+    "sentError": "Erreur, veuillez réessayer"
   },
 
   "ServicePage": {

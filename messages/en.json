@@ -80,7 +80,8 @@
     "privacyPolicy": "Privacy Policy",
     "contact": "Contact",
 
-    "sentSuccessfully": "Sent successfully"
+    "sentSuccessfully": "Sent successfully",
+    "sentError": "Error, please try again"
   },
 
   "ServicePage": {
