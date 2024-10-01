@@ -40,7 +40,7 @@ const FooterInputEmail = () => {
 
   const handleSubmit = async (
     value: FormInputValue,
-    { setSubmitting, resetForm }: any,
+    { setSubmitting, resetForm }: any
   ) => {
     console.log("Form submitted:", value);
 

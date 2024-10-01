@@ -207,7 +207,9 @@
     "inputMail": "E-mail",
     "inputTel": "Telephone",
     "inputCom": "Your message",
-    "contactBtn1": "Send"
+    "contactBtn1": "Send",
+    "successMessage": "Your message has been successfully sent!",
+    "errorMessage": "An error occurred while sending the message. Please try again."
   },
 
   "PrivacyPolicy": {
