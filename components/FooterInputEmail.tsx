@@ -34,30 +34,25 @@ const postUserEmail = async (data: FormInputValue) => {
 const FooterInputEmail = () => {
   const t = useTranslations("Footer");
   const [isSuccessSubmitted, setIsSuccessSubmitted] = useState(false);
+  const [isSentError, setIsSentError] = useState(false);
   const initialValues: FormInputValue = {
     email: "",
   };
 
-  const handleSubmit = async (
-    value: FormInputValue,
-    { setSubmitting, resetForm }: any,
-  ) => {
-    console.log("Form submitted:", value);
-
+  const handleSubmit = async (value: FormInputValue, { _, resetForm }: any) => {
     try {
       await postUserEmail(value);
       setIsSuccessSubmitted(true);
     } catch (error) {
-      console.log("error:", error);
+      setIsSentError(true);
     } finally {
-      setSubmitting(false);
-      setIsSuccessSubmitted(false);
+      setTimeout(() => {
+        setIsSuccessSubmitted(false);
+        setIsSentError(false);
+      }, 15000);
+
       resetForm();
     }
-
-    // setTimeout(() => {
-    //   setIsSuccessSubmitted(false);
-    // }, 3000);
   };
 
   return (
@@ -103,7 +98,10 @@ const FooterInputEmail = () => {
                 name="email"
               />
               {isSuccessSubmitted && (
-                <p className="pl-5 text-[#20FF81]">{t("sentSuccessfully")}</p>
+                <p className="pl-5 mt-3 text-[#20FF81]">{t("sentSuccessfully")}</p>
+              )}
+              {isSentError && (
+                <p className="pl-5 mt-3 text-[red]">{t("sentError")}</p>
               )}
             </div>
             <Button
