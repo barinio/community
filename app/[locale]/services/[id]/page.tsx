@@ -81,10 +81,14 @@ export default function CollectionServices({ params }: PageProps) {
         );
       } else if (Array.isArray(item)) {
         return (
-          <ul key={index} className="list-disc list-inside  mb-10">
+          <ul key={index} className="mb-10">
             {item.map((subItem, subIndex) => (
-              <li key={subIndex} className="text-2xl text-justify pl-[20px]">
-                {renderWithBold(t(subItem))}
+              <li
+                key={subIndex}
+                className="text-2xl text-justify pb-8 last:pb-0"
+              >
+                <p>{renderWithBold(t(subItem.title))}</p>
+                {renderWithBold(t(subItem.desc))}
               </li>
             ))}
           </ul>
