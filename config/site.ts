@@ -39,6 +39,10 @@ export const siteConfig = {
       href: "/privacy-policy",
     },
     {
+      label: "personalInformation",
+      href: "/personal-information",
+    },
+    {
       label: "contact",
       href: "/contact",
     },

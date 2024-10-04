@@ -10,12 +10,14 @@ import {
   NavbarMenuToggle,
 } from "@nextui-org/navbar";
 import { Link } from "@nextui-org/link";
+
 import NextLink from "next/link";
 import clsx from "clsx";
 import { useTranslations } from "next-intl";
 import { useReducer } from "react";
 import { Button } from "@nextui-org/button";
 
+import { Link as NavLink } from "@/navigation";
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
 import { Logo } from "@/components/icons";
@@ -50,7 +52,7 @@ export const Navbar = () => {
           {siteConfig.navItems.map((item) => (
             <NavbarItem key={item.href}>
               <Button
-                as={Link}
+                as={NavLink}
                 className={clsx(
                   "bg-transparent data-[active=true]:text-primary data-[active=true]:font-medium font-bold text-sm px-2 lg:px-[17px] py-2.5 uppercase",
                   "hover:bg-[#FFDD33] hover:text-black focus:bg-[#FFDD33] focus:text-black transition-colors duration-300",

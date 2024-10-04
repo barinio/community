@@ -27,10 +27,8 @@ const Footer = () => {
               </p>
             </div>
 
-            <section className="max-w-[535px]">
-              <h4 className="max-sm:hidden text-norm-white mb-6">
-                {t("inputTitle")}
-              </h4>
+            <section className="max-w-[535px] my-auto">
+              <h4 className="hidden text-norm-white mb-6">{t("inputTitle")}</h4>
 
               <FooterInputEmail />
             </section>
@@ -38,14 +36,19 @@ const Footer = () => {
         </div>
 
         <div className="second-footer flex sm:flex-row justify-between mt-[34px] sm:mt-4 gap-12 sm:gap-6">
-          <p className="max-sm:hidden text-[#BEBEBE]">{t("subTitle")}</p>
+          <p className="max-sm:hidden text-lg text-[#BEBEBE]">
+            {t("subTitle")}
+          </p>
 
           <ul className="flex flex-col gap-[18px]">
             <li>
-              <h4 className="text-norm-white font-bold">Company</h4>
+              <h4 className="text-norm-white font-bold">Site</h4>
             </li>
-            {siteConfig.navItems.map(({ label, href }) => (
-              <li key={label} className="text-[#BEBEBE]">
+            {siteConfig.navItems.map(({ label, href }, index) => (
+              <li
+                key={label}
+                className={`${index === siteConfig.navItems.length - 1 ? "hidden " : ""}text-[#BEBEBE]`}
+              >
                 <Link href={href} className="text-sm text-[#BEBEBE]">
                   {t(label)}
                 </Link>
@@ -53,14 +56,14 @@ const Footer = () => {
             ))}
           </ul>
 
-          <ul className="flex flex-col gap-[18px]">
+          <ul className="flex flex-col gap-[18px] [&:li:last-child]:hidden">
             <li>
               <h4 className="text-norm-white font-bold">Support</h4>
             </li>
 
-            {siteConfig.footerOtherLinks.map(({ label, href }) => (
+            {siteConfig.footerOtherLinks.map(({ label, href }, index) => (
               <li key={label} className="text-[#BEBEBE]">
-                <Link href={href} className="text-sm text-[#BEBEBE]">
+                <Link href={href} className={`text-sm text-[#BEBEBE] `}>
                   {t(label)}
                 </Link>
               </li>
