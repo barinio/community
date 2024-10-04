@@ -7,7 +7,7 @@
     "contact": "Nous joindre"
   },
   "AchieveMore": {
-    "title": "Réalisez davantage avec CommUnité"
+    "title": "CommUnité – Solutions d’avenir"
   },
   "HomePageHero": {
     "heroTitle": "CommUnité",
@@ -65,6 +65,7 @@
     "services": "Services",
     "ourCommitment": "Notre engagement",
     "advantages": "Avantages",
+    "contact": "Nous joindre",
 
     "title": "Restez au courant des dernières nouveautés",
     "description": "Rejoignez notre newsletter pour rester informé des fonctionnalités et des versions.",
@@ -78,7 +79,7 @@
     "titleSupport": "Support",
 
     "privacyPolicy": "Politique de confidentialite",
-    "contact": "Contact",
+    "personalInformation": "Information sur la protection des renseignements personnels",
 
     "sentSuccessfully": "Envoyé avec succès",
     "sentError": "Erreur, veuillez réessayer"
@@ -271,8 +272,7 @@
     "description8": "CommUnity se réserve le droit de modifier cette politique à tout moment. Veuillez noter que la dernière version de notre politique est affichée sur cette page.",
 
     "privacyOfficer": "Responsable de la confidentialité",
-    "privacyOfficerName": "Patrick René, Directeur des Opérations",
-    "addressText": "4350 Beaubien Est, Montréal (Québec) H1T 1S9"
+    "privacyOfficerName": "Patrick René, Directeur des Opérations"
   },
 
   "ChatBot": {
@@ -287,5 +287,11 @@
     "inputTelChat": "Téléphone",
     "messageSuccess": "Vous avez envoyé le courrier avec succès.",
     "messageError": "Une erreur s'est produite lors de l'envoi des données. Veuillez réessayer."
+  },
+
+  "PersonalInformation": {
+    "title": "La personne responsable de l'accès aux documents ou de la protection des renseignements personnels",
+    "description": "La personne responsable de l'application de la Loi sur la protection des renseignements personnels dans le secteur privé est également chargée de veiller au respect de cette politique. Si vous avez des commentaires ou des plaintes concernant la non-conformité à cette politique, veuillez contacter :",
+    "directorOfOperations": "Directeur des opérations"
   }
 }

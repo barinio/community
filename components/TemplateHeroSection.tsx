@@ -5,12 +5,18 @@ import heroImg from "@/images/hero-img.png";
 
 interface TemplateHeroSectionProps {
   title: string;
+  textStart?: string;
 }
 
-const TemplateHeroSection: React.FC<TemplateHeroSectionProps> = ({ title }) => {
+const TemplateHeroSection: React.FC<TemplateHeroSectionProps> = ({
+  title,
+  textStart,
+}) => {
   return (
     <section className="items-center justify-end flex max-w-7xl gap-6 mb-16 lg:flex-row flex-col">
-      <h1 className="max-w-[611px] text-justify w-full font-bold text-[34px] sm:text-[55px] dark:text-norm-white text-[#171717] tracking-[-.04em]">
+      <h1
+        className={`${textStart ? textStart : "text-justify"} max-w-[611px]  w-full font-bold text-[34px] sm:text-[55px] dark:text-norm-white text-[#171717] tracking-[-.04em]`}
+      >
         {title}
       </h1>
       <div className="w-full">

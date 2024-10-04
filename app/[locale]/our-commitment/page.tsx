@@ -9,7 +9,7 @@ export default function OurCommitment() {
 
   return (
     <>
-      <TemplateHeroSection title={t("heroTitle")} />
+      <TemplateHeroSection title={t("heroTitle")} textStart="text-start" />
 
       <ul className="flex justify-center flex-wrap gap-x-6 gap-y-11 mb-5 [&>*:nth-child(-n+2)]:bg-main-yellow [&>*:nth-child(n+3):nth-child(-n+4)]:bg-black [&>*:nth-child(n+3):nth-child(-n+4)]:dark:bg-[#171717] [&>*:nth-child(n+5)]:bg-[#F9FAFB]">
         {OurCommitmentList.map(({ number, title, description }) => (
@@ -28,7 +28,7 @@ export default function OurCommitment() {
               <p
                 className={`text-[20px] sm:text-[38px] leading-[0.98] text-justify ${number >= 3 && number <= 4 ? "text-white" : "dark:text-[#1A1D1F]"}`}
               >
-                {t(description)}
+                `{t(description)}
               </p>
             </section>
           </li>

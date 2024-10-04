@@ -7,7 +7,7 @@
     "contact": "Contact Us"
   },
   "AchieveMore": {
-    "title": "Achieve more with CommUnité"
+    "title": "CommUnité – Future Solutions"
   },
   "HomePageHero": {
     "heroTitle": "CommUnité",
@@ -65,6 +65,8 @@
     "services": "Services",
     "ourCommitment": "Our Commitment",
     "advantages": "Advantages",
+    "contact": "Contact Us",
+
 
     "title": "Stay up to date with the latest news",
     "description": "Join our newsletter to stay informed about features and releases.",
@@ -78,7 +80,7 @@
     "titleSupport": "Support",
 
     "privacyPolicy": "Privacy Policy",
-    "contact": "Contact",
+    "personalInformation": "Protection of personal information in the private sector",
 
     "sentSuccessfully": "Sent successfully",
     "sentError": "Error, please try again"
@@ -271,8 +273,7 @@
     "description8": "CommUnity reserves the right to modify this policy at any time. Note that the latest version of our policy is displayed on this page.",
 
     "privacyOfficer": "Privacy Officer",
-    "privacyOfficerName": "Patrick René, Directeur des Opérations",
-    "addressText": "4350 Beaubien Est, Montréal (Québec) H1T 1S9"
+    "privacyOfficerName": "Patrick René, Directeur des Opérations"
   },
 
   "ChatBot": {
@@ -287,5 +288,11 @@
     "inputTelChat": "Phone",
     "messageSuccess": "You have successfully sent the mail.",
     "messageError": "An error occurred while sending data. Please try again."
+  },
+
+  "PersonalInformation": {
+    "title": "The person responsible for access to documents or the protection of personal information",
+    "description": "The person responsible for the application of the Act respecting the protection of personal information in the private sector is also responsible for ensuring compliance with this policy. If you have any comments or complaints about non-compliance with this policy, please contact :",
+    "directorOfOperations": "Director of Operations"
   }
 }
