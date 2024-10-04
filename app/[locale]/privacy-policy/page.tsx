@@ -24,7 +24,7 @@ export default function PrivacyPolicy() {
             <p className="text-[31px] text-white">{t(description)}</p>
           </li>
         ))}
-        <li className="rounded-[32px] w-full "></li>
+        <li className="rounded-[32px] w-full " />
       </ul>
 
       <p className="text-[31px] leading-[0.98] text-justify text-white">
