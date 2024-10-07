@@ -9,7 +9,7 @@ export default function OurCommitment() {
 
   return (
     <>
-      <TemplateHeroSection title={t("heroTitle")} textStart="text-start" />
+      <TemplateHeroSection title={t("heroTitle")} />
 
       <ul className="flex justify-center flex-wrap gap-x-6 gap-y-11 mb-5 [&>*:nth-child(-n+2)]:bg-main-yellow [&>*:nth-child(n+3):nth-child(-n+4)]:bg-black [&>*:nth-child(n+3):nth-child(-n+4)]:dark:bg-[#171717] [&>*:nth-child(n+5)]:bg-[#F9FAFB]">
         {OurCommitmentList.map(({ number, title, description }) => (
