@@ -7,6 +7,7 @@ import { Tab, Tabs } from "@nextui-org/tabs";
 import Image from "next/image";
 import { Button } from "@nextui-org/button";
 import { useTranslations } from "next-intl";
+import { useRouter, usePathname } from "next/navigation";
 
 import { dataCollectionServices } from "@/data/dataCollectionServices";
 
@@ -15,7 +16,9 @@ export interface PageProps {
 }
 
 export default function CollectionServices({ params }: PageProps) {
-  const [selectedTab, setSelectedTab] = useState<string>(params.id);
+  // const [selectedTab, setSelectedTab] = useState<string>(params.id);
+  const router = useRouter();
+  const pathname = usePathname();
 
   const t = useTranslations("CollectionServicesPage");
   const tabsContainerRef = useRef<HTMLDivElement>(null);
@@ -99,12 +102,14 @@ export default function CollectionServices({ params }: PageProps) {
     });
   };
 
-  const currentTab = dataCollectionServices.find(
-    (tab) => tab.id === selectedTab
-  );
+  const currentTab = dataCollectionServices.find((tab) => tab.id === params.id);
 
   const handleTabChange = (key: any) => {
-    setSelectedTab(key);
+    // setSelectedTab(key);
+
+    const currentLang = pathname.split("/")[1];
+
+    router.push(`/${currentLang}/services/${key}`);
   };
 
   return (
@@ -125,7 +130,7 @@ export default function CollectionServices({ params }: PageProps) {
         <Tabs
           variant="underlined"
           aria-label="Navigation Tabs"
-          selectedKey={selectedTab}
+          selectedKey={params.id}
           onSelectionChange={handleTabChange}
           classNames={{
             tabList:
@@ -144,14 +149,17 @@ export default function CollectionServices({ params }: PageProps) {
       {currentTab && (
         <section key={currentTab.id}>
           <div className="clearfix mb-[85px]">
-            <div className="hidden sm:block w-[320px] md:w-[420px] lg:w-[520px] sm:float-right ml-16 pt-[10px] mb-14">
-              <Image
-                alt={currentTab.title}
-                className="w-full h-full object-contain transition-transform duration-300"
-                width={520}
-                height={420}
-                src={currentTab.img}
-              />
+            <div className="hidden sm:block  sm:float-right ml-16 pt-[10px] mb-14">
+              <div className="w-[359px] flex justify-center items-center bg-main-yellow rounded-[46px] px-[64px] py-[52px]">
+                <Image
+                  priority={true}
+                  alt={t(currentTab.title)}
+                  className="w-full h-full object-contain transition-transform duration-300"
+                  width={520}
+                  height={420}
+                  src={currentTab.img}
+                />
+              </div>
             </div>
             {renderDescription(currentTab.description)}
           </div>
