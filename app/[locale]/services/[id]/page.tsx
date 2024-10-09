@@ -150,7 +150,10 @@ export default function CollectionServices({ params }: PageProps) {
         <section key={currentTab.id}>
           <div className="clearfix mb-[85px]">
             <div className="hidden sm:block  sm:float-right ml-16 pt-[10px] mb-14">
-              <div className="w-[359px] flex justify-center items-center bg-main-yellow rounded-[46px] px-[64px] py-[52px]">
+              <div
+                className={`w-[359px] h-[335px] flex justify-center items-center bg-main-yellow rounded-[46px] ${currentTab.id === "recouvrement-des-creances" ? "pl-[60px] pr-[44px] py-[38px]" : "px-[58px] py-[42px]"}
+                 ${currentTab.id === "la-revision-et-la-redaction-des-contrats" ? "pl-[58px] pr-[30px] pt-[36px] pb-[42px]" : "px-[58px] py-[42px]"}`}
+              >
                 <Image
                   priority={true}
                   alt={t(currentTab.title)}
