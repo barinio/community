@@ -3,7 +3,7 @@ import { Button } from "@nextui-org/button";
 import { Link } from "@nextui-org/link";
 import { useTranslations } from "next-intl";
 
-import heroImg from "@/images/hero-img.png";
+import heroImg from "@/images/hero-img.svg";
 
 const HeroSection = () => {
   const t = useTranslations("HomePageHero");

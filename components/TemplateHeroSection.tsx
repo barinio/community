@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-import heroImg from "@/images/hero-img.png";
+import heroImg from "@/images/hero-img.svg";
 
 interface TemplateHeroSectionProps {
   title: string;
