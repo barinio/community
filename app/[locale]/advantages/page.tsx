@@ -25,6 +25,7 @@ export default function Advantages() {
             return (
               <InfoBlock
                 key={index}
+                Icon={block.icon}
                 title={block.title}
                 content={block.content}
                 isYellow={isYellow}
