@@ -4,6 +4,8 @@ import { useLocale } from "next-intl";
 import { Button } from "@nextui-org/button";
 import Link from "next/link";
 
+import { Link as NavLink } from "@/navigation";
+
 export function LocaleSwitcher() {
   const pathname = usePathname();
   const locale = useLocale();
@@ -18,10 +20,13 @@ export function LocaleSwitcher() {
 
   return (
     <Link href={newPath} passHref legacyBehavior>
-      <Button variant="light" className="bg-transparent p-2 min-w-[auto]">
+      <Button
+        as={NavLink}
+        variant="light"
+        className="bg-transparent p-2 min-w-[auto]"
+      >
         {locale === "en" ? "FR" : "EN"}
       </Button>
     </Link>
   );
 }
-``;

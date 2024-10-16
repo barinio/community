@@ -6,7 +6,7 @@ import { Link } from "@nextui-org/link";
 import { useTranslations } from "next-intl";
 
 import { Link as NavLink } from "@/navigation";
-import { InboxIcon, Logo } from "@/components/icons";
+import { FooterLogo, InboxIcon } from "@/components/icons";
 import { siteConfig } from "@/config/site";
 import FooterInputEmail from "@/components/FooterInputEmail";
 
@@ -68,7 +68,7 @@ const Footer = () => {
               <h4 className="text-norm-white font-bold">Support</h4>
             </li>
 
-            {siteConfig.footerOtherLinks.map(({ label, href }, index) => (
+            {siteConfig.footerOtherLinks.map(({ label, href }) => (
               <li key={label} className="text-[#BEBEBE]">
                 <Link href={href} className={`text-sm text-[#BEBEBE] `}>
                   {t(label)}
@@ -82,7 +82,7 @@ const Footer = () => {
           className="flex justify-start items-center gap-3 mt-12 sm:mt-0"
           href="/"
         >
-          <Logo />
+          <FooterLogo />
           <p className="font-bold text-norm-white text-2xl">CommUnité</p>
         </NextLink>
       </div>
@@ -92,7 +92,7 @@ const Footer = () => {
           {siteConfig.links.map(({ Icon, link }) => (
             <li key={link}>
               <div className="bg-main-yellow flex justify-center items-center rounded-full w-[44px] h-[44px]">
-                <Link isExternal href={link}>
+                <Link as={NavLink} isExternal href={link}>
                   <Icon />
                 </Link>
               </div>

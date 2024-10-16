@@ -107,7 +107,7 @@ export default function Services() {
             <p className="text-xs font-normal text-[#9E9E9E] mb-9 flex items-center before:content-[''] before:block before:h-[1px] before:w-[30px] before:bg-[#9E9E9E] before:mr-2">
               {t("reviewsText2")}
             </p>
-            <p className="w-[230px] text-[20px] leading-[90%] tracking-[-1.4px] font-bold text-[#f9f5f5]">
+            <p className="w-[230px] text-[20px] leading-[90%] font-bold text-[#f9f5f5]">
               {t("reviewsText3")}
             </p>
             <div className="absolute bottom-[0px] right-[30px] flex flex-row items-end gap-4">

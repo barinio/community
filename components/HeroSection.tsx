@@ -1,9 +1,8 @@
-import Image from "next/image";
 import { Button } from "@nextui-org/button";
 import { Link } from "@nextui-org/link";
 import { useTranslations } from "next-intl";
 
-import heroImg from "@/images/hero-img.svg";
+import { HeroImg } from "@/components/icons";
 
 const HeroSection = () => {
   const t = useTranslations("HomePageHero");
@@ -11,13 +10,7 @@ const HeroSection = () => {
   return (
     <div className="items-center flex mb-[65px]">
       <div className="max-lg:hidden w-full mr-[90px]">
-        <Image
-          src={heroImg}
-          width={554}
-          height={505}
-          alt="Picture of the author"
-          className="object-fill m-auto"
-        />
+        <HeroImg />
       </div>
 
       <div className="max-lg:flex flex-col items-center max-w-[519px] w-full">
