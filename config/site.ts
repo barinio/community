@@ -50,19 +50,19 @@ export const siteConfig = {
   links: [
     {
       Icon: InstagramIcon,
-      link: "https://nextui.org",
+      link: "https://www.instagram.com/c0mmunite?igsh=bmR6MGt6Mmp6YmJz",
     },
     {
       Icon: FacebookIcon,
-      link: "https://discord.gg/9b6yyZKmH4",
+      link: "https://www.facebook.com/communite.2024/",
     },
     {
       Icon: TwitterIcon,
-      link: "https://twitter.com/getnextui",
+      link: "https://x.com/c0mmunite",
     },
     {
       Icon: LinkedinIcon,
-      link: "https://patreon.com/jrgarciadev",
+      link: "https://www.linkedin.com/company/105265217/",
     },
   ],
 };

@@ -484,7 +484,7 @@ export const LogoMdrIcon = ({}: IconSvgProps) => (
   >
     <g
       transform="translate(0.000000,336.000000) scale(0.100000,-0.100000)"
-      fill="#000000"
+      className="dark:fill-white"
       stroke="none"
     >
       <path
