@@ -10,7 +10,6 @@ import {
   NavbarMenuToggle,
 } from "@nextui-org/navbar";
 import { Link } from "@nextui-org/link";
-
 import NextLink from "next/link";
 import clsx from "clsx";
 import { useTranslations } from "next-intl";

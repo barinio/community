@@ -1,8 +1,11 @@
+"use client";
+
 import React from "react";
 import NextLink from "next/link";
 import { Link } from "@nextui-org/link";
 import { useTranslations } from "next-intl";
 
+import { Link as NavLink } from "@/navigation";
 import { InboxIcon, Logo } from "@/components/icons";
 import { siteConfig } from "@/config/site";
 import FooterInputEmail from "@/components/FooterInputEmail";
@@ -49,7 +52,11 @@ const Footer = () => {
                 key={label}
                 className={`${index === siteConfig.navItems.length - 1 ? "hidden " : ""}text-[#BEBEBE]`}
               >
-                <Link href={href} className="text-sm text-[#BEBEBE]">
+                <Link
+                  as={NavLink}
+                  href={href}
+                  className="text-sm text-[#BEBEBE]"
+                >
                   {t(label)}
                 </Link>
               </li>
