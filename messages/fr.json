@@ -1,5 +1,6 @@
 {
   "NavItems": {
+    "logo": "CommUnité",
     "home": "Accueil",
     "services": "Services",
     "ourCommitment": "Notre engagement",
@@ -61,6 +62,7 @@
   },
 
   "Footer": {
+    "logo": "CommUnité",
     "home": "Accueil",
     "services": "Services",
     "ourCommitment": "Notre engagement",
@@ -292,6 +294,7 @@
   "PersonalInformation": {
     "title": "La personne responsable de l'accès aux documents ou de la protection des renseignements personnels",
     "description": "La personne responsable de l'application de la Loi sur la protection des renseignements personnels dans le secteur privé est également chargée de veiller au respect de cette politique. Si vous avez des commentaires ou des plaintes concernant la non-conformité à cette politique, veuillez contacter :",
-    "directorOfOperations": "Directeur des opérations"
+    "directorOfOperations": "Directeur des opérations",
+    "patrickRene": "Patrick René"
   }
 }

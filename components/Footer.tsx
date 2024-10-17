@@ -83,7 +83,7 @@ const Footer = () => {
           href="/"
         >
           <FooterLogo />
-          <p className="font-bold text-norm-white text-2xl">CommUnité</p>
+          <p className="font-bold text-norm-white text-2xl">{t("logo")}</p>
         </NextLink>
       </div>
 

@@ -1,11 +1,12 @@
 import { Button } from "@nextui-org/button";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 import {
   AimIcon,
   ArrowRightIcon,
   DiagramaIcon,
-  LogoMdrIcon,
+  LogoMdrIconEn,
+  LogoMdrIconFr,
   MobileIcon,
   OperatorIcon,
   SendMoneyIcon,
@@ -17,6 +18,9 @@ import BlockDescriptionTextTemplate from "@/components/FutureSolutionsSection/he
 
 const FutureSolutionsSection = () => {
   const t = useTranslations("FutureSolutionsSection");
+  const locale = useLocale(); // Отримуємо поточну мову
+
+  const LogoMdrIcon = locale === "fr" ? LogoMdrIconFr : LogoMdrIconEn;
 
   return (
     <section>
@@ -58,7 +62,7 @@ const FutureSolutionsSection = () => {
       </div>
 
       <SectionContentWrapper classStyles="max-sm:max-w-[350px] max-w-[1280px] p-[45px]">
-        <div className="flex flex-col lg:flex-row gap-5">
+        <div className="flex flex-col xl:flex-row gap-5">
           <div className="flex flex-col">
             <IconWrapper>
               <AimIcon />
@@ -67,7 +71,7 @@ const FutureSolutionsSection = () => {
             <BlockDescriptionTextTemplate descriptionText={t("description3")} />
           </div>
           <div
-            className={`max-sm:hidden w-full max-w-[633px] h-[379px] dark:bg-[url(../images/dark-world-map.png)] bg-[url(../images/world-map.png)] bg-contain bg-no-repeat bg-blend-multiply dark:bg-transparent bg-[#F9FAFB]`}
+            className={`max-sm:hidden min-w-[633px] h-[379px] dark:bg-[url(../images/dark-world-map.png)] bg-[url(../images/world-map.png)] bg-contain bg-no-repeat bg-blend-multiply dark:bg-transparent bg-[#F9FAFB]`}
           />
         </div>
       </SectionContentWrapper>

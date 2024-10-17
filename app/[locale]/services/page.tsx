@@ -11,6 +11,7 @@ import {
   IconService3,
 } from "@/components/icons";
 import serviceLogo from "@/images/serviceImg.png";
+import TitleAchieveMore from "@/components/TitleAchieveMore";
 import image3 from "@/images/lelaboration-dune-politique.svg";
 import image4 from "@/images/la-revision-et-la-redaction-yelow.svg";
 import image5 from "@/images/letablissement-de-scripts-yelow.svg";
@@ -63,7 +64,7 @@ export default function Services() {
   const t = useTranslations("ServicePage");
 
   return (
-    <div className="">
+    <div className=" sm:pb-[90px]">
       <section className="flex flex-col lg:flex-row justify-between mb-[178px] mt-16 ">
         <div>
           <p className="max-w-[780px] text-[48px] text-[#171717] dark:text-[#fff] leading-[100%] font-bold tracking-[-0.04em] mt-4 mb-[24px]">
@@ -247,13 +248,7 @@ export default function Services() {
         ))}
       </div>
 
-      <h3 className="text-center text-[45px] leading-[38px] tracking-tight font-bold  mb-[160px]">
-        {t("subTitle3")}
-      </h3>
-
-      <h2 className="font-bold text-[58px] md:text-[110px] text-center leading-[0.82] tracking-[-.03em]  mb-[90px]">
-        {t("titleAchieveMore")}
-      </h2>
+      <TitleAchieveMore />
     </div>
   );
 }

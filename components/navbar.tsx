@@ -38,7 +38,7 @@ export const Navbar = () => {
         <NextLink className="flex justify-start items-center gap-3" href="/">
           <Logo />
           <p className="font-bold text-inherit md:max-lg:text-lg text-2xl">
-            CommUnité
+            {t("logo")}
           </p>
         </NextLink>
       </NavbarBrand>
