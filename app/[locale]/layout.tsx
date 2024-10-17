@@ -46,7 +46,7 @@ export default async function RootLayout({
       <body
         className={clsx(
           `min-h-screen bg-background antialiased font-al`,
-          fontAbhayaLibre.variable
+          fontAbhayaLibre.variable,
         )}
       >
         <NextIntlClientProvider messages={messages}>

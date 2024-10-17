@@ -1,8 +1,10 @@
 import { useTranslations } from "next-intl";
 import React from "react";
 
+import { IconSvgProps } from "@/types";
+
 interface InfoBlockProp {
-  Icon: React.ComponentType<{ width?: number; height?: number }>;
+  Icon: React.FC<IconSvgProps>;
   title: string;
   content: string;
   isYellow?: boolean;
