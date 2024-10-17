@@ -213,9 +213,11 @@ export default function Services() {
             style={{ backgroundColor: card.bgColor, color: card.textColor }}
           >
             <div
-              className={`absolute top-6 right-6 flex items-center justify-center w-[58px] h-[58px] rounded-full bg-[#FFDD33] mb-[50px] ${
-                index === 2 ? "bg-[#000]" : ""
-              } ${index === 1 ? "bg-[#000] pl-1 pb-[2px]" : ""}`}
+              className={`absolute top-6 right-6 flex items-center justify-center w-[58px] h-[58px] rounded-full   mb-[50px] 
+                ${index === 3 ? "bg-[#FFDD33]" : ""}
+                ${index === 0 ? "bg-[#FFDD33]" : ""}
+                ${index === 2 ? "bg-[#000]" : ""}
+                ${index === 1 ? "bg-[#000] pl-1 pb-[2px]" : ""}`}
             >
               <Image
                 alt={t(card.title)}
