@@ -14,7 +14,7 @@ export default function PersonalInformation() {
       </p>
 
       <p className="font-bold text-[33px] leading-[0.98] text-justify text-white">
-        Patrick René
+        {t("patrickRene")}
       </p>
       <p className="text-[31px] leading-[0.98] text-justify text-white mb-10">
         {t("directorOfOperations")}
@@ -24,10 +24,10 @@ export default function PersonalInformation() {
         <ul>
           <li>
             <Link
-              href="mailto:prene@desrochesmongeonavocats.com"
+              href="mailto:info@communite.ca"
               className="text-[31px] leading-[0.98] text-justify text-white"
             >
-              prene@desrochesmongeonavocats.com
+              info@communite.ca
             </Link>
           </li>
           <li>
