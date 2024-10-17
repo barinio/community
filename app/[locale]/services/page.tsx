@@ -12,11 +12,16 @@ import {
 } from "@/components/icons";
 import serviceLogo from "@/images/serviceImg.png";
 import TitleAchieveMore from "@/components/TitleAchieveMore";
+import image3 from "@/images/lelaboration-dune-politique.svg";
+import image4 from "@/images/la-revision-et-la-redaction-yelow.svg";
+import image5 from "@/images/letablissement-de-scripts-yelow.svg";
+import image6 from "@/images/conseils-et-accompagnement.svg";
 
 const cardsData = [
   {
     id: "lelaboration-dune-politique-de-recouvrement",
     title: "cardIncludeTitle1",
+    img: image3,
     description: "Description de la première carte",
     bgColor: "#171717",
     textColor: "#fff",
@@ -26,6 +31,7 @@ const cardsData = [
   {
     id: "la-revision-et-la-redaction-des-contrats",
     title: "cardIncludeTitle2",
+    img: image4,
     description: "Description de la deuxième carte",
     bgColor: "#ffdd33",
     textColor: "#000",
@@ -35,6 +41,7 @@ const cardsData = [
   {
     id: "letablissement-de-scripts",
     title: "cardIncludeTitle3",
+    img: image5,
     description: "Description de la troisième carte",
     bgColor: "#ffdd33",
     textColor: "#000",
@@ -44,6 +51,7 @@ const cardsData = [
   {
     id: "conseils-et-accompagnement-juridiques",
     title: "cardIncludeTitle4",
+    img: image6,
     description: "Description de la quatrième carte",
     bgColor: "#171717",
     textColor: "#fff",
@@ -204,6 +212,21 @@ export default function Services() {
             `}
             style={{ backgroundColor: card.bgColor, color: card.textColor }}
           >
+            <div
+              className={`absolute top-6 right-6 flex items-center justify-center w-[58px] h-[58px] rounded-full   mb-[50px] 
+                ${index === 3 ? "bg-[#FFDD33]" : ""}
+                ${index === 0 ? "bg-[#FFDD33]" : ""}
+                ${index === 2 ? "bg-[#000]" : ""}
+                ${index === 1 ? "bg-[#000] pl-1 pb-[2px]" : ""}`}
+            >
+              <Image
+                alt={t(card.title)}
+                width={34}
+                height={34}
+                src={card.img}
+              />
+            </div>
+
             <p className="w-[230px] sm:w-[300px] h-[170px] text-[36px] leading-[48px] tracking-tight sm:text-[45px] sm:leading-[58px] sm:tracking-tight mb-[120px]">
               {t(card.title)}
             </p>
