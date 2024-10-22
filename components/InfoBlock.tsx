@@ -22,8 +22,8 @@ const InfoBlock = ({ Icon, title, content, isYellow }: InfoBlockProp) => {
       >
         <Icon />
       </div>
-      <p className="text-[20px] sm:text-[35px] leading-[0.98] text-justify ">
-        <span className="font-bold">{t(title)} </span>
+      <p className="text-[20px] sm:text-[34px] leading-[0.98] text-justify ">
+        <span className="font-bold block mb-4 text-left">{t(title)} </span>
         {t(content)}
       </p>
     </li>

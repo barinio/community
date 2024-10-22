@@ -70,6 +70,17 @@ export default function CollectionServices({ params }: PageProps) {
         );
       }
 
+      if (part.startsWith("+") && part.endsWith("+")) {
+        return (
+          <span
+            key={index}
+            className="underline underline-offset-2 decoration-1"
+          >
+            {part.slice(1, -1)}
+          </span>
+        );
+      }
+
       return part;
     });
   };

@@ -21,12 +21,12 @@ export default function OurCommitment() {
                 {number}
               </div>
               <h3
-                className={`font-bold text-[20px] sm:text-[38px] leading-[0.98] text-justify ${number >= 3 && number <= 4 ? "text-white" : "dark:text-[#1A1D1F]"}`}
+                className={`font-bold text-[20px] sm:text-[36px] leading-[0.98] mb-4  ${number >= 3 && number <= 4 ? "text-white" : "dark:text-[#1A1D1F]"}`}
               >
                 {t(title)}
               </h3>
               <p
-                className={`text-[20px] sm:text-[38px] leading-[0.98] text-justify ${number >= 3 && number <= 4 ? "text-white" : "dark:text-[#1A1D1F]"}`}
+                className={`text-[20px] sm:text-[36px] leading-[0.98] text-justify ${number >= 3 && number <= 4 ? "text-white" : "dark:text-[#1A1D1F]"}`}
               >
                 `{t(description)}
               </p>
