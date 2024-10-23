@@ -2,6 +2,7 @@
 
 import { useTheme } from "next-themes";
 import React from "react";
+import { useTranslations } from "next-intl";
 
 import { HeroImg, HeroImg1, HeroImg2 } from "@/components/icons";
 
@@ -11,6 +12,7 @@ interface TemplateHeroSectionProps {
 
 const TemplateHeroSection: React.FC<TemplateHeroSectionProps> = ({ title }) => {
   const { theme } = useTheme();
+  const t = useTranslations("OurCommitment");
 
   return (
     <section className="items-center justify-end flex max-w-7xl gap-6 mb-16 lg:flex-row flex-col">
@@ -20,8 +22,7 @@ const TemplateHeroSection: React.FC<TemplateHeroSectionProps> = ({ title }) => {
         {title}
       </h1>
       <div className="flex justify-center">
-        {title ===
-        "By choosing CommUnity, you benefit from a comprehensive range of advantages that go beyond simple receivables management." ? (
+        {title === t("heroTitle") ? (
           theme === "dark" ? (
             <HeroImg2 />
           ) : (
