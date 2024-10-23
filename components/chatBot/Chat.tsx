@@ -27,7 +27,7 @@ function Chat({ closeChat }: ChatProps) {
   const t = useTranslations("ChatBot");
 
   const setupWebSocket = () => {
-    ws.current = new WebSocket("ws://localhost:3002");
+    ws.current = new WebSocket("wss://communite-back-product.onrender.com");
 
     // ws.current = new WebSocket("wss://one855-product-code.onrender.com");
     ws.current.onmessage = (event) => {

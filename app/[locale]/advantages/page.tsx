@@ -25,7 +25,7 @@ export default function Advantages() {
             return (
               <InfoBlock
                 key={index}
-                Icon={block.icon}
+                Icon={block.icon as React.ComponentType<{ width?: number; height?: number }>}
                 title={block.title}
                 content={block.content}
                 isYellow={isYellow}

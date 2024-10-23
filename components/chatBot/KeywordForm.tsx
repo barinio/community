@@ -30,7 +30,7 @@ function KeywordForm() {
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     axios
-      .post("http://localhost:3000/add", formData)
+      .post("https://communite-back-product.onrender.com/add", formData)
       // .post("https://one855-product-code.onrender.com/add", formData)
       .then((response) => {
         console.log(response.data);

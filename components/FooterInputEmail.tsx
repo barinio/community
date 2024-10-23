@@ -18,7 +18,7 @@ const validationSchema = Yup.object().shape({
 });
 
 const instance = axios.create({
-  baseURL: "http://localhost:3001",
+  baseURL: "https://communite-back-product.onrender.com",
 });
 
 interface FormInputValue {
