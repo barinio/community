@@ -21,7 +21,7 @@ const TemplateHeroSection: React.FC<TemplateHeroSectionProps> = ({ title }) => {
       </h1>
       <div className="flex justify-center">
         {title ===
-        "By choosing CommUnite, you benefit from a comprehensive range of advantages that go beyond simple receivables management." ? (
+        "By choosing CommUnity, you benefit from a comprehensive range of advantages that go beyond simple receivables management." ? (
           theme === "dark" ? (
             <HeroImg2 />
           ) : (

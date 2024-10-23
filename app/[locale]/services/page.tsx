@@ -1,16 +1,20 @@
+"use client";
+
 import { Button } from "@nextui-org/button";
 import { Card, CardBody } from "@nextui-org/card";
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
+import { useTheme } from "next-themes";
 
 import {
   ArrowIcon,
+  HeroImg2,
+  HeroImg3,
   IconService1,
   IconService2,
   IconService3,
 } from "@/components/icons";
-import serviceLogo from "@/images/serviceImgNew.png";
 import TitleAchieveMore from "@/components/TitleAchieveMore";
 import image3 from "@/images/lelaboration-dune-politique.svg";
 import image4 from "@/images/la-revision-et-la-redaction-yelow.svg";
@@ -62,73 +66,23 @@ const cardsData = [
 
 export default function Services() {
   const t = useTranslations("ServicePage");
+  const { theme } = useTheme();
 
   return (
     <div className=" sm:pb-[90px]">
-      <section className="flex flex-col lg:flex-row justify-between mb-[178px] mt-16 ">
+      <section className="flex flex-col gap-4 lg:flex-row justify-between mb-[178px] mt-16 ">
         <div>
           <p className="max-w-[780px] text-[48px] text-[#171717] dark:text-[#fff] leading-[100%] font-bold tracking-[-0.04em] mt-4 mb-[26px]">
             {t("title")}
           </p>
-
-          {/* <Card className="sm:hidden relative w-full rounded-[33px] px-5 pt-[30px] pb-[30px]  bg-[#171717] mb-[22px] ">
-            <p className="text-xs font-normal text-[#9E9E9E] mb-3 flex items-center before:content-[''] before:block before:h-[1px] before:w-[30px] before:bg-[#9E9E9E] before:mr-2">
-              {t("reviewsText2")}
-            </p>
-            <p className="w-[210px] text-[18px] leading-[90%] tracking-[-0.04em] font-bold text-[#f9f5f5]">
-              {t("reviewsText3")}
-            </p>
-            <div className="absolute bottom-[20px] right-[30px] flex flex-row items-end gap-[7px]">
-              {[31, 45, 63].map((height, index) => (
-                <span
-                  key={index}
-                  className="w-[19px] rounded-[2px] bg-[#ffdd33]"
-                  style={{ height: `${height}px` }}
-                />
-              ))}
-            </div>
-          </Card> */}
 
           <p className="max-w-[700px] text-[36px] text-[#171717] dark:text-[#fff] leading-[112%] font-normal tracking-[-0.04em]">
             {t("textTitle")}
           </p>
         </div>
 
-        <div className="mx-auto">
-          <Image
-            src={serviceLogo}
-            width={540}
-            height={360}
-            alt="Icon"
-            className="inline-block md:ml-6 mb-2 mt-2"
-          />
-          {/* <Card className=" absolute top-[136px] left-[55px] h-20 z-10 rounded px-6 py-[20px] bg-[#fff] ">
-            <p className="w-[410px] text-2xl font-light text-[#1b1b1b]">
-              {t("reviewsTitle")}
-              <span className="text-4xl text-[#01C087] ml-8 mr-10">792</span>
-              <span className="text-2xl font-bold text-[#1b1b1b]">
-                {" "}
-                {t("reviewsText")}
-              </span>
-            </p>
-          </Card>
-          <Card className="relative w-[485px] rounded-[33px] px-5 pt-[30px] pb-[44px]  bg-[#171717] ">
-            <p className="text-xs font-normal text-[#9E9E9E] mb-9 flex items-center before:content-[''] before:block before:h-[1px] before:w-[30px] before:bg-[#9E9E9E] before:mr-2">
-              {t("reviewsText2")}
-            </p>
-            <p className="w-[230px] text-[20px] leading-[90%] font-bold text-[#f9f5f5]">
-              {t("reviewsText3")}
-            </p>
-            <div className="absolute bottom-[0px] right-[30px] flex flex-row items-end gap-4">
-              {[80, 96, 112].map((height, index) => (
-                <span
-                  key={index}
-                  className="w-[47px] rounded-[2px] bg-[#ffdd33]"
-                  style={{ height: `${height}px` }}
-                />
-              ))}
-            </div>
-          </Card> */}
+        <div className="flex justify-center items-center mx-auto">
+          {theme === "dark" ? <HeroImg2 /> : <HeroImg3 />}
         </div>
       </section>
 
