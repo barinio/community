@@ -64,10 +64,10 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="tel:+4509142498"
+                    href="tel:+15148977216"
                     className="text-[31px] leading-[0.98] max-sm:hidden text-lg text-[#BEBEBE] underline"
                   >
-                    450-914-2498
+                    15148977216
                   </Link>
                 </li>
               </ul>

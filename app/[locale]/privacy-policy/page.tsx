@@ -53,7 +53,7 @@ export default function PrivacyPolicy() {
               href="tel:+4509142498"
               className="text-[31px] leading-[0.98] text-justify text-white"
             >
-              450-914-2498
+              15148977216
             </Link>
           </li>
         </ul>

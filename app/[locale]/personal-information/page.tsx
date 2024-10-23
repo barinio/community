@@ -41,10 +41,10 @@ export default function PersonalInformation() {
           </li>
           <li>
             <Link
-              href="tel:+4509142498"
+              href="tel:+15148977216"
               className="text-[31px] leading-[0.98] text-justify text-white"
             >
-              450-914-2498
+              15148977216
             </Link>
           </li>
         </ul>
