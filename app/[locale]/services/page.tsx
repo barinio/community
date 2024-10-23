@@ -5,12 +5,9 @@ import { Card, CardBody } from "@nextui-org/card";
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
-import { useTheme } from "next-themes";
 
 import {
   ArrowIcon,
-  HeroImg2,
-  HeroImg3,
   IconService1,
   IconService2,
   IconService3,
@@ -66,23 +63,56 @@ const cardsData = [
 
 export default function Services() {
   const t = useTranslations("ServicePage");
-  const { theme } = useTheme();
 
   return (
     <div className=" sm:pb-[90px]">
-      <section className="flex flex-col gap-4 lg:flex-row justify-between mb-[178px] mt-16 ">
+      <section className="flex flex-col gap-5 lg:flex-row justify-between mb-[178px] mt-16 ">
         <div>
           <p className="max-w-[780px] text-[48px] text-[#171717] dark:text-[#fff] leading-[100%] font-bold tracking-[-0.04em] mt-4 mb-[26px]">
             {t("title")}
           </p>
+
+          <Card className="sm:hidden relative w-full rounded-[33px] px-5 pt-[30px] pb-[30px]  bg-[#171717] mb-[22px] ">
+            <p className="text-xs font-normal text-[#9E9E9E] mb-3 flex items-center before:content-[''] before:block before:h-[1px] before:w-[30px] before:bg-[#9E9E9E] before:mr-2">
+              {t("reviewsText2")}
+            </p>
+            <p className="w-[210px] text-[18px] leading-[90%] tracking-[-0.04em] font-bold text-[#f9f5f5]">
+              {t("reviewsText3")}
+            </p>
+            <div className="absolute bottom-[20px] right-[30px] flex flex-row items-end gap-[7px]">
+              {[31, 45, 63].map((height, index) => (
+                <span
+                  key={index}
+                  className="w-[19px] rounded-[2px] bg-[#ffdd33]"
+                  style={{ height: `${height}px` }}
+                />
+              ))}
+            </div>
+          </Card>
 
           <p className="max-w-[700px] text-[36px] text-[#171717] dark:text-[#fff] leading-[112%] font-normal tracking-[-0.04em]">
             {t("textTitle")}
           </p>
         </div>
 
-        <div className="flex justify-center items-center mx-auto">
-          {theme === "dark" ? <HeroImg2 /> : <HeroImg3 />}
+        <div className="hidden sm:flex justify-center items-center mx-auto">
+          <Card className="relative w-[560px] rounded-[33px] px-5 pt-[57px] pb-[83px]  bg-[#171717] ">
+            <p className="text-xl font-normal text-[#9E9E9E] mb-[70px] flex items-center before:content-[''] before:block before:h-[1px] before:w-[30px] before:bg-[#9E9E9E] before:mr-2">
+              {t("reviewsText2")}
+            </p>
+            <p className="w-[285px] text-[23px] leading-[154%] tracking-tight font-bold text-[#f9f5f5]">
+              {t("reviewsText3")}
+            </p>
+            <div className="absolute bottom-[37px] right-[30px] flex flex-row items-end gap-4">
+              {[116, 146, 177].map((height, index) => (
+                <span
+                  key={index}
+                  className="w-[54px] rounded-[2px] bg-[#ffdd33]"
+                  style={{ height: `${height}px` }}
+                />
+              ))}
+            </div>
+          </Card>
         </div>
       </section>
 

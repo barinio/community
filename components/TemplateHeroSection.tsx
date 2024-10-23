@@ -4,7 +4,7 @@ import { useTheme } from "next-themes";
 import React from "react";
 import { useTranslations } from "next-intl";
 
-import { HeroImg, HeroImg1, HeroImg2 } from "@/components/icons";
+import { HeroImg, HeroImg2, HeroImg3 } from "@/components/icons";
 
 interface TemplateHeroSectionProps {
   title: string;
@@ -26,7 +26,7 @@ const TemplateHeroSection: React.FC<TemplateHeroSectionProps> = ({ title }) => {
           theme === "dark" ? (
             <HeroImg2 />
           ) : (
-            <HeroImg1 />
+            <HeroImg3 />
           )
         ) : (
           <HeroImg />
