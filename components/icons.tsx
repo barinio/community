@@ -351,8 +351,8 @@ export const HeroImg1: React.FC<IconSvgProps> = () => (
 
 export const HeroImg2: React.FC<IconSvgProps> = () => (
   <svg
-    width={513}
-    height={299}
+    width={557}
+    height={337}
     viewBox="0 0 513 299"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
