@@ -32,7 +32,7 @@ const HeroSection = () => {
           </Button>
           <Button
             as={Link}
-            href="tel:+14509142498"
+            href="tel:+15148977216"
             variant="bordered"
             className="font-bold text-xl bg-norm-white w-[149px] sm:w-[200px] h-[60px] text-[#1A1D1F] border-2 border-[#2E2C2C] rounded-[32px] shadow-[0px_4px_4px_0px_#00000024]"
           >
