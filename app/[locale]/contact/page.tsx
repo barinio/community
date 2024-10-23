@@ -67,8 +67,6 @@ export default function ContactUsPage() {
     values: FormValues,
     { setSubmitting, resetForm }: any
   ) => {
-    console.log("Form submitted:", values);
-
     try {
       await postUserLetter(values);
 
@@ -81,7 +79,6 @@ export default function ContactUsPage() {
         draggable: true,
       });
     } catch (error) {
-      console.log("error:", error);
       toast.error(t("errorMessage"), {
         position: "top-right",
         autoClose: 6000,

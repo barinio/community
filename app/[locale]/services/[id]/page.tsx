@@ -16,7 +16,6 @@ export interface PageProps {
 }
 
 export default function CollectionServices({ params }: PageProps) {
-  // const [selectedTab, setSelectedTab] = useState<string>(params.id);
   const router = useRouter();
   const pathname = usePathname();
 
@@ -50,13 +49,6 @@ export default function CollectionServices({ params }: PageProps) {
 
     tabsContainerRef.current.scrollLeft = scrollLeft - walk;
   };
-
-  // const handleWheelScroll = (e: React.WheelEvent<HTMLDivElement>) => {
-  //   if (tabsContainerRef.current) {
-  //     e.preventDefault();
-  //     tabsContainerRef.current.scrollLeft += e.deltaY;
-  //   }
-  // };
 
   const renderWithBold = (text: string) => {
     const parts = text.split(/(\*.*?\*)/);
@@ -116,8 +108,6 @@ export default function CollectionServices({ params }: PageProps) {
   const currentTab = dataCollectionServices.find((tab) => tab.id === params.id);
 
   const handleTabChange = (key: any) => {
-    // setSelectedTab(key);
-
     const currentLang = pathname.split("/")[1];
 
     router.push(`/${currentLang}/services/${key}`);
@@ -132,7 +122,6 @@ export default function CollectionServices({ params }: PageProps) {
         }`}
         orientation="horizontal"
         ref={tabsContainerRef}
-        // onWheel={handleWheelScroll}
         onMouseDown={handleMouseDown}
         onMouseUp={handleMouseUp}
         onMouseLeave={handleMouseLeave}
