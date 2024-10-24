@@ -1,7 +1,7 @@
 import { useTranslations } from "next-intl";
-import { Link } from "@nextui-org/link";
 
 import { PrivacyPolicyList } from "@/data/PrivacyPolicyList";
+import Address from "@/components/Address";
 
 export default function PrivacyPolicy() {
   const t = useTranslations("PrivacyPolicy");
@@ -29,35 +29,10 @@ export default function PrivacyPolicy() {
         {t("privacyOfficerName")}
       </p>
 
-      <address className="not-italic mt-4">
-        <ul>
-          <li>
-            <Link
-              href="mailto:info@communite.ca"
-              className="text-[31px] leading-[0.98] text-justify text-white"
-            >
-              info@communite.ca
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="https://maps.app.goo.gl/WVBY2Ar3FiGnR6gE8"
-              className="text-[31px] leading-[0.98] text-justify text-white"
-              isExternal
-            >
-              4350 Beaubien East, Montreal, Quebec H1T 1S9
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="tel:+4509142498"
-              className="text-[31px] leading-[0.98] text-justify text-white"
-            >
-              15148977216
-            </Link>
-          </li>
-        </ul>
-      </address>
+      <Address
+        addressStyle="mt-4"
+        textStyle="text-justify text-white w-[280px]"
+      />
     </div>
   );
 }

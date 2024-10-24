@@ -9,6 +9,7 @@ import { Link as NavLink } from "@/navigation";
 import { FooterLogo, InboxIcon } from "@/components/icons";
 import { siteConfig } from "@/config/site";
 import FooterInputEmail from "@/components/FooterInputEmail";
+import Address from "@/components/Address";
 
 const Footer = () => {
   const t = useTranslations("Footer");
@@ -43,35 +44,8 @@ const Footer = () => {
             <p className="max-sm:hidden text-lg text-[#BEBEBE] mb-2.5">
               {t("subTitle")}
             </p>
-            <address className="not-italic">
-              <ul className="flex flex-col gap-2.5">
-                <li>
-                  <Link
-                    href="https://maps.app.goo.gl/WVBY2Ar3FiGnR6gE8"
-                    className="w-[222px] text-[31px] leading-[0.98] max-sm:hidden text-lg text-[#BEBEBE]"
-                    isExternal
-                  >
-                    4350 Beaubien East, Montreal, Quebec H1T 1S9
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="mailto:info@communite.ca"
-                    className="text-[31px] leading-[0.98] max-sm:hidden text-lg text-[#BEBEBE] underline"
-                  >
-                    info@communite.ca
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="tel:+15148977216"
-                    className="text-[31px] leading-[0.98] max-sm:hidden text-lg text-[#BEBEBE] underline"
-                  >
-                    15148977216
-                  </Link>
-                </li>
-              </ul>
-            </address>
+
+            <Address textStyle="max-sm:hidden text-[#BEBEBE] text-lg w-[190px]" />
           </div>
 
           <ul className="flex flex-col gap-[18px]">
