@@ -32,6 +32,10 @@ export const siteConfig = {
       label: "contact",
       href: "/contact",
     },
+    {
+      label: "demo",
+      href: "/demo",
+    },
   ],
   footerOtherLinks: [
     {
