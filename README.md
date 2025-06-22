@@ -17,4 +17,4 @@ The site has a `Home page` and other pages.
 
 > Also used were NextUI, Tailwind, Formik and next-intl.
 
-The project is deployed on vercel.com: [CommUnity]().
+The project is deployed on vercel.com: [CommUnity](https://community-three-rosy.vercel.app).
