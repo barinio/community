@@ -9,18 +9,18 @@ import {
   NavbarMenuItem,
   NavbarMenuToggle,
 } from "@nextui-org/navbar";
-import { Link } from "@nextui-org/link";
+import {Link} from "@nextui-org/link";
 import NextLink from "next/link";
 import clsx from "clsx";
-import { useTranslations } from "next-intl";
-import { useReducer } from "react";
-import { Button } from "@nextui-org/button";
+import {useTranslations} from "next-intl";
+import {useReducer} from "react";
+import {Button} from "@nextui-org/button";
 
-import { Link as NavLink } from "@/navigation";
-import { siteConfig } from "@/config/site";
-import { ThemeSwitch } from "@/components/theme-switch";
-import { Logo } from "@/components/icons";
-import { LocaleSwitcher } from "@/components/LocaleSwitcher";
+import {Link as NavLink} from "@/navigation";
+import {siteConfig} from "@/config/site";
+import {ThemeSwitch} from "@/components/theme-switch";
+import {Logo} from "@/components/icons";
+import {LocaleSwitcher} from "@/components/LocaleSwitcher";
 
 export const Navbar = () => {
   const t = useTranslations("NavItems");
@@ -28,11 +28,12 @@ export const Navbar = () => {
 
   return (
     <NextUINavbar
-      maxWidth="xl"
-      className="mt-2"
-      position="sticky"
-      isMenuOpen={isMenuOpen}
-      onMenuOpenChange={setIsMenuOpen}
+        className="mt-2"
+        position="sticky"
+        isMenuOpen={isMenuOpen}
+        onMenuOpenChange={setIsMenuOpen}
+        maxWidth="xl"
+
     >
       <NavbarBrand as="li" className="gap-3 max-w-fit">
         <NextLink className="flex justify-start items-center gap-3" href="/">

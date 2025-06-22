@@ -10,7 +10,7 @@ import {useTheme} from "next-themes";
 import {LogoDemo, PhoneDemo} from "@/components/icons";
 import iphone from "@/images/demo-iPhone11.png";
 import mail from "@/images/mail.png";
-import voice from "@/images/voice-icon.svg";
+import voice from "@/images/phone.svg";
 import clientProf from "@/images/clientProf.png";
 import SectionContentWrapper from "@/components/FutureSolutionsSection/helpers/SectionContentWrapper";
 import EmailLatter from "@/components/EmailLatter";

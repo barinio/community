@@ -1,4 +1,4 @@
-import { nextui } from "@nextui-org/theme";
+import {nextui} from "@nextui-org/theme";
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -51,10 +51,6 @@ module.exports = {
         ".custom-scrollbar::-webkit-scrollbar-thumb:active": {
           backgroundColor: "#a0a0a0",
         },
-        // ".custom-scrollbar": {
-        //   scrollbarWidth: "thin",
-        //   scrollbarColor: "#e0e0e0 #2d2d2d",
-        // },
       };
 
       addUtilities(newUtilities, ["responsive"]);

@@ -27,7 +27,7 @@ const phoneRegExp =
 const validationSchema = Yup.object().shape({
     telephone: Yup.string()
         .required("Phone number is required")
-        .matches(phoneRegExp, "+X (XXX) XXX-XXXX"),
+        .matches(phoneRegExp, "+1 (234) 567-8910"),
 });
 
 interface FormValues {
